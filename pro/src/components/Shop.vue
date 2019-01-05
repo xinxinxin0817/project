@@ -1,5 +1,6 @@
 <template>
 	<div>
+		
 		<h1>about</h1>
 		
 		
@@ -23,4 +24,10 @@
 </script>
 
 <style scoped="">
+header{
+		height:80px;
+			background: #ff0;
+		text-align: center;
+		line-height: 50px;
+	}
 </style>
