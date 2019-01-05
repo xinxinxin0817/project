@@ -40,7 +40,10 @@ export default {
 		color: #fff;
 		background:red;
 	}
-	
+	*{
+		margin:0;
+		padding:0;
+	}
 	
 	.hello{
 		height: 100vh;
