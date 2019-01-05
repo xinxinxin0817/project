@@ -6,7 +6,7 @@
    		<router-view @toparent="getdata"></router-view>
    	</section>
    	<footer>
-   		<router-link to="/home" tag="span">首页</router-link>
+   		<router-link to="/home" tag="span">首页01</router-link>
    		<router-link to="/about" tag='span'>关于</router-link>
    		<router-link to='/other' tag="span">其他</router-link>
    	</footer>
