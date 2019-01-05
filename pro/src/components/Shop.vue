@@ -23,7 +23,7 @@
 	}
 </script>
 
-<style scoped="">
+<style>
 header{
 		height:80px;
 			background: #ff0;

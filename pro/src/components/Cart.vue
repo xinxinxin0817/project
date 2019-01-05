@@ -22,7 +22,7 @@
 	}
 </script>
 
-<style scoped="">
+<style>
 header{
 		height:50px;
 			background: pink;
