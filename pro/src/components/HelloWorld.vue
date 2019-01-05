@@ -7,7 +7,7 @@
    	</section>
    	<footer>
    		<router-link to="/home" tag="span">首页</router-link>
-   		<router-link to="/about" tag='span'>关于</router-link>
+   		<router-link to="/about" tag='span'>关于111</router-link>
    		<router-link to='/other' tag="span">其他</router-link>
    	</footer>
   </div>
