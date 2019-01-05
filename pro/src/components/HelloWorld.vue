@@ -38,8 +38,12 @@ export default {
 	/*vh==竖向高度*/
 	.router-link-active{
 		color: #fff;
+		background:red;
 	}
-	
+	*{
+		margin:0;
+		padding:0;
+	}
 	
 	.hello{
 		height: 100vh;
@@ -49,7 +53,7 @@ export default {
 	
 	footer{
 		height: 50px;
-		background: orange;
+		background: #cecece;
 		text-align: center;
 		line-height: 50px;
 	}

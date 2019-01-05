@@ -2,7 +2,7 @@
 	<div>
 		<h1>about</h1>
 		
-		
+			
 		
 		
 	</div>
@@ -22,7 +22,7 @@
 	}
 </script>
 
-<style>
+<style scoped="">
 header{
 		height:50px;
 			background: pink;

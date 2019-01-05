@@ -18,5 +18,11 @@
 	}
 </script>
 
-<style>
+<style scoped="">
+header{
+		height:80px;
+			background: blue;
+		text-align: center;
+		line-height: 50px;
+	}
 </style>
