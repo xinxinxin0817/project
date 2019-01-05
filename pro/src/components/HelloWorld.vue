@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
-   	<!--<header>{{title}}</header>-->
-   	<mt-header fixed :title="title"></mt-header>	
+   	<header>{{title}}</header>
+   	<!-- <mt-header fixed :title="title"></mt-header>	 -->
    	<section>
    		<router-view @toparent="getdata"></router-view>
    	</section>

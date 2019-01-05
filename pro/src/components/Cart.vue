@@ -2,11 +2,7 @@
 	<div>
 		<h1>about</h1>
 		
-		<mt-swipe :auto="4000" style="height:200px">
-		  <mt-swipe-item style="background: red;">1</mt-swipe-item>
-		  <mt-swipe-item style="background: yellow;">2</mt-swipe-item>
-		  <mt-swipe-item style="background: pink;">3</mt-swipe-item>
-		</mt-swipe>
+		
 		
 		
 	</div>
@@ -26,5 +22,11 @@
 	}
 </script>
 
-<style scoped="">
+<style>
+header{
+		height:50px;
+			background: pink;
+		text-align: center;
+		line-height: 50px;
+	}
 </style>
