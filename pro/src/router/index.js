@@ -1,9 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
-import About from '@/components/About'
+import Shop from '@/components/Shop'
 import Home from '@/components/Home'
-import Other from '@/components/Other'
+import Find from '@/components/Find'
+import Cart from '@/components/Cart'
+import Mycenter from '@/components/Mycenter'
 import Detail from '@/components/Detail'
 import Register from '@/components/Register'
 Vue.use(Router)
@@ -21,13 +23,21 @@ export default new Router({
 		    		component:Home
 		    },
 		    {
-		    		path:'/about',
-		    		component:About
+		    		path:'/shop',
+		    		component:Shop
 		    },
 		    {
-		    		path:'/other',
-		    		component:Other
-		    }
+		    		path:'/find',
+		    		component:Find
+				},
+				{
+					path:'/cart',
+					component:Cart
+				},
+				{
+					path:'/mycenter',
+					component:Mycenter
+				}
       ]
     },
     {

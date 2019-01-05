@@ -14,7 +14,7 @@
 
 <script>
 	export default{
-		name:'About',
+		name:'Shop',
 		data(){
 			return{
 				tit:'关于'

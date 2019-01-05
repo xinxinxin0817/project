@@ -2,9 +2,9 @@
 	<div id="">
 		<h1>home</h1>
 		<h2>{{count}}</h2>
-		<ul>
+		<!-- <ul>
 			<li v-for="(item,home) in list" :key="home"><router-link :to="'/detail/'+item.pid">{{item.pname}}</router-link></li>
-		</ul>
+		</ul> -->
 	</div>
 </template>
 
@@ -30,13 +30,13 @@
 		mounted(){
 			this.$emit('toparent',this.tit)
 			var _this=this;
-			axios({
-				method:'get',
-				url:'http://jx.xuzhixiang.top/ap/api/productlist.php',
-				params:{uid:'11475'}
-			}).then((data)=>{
-				_this.list=data.data.data
-			})
+			// axios({
+			// 	method:'get',
+			// 	url:'http://jx.xuzhixiang.top/ap/api/productlist.php',
+			// 	params:{uid:'11475'}
+			// }).then((data)=>{
+			// 	_this.list=data.data.data
+			// })
 			
 			
 		}

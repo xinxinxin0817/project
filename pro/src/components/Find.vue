@@ -9,7 +9,7 @@
 		name:'Other',
 		data(){
 			return{
-				tit:'其他'
+				tit:'发现'
 			}
 		},
 		mounted(){

@@ -7,8 +7,10 @@
    	</section>
    	<footer>
    		<router-link to="/home" tag="span">首页</router-link>
-   		<router-link to="/about" tag='span'>关于</router-link>
-   		<router-link to='/other' tag="span">其他</router-link>
+   		<router-link to="/shop" tag='span'>选购</router-link>
+   		<router-link to='/find' tag="span">发现</router-link>
+   		<router-link to='/cart' tag="span">购物车</router-link>
+   		<router-link to='/mycenter' tag="span">我的</router-link>
    	</footer>
   </div>
 </template>
@@ -62,7 +64,7 @@ export default {
 	
 	footer span{
 		float: left;
-		width: 33.3%;
+		width: 20%;
 	}
 	
 	
