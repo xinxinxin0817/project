@@ -1,9 +1,24 @@
 <template>
 
 	<div>
-		<Header msg="我的" style="background: orange;width:100%;height:80px;"></Header>
+		<Header class="header" msg="我的">
+			<div class="sy"><router-link to="/home" ><span>返回首页</span></router-link></div>
+		</Header>
+		<section class="section">
+			<div class="logo"></div>
+			<mt-swipe :auto="4000" style="height:200px; margin:0; padding:0;">
+				<router-link to="" tag="div"><mt-swipe-item style="background: red;height:200px;">1</mt-swipe-item></router-link>
+				<router-link to="" tag="div"><mt-swipe-item style="background: yellow;height:200px;">2</mt-swipe-item></router-link>
+				<router-link to="" tag="div"><mt-swipe-item style="background: pink;height:200px;">3</mt-swipe-item></router-link>
+				<router-link to="" tag="div"><mt-swipe-item style="background: blue;height:200px;">4</mt-swipe-item></router-link>
+			</mt-swipe>
+
+			<div class="dlzc">
+				<div class="dl-top"><router-link to="" style="width:100%"><p>手机号登录</p></router-link></div>
+				<div class="dl-foot"><router-link to="" style="width:100%"><p>手机号快捷注册</p></router-link></div>
+			</div>
+		</section>
 		
-		<h1>about</h1>
 		
 		
 		
@@ -24,15 +39,62 @@
 	}
 </script>
 
-<style>
+<style scoped="">
 *{
 	margin:0;
 	padding:0;
 }
-/* header{
-		height:80px;
-			background: #0ff;
-		text-align: center;
-		line-height: 50px;
-	} */
+a{
+	text-decoration: none;
+}
+.header{
+	background:yellow;
+	padding-left:4%;
+	height:50px;
+	width:96%;
+	display: flex;
+	align-items: center;
+
+}
+.sy{
+	width:15%;
+	height:30px;
+	line-height: 30px;
+	text-align: center;
+	background:#ccc;
+	font-size:12px;
+}
+
+.logo{
+	width:100%;
+	height:100px;
+	background:#cfcfcf;
+	margin-bottom:46px;
+}
+.dlzc{
+	margin-top:80px;
+	height:100px;
+	width:100%;
+	display:flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	
+}
+.dl-top{
+	font-size:14px;
+	width:70%;
+	height:40px;
+	background:#ccc;
+	line-height: 40px;
+	text-align: center;
+}
+.dl-foot{
+	font-size:14px;
+	width:70%;
+	height:40px;
+	background:#ccc;
+	line-height: 40px;
+	text-align: center;
+}
 </style>

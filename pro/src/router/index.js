@@ -55,10 +55,7 @@ export default new Router({
 					path:'/cart',
 					component:Cart
 				},
-				{
-					path:'/mycenter',
-					component:Mycenter
-				}
+				
       ]
     },
     {
@@ -69,6 +66,10 @@ export default new Router({
     {
     		path:'/register',
     		component:Register
-    }
+	},
+	{
+		path:'/mycenter',
+		component:Mycenter
+	}
   ]
 })
