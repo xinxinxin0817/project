@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<Header msg="购物车" style="background: yellow;"></Header>
+		<Header msg="购物车" style="background: yellow;width:100%;height:80px;"></Header>
 		<h1>about</h1>
 		
 			

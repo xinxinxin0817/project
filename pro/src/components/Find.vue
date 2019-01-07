@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<Header msg="发现" style="background: orange;"></Header>
+		<Header msg="发现" style="background: orange;width:100%;height:80px;"></Header>
 		<h1>other</h1>
 	</div>
 </template>

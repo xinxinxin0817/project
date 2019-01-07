@@ -53,6 +53,7 @@ export default {
 	
 	footer{
 		height: 50px;
+		width:100%;
 		background: #cecece;
 		text-align: center;
 		line-height: 50px;
@@ -61,9 +62,10 @@ export default {
 	section{
 		flex: 1;
 	}
-	footer{
+	/* footer{
 		overflow: hidden;
-	}
+		z-index: 1;
+	} */
 	
 	footer span{
 		float: left;
