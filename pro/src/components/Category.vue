@@ -21,8 +21,30 @@
 				<mt-swipe-item style="background: pink;"></mt-swipe-item>
 				<mt-swipe-item style="background: blue;"></mt-swipe-item>
 				</mt-swipe>
+				<div class="look">
+					<h2>最近查看的</h2>
+					<span>Senior Health</span>
+					<span>维生素</span>
+			    </div>
+				<div class="cate-list">
+					<h6>你好</h6>
+					<router-link to=""><span>查看全部</span></router-link>
+				</div>
+				<ul>
+					<router-link to=""><li></li></router-link>
+					<router-link to=""><li></li></router-link>
+					<router-link to=""><li></li></router-link>
+					<router-link to=""><li></li></router-link>
+					<router-link to=""><li></li></router-link>
+					<router-link to=""><li></li></router-link>
+					<router-link to=""><li></li></router-link>
+					<router-link to=""><li></li></router-link>
+					<router-link to=""><li></li></router-link>
+					
+				</ul>
 			</div>
-
+			
+			
 		</section>
 		
 		
@@ -60,15 +82,14 @@
 		display: flex;
 		height:79vh;
 		overflow: auto;
-		background:rgb(233, 123, 243);
 		width:100%;
 		flex:1;
 	   
 	}
 	section .left{
 		width:22%;
-		background:pink;
-		border-right:1px solid #ccc;
+	
+		
 		overflow: auto;
 		 display: flex; 
 		 flex-direction: column;
@@ -78,14 +99,14 @@
 	section p{
 
 		width:80%;
-		height:40px;
+		height:45px;
 		padding-left:10px;
-		color:#000;
-		background:#0ff;
+		color:rgb(78, 76, 76);
+	
 		word-break: break-all;
 		font-size: 12px;
 		margin-top:5px;
-		margin-left:5px;
+	
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
@@ -99,6 +120,70 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		border-left:1px solid #ccc;
+		height:100%;
 	}
+	section .look{
+		width:100%;
+		height:40px;
+		margin-left:5%;
+		margin-top:3%;
+		
+	}
+	section .look h2{
+		font-size: 12px;
+		color:rgb(78, 76, 76);
+		
+		margin-bottom:1%;
+	}
+	.look span{
+		width:10%;
+		height:30px;
+		border:1px solid #ccc;
+		border-radius: 4px;
+		font-size: 12px;
+		text-align: center;
+		line-height: 30px;
+		padding:3px 3px;
+		color:rgb(78, 76, 76);
 	
+	}
+	.cate-list{
+		width:95%;
+	
+		height:50px;
+		display: flex;
+		justify-content: space-between;
+		margin-top:5%;
+		line-height: 50px;
+	}
+	.cate-list h6{
+		color:#ccc;
+		font-size: 20px;
+		font-weight: 500;
+
+	}
+	.cate-list span{
+		font-size: 12px;
+		color:#ccc;
+	}
+	.right ul{
+		width:95%;
+		height:100%;	 
+		display: flex;
+	
+		flex:1;
+		flex-wrap:wrap ;
+		justify-content: space-between;
+	
+	}
+	.right li{
+		width:84px;	
+		height:116px;
+		background:pink;
+		margin-bottom:10px;
+		list-style: none;
+        border:0;
+        border:1px solid #ccc;
+	}
 </style>
