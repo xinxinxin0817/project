@@ -5,10 +5,10 @@
 				<router-link to="" style="width:80%;"><input type="text" placeholder="" /></router-link>
 			</div>
 			<div class="h-ls">
-			<router-link to=""><p class="teshu">推荐</p></router-link>
-			<router-link to=""><p>草木顺势疗法</p></router-link>
-			<router-link to=""><p>沐浴和个人护理</p></router-link>
-			<router-link to=""><p>美容美妆</p></router-link>
+			<router-link to="/home"><p class="teshu">推荐</p></router-link>
+			<router-link to="/category"><p>草木顺势疗法</p></router-link>
+			<router-link to="/category"><p>沐浴和个人护理</p></router-link>
+			<router-link to="/category"><p>美容美妆</p></router-link>
 			</div>
 
 		</Header>
