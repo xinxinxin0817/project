@@ -17,10 +17,10 @@
 						<h2 class="b-c-a"><span></span>YANG</h2>
 						<p class="b-c-b">补剂特惠只运动补剂<br/>大类8折介绍！！！</p>
 						<span class="b-c-c">健康特惠：48.8元</span>
-						<span class="c-c-d">5285人看过</span>
+						<p class="b-c-d">5285人看过</p>
 					</div>
-					<div b-c-r>
-						<router-link to=""><div class="b-c-r1"></div></router-link>
+					<div class="b-c-r">
+						<router-link to="" style="width:100%;"><div class="b-c-r1"></div></router-link>
 					</div>
 				</div>
 
@@ -125,8 +125,50 @@
 	}
 
 	.b-cen{
+		width:97%;
+		padding-left:3%;
 		height:139px;
 		display: flex;
+		justify-content: space-between;
+		align-items:center; 
+	}
+	.b-c-l{
+		width:40%;
+	}
+	.b-c-a{
+		
+		display:flex;
+		align-items: center;
+		font-size:14px;
+	}
+	.b-c-a span{
+		margin-right:2%;
+		display: block;
+		background:red;
+		width:30px;
+		height:30px;
+		border-radius: 50%;
+	}
+	.b-c-b{
+	
+		font-size:14px;
+	}
+	.b-c-c{
+		
+		font-size:12px;
+	}
+	.b-c-d{
+		
+		font-size:12px;
+	}
+	.b-c-r{
+		width:58%;
+		height:120px;
+	}
+	.b-c-r1{
+		width:100%;
+		height:120px;
+		background:green;
 	}
 
 
