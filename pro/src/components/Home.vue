@@ -1,19 +1,70 @@
 <template>
-	<div id="">
-		<Header msg="首页" style="background: orange;height:100px"></Header>
+	<div id="ohome">
+		<Header msg="关于" class="header" style="background: #ff0;height:90px;">
+			<router-link to=""><input type="text" placeholder="" /></router-link>
+			<div>
+			<router-link to=""><p class="teshu">推荐</p></router-link>
+			<router-link to=""><p>草木顺势疗法</p></router-link>
+			<router-link to=""><p>沐浴和个人护理</p></router-link>
+			<router-link to=""><p>美容美妆</p></router-link>
+			</div>
+
+		</Header>
 		<!-- <h1>home</h1> -->
 		<!-- <h2>{{count}}</h2> -->
 		<!-- <ul>
 			<li v-for="(item,home) in list" :key="home"><router-link :to="'/detail/'+item.pid">{{item.pname}}</router-link></li>
 		</ul> -->
-		
-		<mt-swipe :auto="4000" style="height:200px; margin:0; padding:0;">
+<section class="section">
+		<!--轮播-->
+		<div class="ddd">
+		<mt-swipe :auto="4000" style="height:166px; margin:0; padding:0;">
 		  <mt-swipe-item style="background: red;">1</mt-swipe-item>
 		  <mt-swipe-item style="background: yellow;">2</mt-swipe-item>
 		  <mt-swipe-item style="background: pink;">3</mt-swipe-item>
 		   <mt-swipe-item style="background: blue;">4</mt-swipe-item>
 		</mt-swipe>
+		<!--轮播结束-->
 		
+		<!---->
+		<div class="fl">
+			<dl>
+				<dt>图片</dt>
+				<dd>特价产品</dd>
+			</dl>
+			<dl>
+				<dt>图片</dt>
+				<dd>尖货排名</dd>
+			</dl>
+			<dl>
+				<dt>图片</dt>
+				<dd>新品上架</dd>
+			</dl>
+			<dl>
+				<dt>图片</dt>
+				<dd>限时抢购</dd>
+			</dl>
+		</div>
+		<!---->
+
+		<!---->
+		<div class="th-fu">
+			<h2 class="mzth"><span></span><em>每周特惠</em><span></span></h2>
+		</div>
+		<div class="th-list">
+			<router-link to=""><p>1</p></router-link>
+			<router-link to=""><p>2</p></router-link>
+			<router-link to=""><p>3</p></router-link>
+		</div>
+		<!---->
+		<!--产品建议开始-->
+			<div class="cpjy">
+				<h2 class="cp-top"><span>产品建议</span> <router-link class="gd" to="" tag="span">更多》</router-link></h2>
+				
+			</div>
+		<!--产品建议结束-->
+	</div>
+</section>
 	</div>
 </template>
 
@@ -54,7 +105,8 @@
 	
 </script>
 
-<style>
+<style scoped="">
+
 *{
 	margin:0;
 	padding:0;
@@ -66,11 +118,119 @@
 		height: 50px;
 		border-bottom: 1px solid red;
 	}
-	header{
-		height:80px;
-			background: orange;
-		text-align: center;
-		line-height: 50px;
+	.section{
+		height:600px;
+		display: flex;
+		flex-direction: column;
+		overflow:auto;
+		overflow: hidden;
+		
 	}
+	.ddd{
+		height:100%;
+		width:100%;
+		overflow: auto;
+	}
+	.header{
+		flex: 0;
+		display: flex;
+		flex-direction: column;
+		
+	}
+	.header input{
+		width:280px;
+		height:30px;
+		margin-left:65px;
+		margin-top:10px;
+		border-radius: 4px;
+		border:1px solid #cecece;
+		text-align: center;
+		line-height: 30px;
 	
+	}
+	.header div{
+		width:100%;
+		height:30px;
+		margin:13px 0px 0px 0px;
+	}
+	.header p{
+		font-size: 14px;
+		float:left;
+		width:102px;
+		height:30px;		
+		text-align: center;
+		line-height: 30px;
+		color:#000;
+	}
+	.header .teshu{
+		border-bottom:4px solid #cecece;
+		margin-left:6px;
+	}
+	.header p:hover{
+		border-bottom:4px solid #cecece;
+	}
+
+
+	.fl{
+		font-size:14px;
+		padding-top:20px;
+		height:90px;
+		display: flex;
+		justify-content: space-around;
+	}
+	.fl dt{
+		width:55px;
+		height:55px;
+		background:red;
+		border-radius: 50%;
+		margin-bottom:10px;
+	}
+	.th-fu{
+		display: flex;
+		justify-content: space-around;
+	}
+	.mzth{
+		width:200px;
+		background:red;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		font-size:16px;
+		height:50px;
+		
+	}
+	.mzth span{
+		display:block;
+		height:1px;
+		width:40px;
+		background:#000;
+	}
+
+	.th-list{
+		display: flex;
+		justify-content: space-around;
+		background:yellow;	
+	}
+	.th-list p{
+		width:110px;
+		height:110px;
+		background:blue;
+	}
+	 .cpjy{
+		 margin-top:20px;
+		height:310px;
+		background:pink;
+	 }
+	.cp-top{
+		width:380px;
+		margin-left:12px;
+		background:green;
+		height:50px;
+		font-size:16px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+
 </style>
