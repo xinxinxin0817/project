@@ -36,10 +36,10 @@ export default {
 <style scoped="">
 	/*vw== 可视窗口 横向宽度*/
 	/*vh==竖向高度*/
-	.router-link-active{
+	/* .router-link-active{
 		color: #fff;
 		background:red;
-	}
+	} */
 	*{
 		margin:0;
 		padding:0;
@@ -68,6 +68,10 @@ export default {
 	footer span{
 		float: left;
 		width: 20%;
+	}
+	footer span:hover{
+		color: #fff;
+		background:red;
 	}
 	
 	

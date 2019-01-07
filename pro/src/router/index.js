@@ -8,6 +8,11 @@ import Cart from '@/components/Cart'
 import Mycenter from '@/components/Mycenter'
 import Detail from '@/components/Detail'
 import Register from '@/components/Register'
+import Category from '@/components/Category'
+import Health from '@/components/Health'
+import Brand from '@/components/Brand'
+
+
 Vue.use(Router)
 
 export default new Router({
@@ -15,7 +20,7 @@ export default new Router({
     {
       path: '/',
       name: 'HelloWorld',
-      // redirect:'/register',
+       redirect:'/home',
       component: HelloWorld,
       children:[
 		     {
@@ -23,9 +28,25 @@ export default new Router({
 		    		component:Home
 		    },
 		    {
-		    		path:'/shop',
-		    		component:Shop
-		    },
+					path:'/shop',				
+					redirect:'/health',
+						component:Shop,
+						children:[
+							{
+								path:'/category',
+								component:Category,
+							},
+							{
+								path:'/health',
+								component:Health,
+							},
+							{
+								path:'/brand',
+								component:Brand,
+							}
+						]
+						
+					},
 		    {
 		    		path:'/find',
 		    		component:Find
