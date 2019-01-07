@@ -54,14 +54,14 @@
 			<h2 class="mzth"><span></span><em>每周特惠</em><span></span></h2>
 		</div>
 		<div class="th-list">
-			<router-link to=""><p>1</p></router-link>
-			<router-link to=""><p>2</p></router-link>
-			<router-link to=""><p>3</p></router-link>
+			<router-link to="" style="width:30%"><p>1</p></router-link>
+			<router-link to="" style="width:30%"><p>2</p></router-link>
+			<router-link to="" style="width:30%"><p>3</p></router-link>
 		</div>
 		<!---->
 		<!--产品建议开始-->
 			<div class="cpjy">
-				<h2 class="cp-top"><span>产品建议</span> <router-link class="gd" to="" tag="span">更多》</router-link></h2>
+				<h2 class="cp-top"><span>产品建议</span> <router-link class="gd" to="" tag="span" style="font-size:14px;">更多》</router-link></h2>
 				<div class="cp-cen">
 					<router-link to="" style="width:40%"><p>3</p></router-link>
 					<router-link to="" style="width:40%"><p>4</p></router-link>
@@ -72,6 +72,91 @@
 				</div>
 			</div>
 		<!--产品建议结束-->
+		<!--bander-->
+
+		<div class="banner">
+				banner
+		</div>
+		<!--bander-->
+
+
+		<!--今日热门-->
+			<div class="jrrm">
+				<h2 class="rm-top"><span>今日热门</span> <router-link class="gd1" to="" tag="span" style="font-size:14px;">更多》</router-link></h2>
+				<div class="rm-foot">
+					<router-link to="" style="width:28%">
+						<dl>
+							<dt>图片</dt>
+							<dd>文字1</dd>
+						</dl>
+					</router-link>
+					<router-link to="" style="width:28%">
+						<dl>
+							<dt>图片</dt>
+							<dd>文字2</dd>
+						</dl>
+					</router-link>
+					<router-link to="" style="width:28%">
+						<dl>
+							<dt>图片</dt>
+							<dd>文字3</dd>
+						</dl>
+					</router-link>
+				
+				</div>
+			</div>
+		<!--今日热门结束-->
+
+		<!--限时购-->
+			<div class="xsg">
+				<h2 class="xsg-top"><span>限时购</span> <router-link class="gd2" to="" tag="span" style="font-size:14px;">更多》</router-link></h2>
+				<div class="xsg-foot">
+					<router-link to="" style="width:28%">
+						<dl>
+							<dt>图片</dt>
+							<dd>文字1</dd>
+						</dl>
+					</router-link>
+					<router-link to="" style="width:28%">
+						<dl>
+							<dt>图片</dt>
+							<dd>文字2</dd>
+						</dl>
+					</router-link>
+					<router-link to="" style="width:28%">
+						<dl>
+							<dt>图片</dt>
+							<dd>文字3</dd>
+						</dl>
+					</router-link>
+				
+				</div>
+			</div>
+
+		<!--限时购end-->
+
+		<!--健康建议-->
+			<div class="jkjy">
+				<h2 class="jk-top">健康建议</h2>
+				<div class="jk-foot">
+					<dl>
+						<dt></dt>
+						<dd>
+							<h3>肠胃保健汤</h3>
+							<p>健康建议肠胃保健汤肠胃保健汤</p>
+						</dd>
+					</dl>
+					<dl>
+						<dt></dt>
+						<dd>
+							<h3>肠胃保健汤</h3>
+							<p>健康建议肠胃保健汤肠胃保健汤</p>
+						</dd>
+					</dl>
+				</div>
+			</div>
+
+		<!--健康建议end-->
 	</div>
 </section>
 	</div>
@@ -167,9 +252,13 @@ a{
 	.h-ls{
 		height:50px;
 		width:100%;
-		display: flex;
-		align-items: center;
+		display: flex;	
 		justify-content: space-around;
+	}
+	.h-ls p{
+		font-size: 14px;
+		height:46px;
+		line-height: 70px;
 	}
 
 	.header p:hover{
@@ -218,13 +307,14 @@ a{
 		background:yellow;	
 	}
 	.th-list p{
-		width:110px;
+		width:100%;
 		height:110px;
 		background:blue;
 	}
+	/*产品建议*/
 	 .cpjy{
 		 margin-top:20px;
-		height:310px;
+		height:280px;
 		background:pink;
 	 }
 	.cp-top{
@@ -260,4 +350,116 @@ a{
 		width:100%;
 		height:100px;
 	}
+	/*产品建议end*/
+
+
+	/*banner*/
+	.banner{
+		margin:30px 0;
+		width:100%;
+		height:55px;
+		background:red;
+	}
+	/*banner end*/
+	/*今日热门*/
+		 .jrrm{
+		 margin-top:20px;
+		height:211px;
+		background:pink;
+	 }
+	.rm-top{
+		width:90%;
+		padding:0 5%;
+		background:green;
+		height:50px;
+		font-size:16px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.rm-foot{
+		
+		width:100%;
+		display: flex;
+		justify-content: space-around;
+	}
+	.rm-foot dt{
+		background:red;
+		width:100%;
+		height:100px;
+	}
+	.rm-foot dd{
+		height:34px;
+		background:yellow;
+	}
+
+	/*今日热门end*/
+
+	/*限时购*/
+		 .xsg{
+		 margin-top:20px;
+		height:211px;
+		background:pink;
+	 }
+	.xsg-top{
+		width:90%;
+		padding:0 5%;
+		background:green;
+		height:50px;
+		font-size:16px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.xsg-foot{
+		
+		width:100%;
+		display: flex;
+		justify-content: space-around;
+	}
+	.xsg-foot dt{
+		background:red;
+		width:100%;
+		height:100px;
+	}
+	.xsg-foot dd{
+		height:34px;
+		background:yellow;
+	}
+
+	/*限时购end*/
+	/*健康建议*/
+	.jkjy{
+		height:220px;
+		background:yellow;
+		display: flex;
+		flex-direction: column;
+	}
+	.jk-top{
+		height:50px;
+		width:95%;
+		padding-left:5%;
+		font-size:16px;
+		line-height:50px;
+	}
+	.jk-foot{
+		display: flex;
+		justify-content: space-around;
+	}
+	.jk-foot dl{
+		width:45%;
+	}
+	.jk-foot dt{
+		background:blue;
+		width:100%;
+		height:100px;
+	}
+	.jk-foot dd h3{
+		font-size:14px;
+	}
+	.jk-foot dd p{
+		font-size:12px;
+	}
+
+	/*健康建议end*/
 </style>
