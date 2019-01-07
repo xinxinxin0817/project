@@ -44,7 +44,7 @@ export default {
 		margin:0;
 		padding:0;
 	}
-	
+	body{display:flex;flex-direction: column;}
 	.hello{
 		height: 100vh;
 		display: flex;
@@ -57,6 +57,8 @@ export default {
 		background: #cecece;
 		text-align: center;
 		line-height: 50px;
+		flex-shrink: 0;
+		display: flex;
 	}
 	
 	section{

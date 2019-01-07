@@ -50,23 +50,28 @@
     }
 	section{
 		display: flex;
+		height:79vh;
 		flex-direction: column;
 		overflow: auto;
 		background:pink;
 		width:100%;
-		height:527px;
-        overflow: hidden;
+		flex:1;
+	    justify-content: center;
+		align-items: center;
 	}
 	section ul{
-		width:355px;
-		margin-left:10px;
-	
-		overflow: auto;
+		width:94%;
 		height:100%;
+		
+		display: flex;
+		overflow: auto;
+		flex:1;
+		flex-wrap:wrap ;
+		justify-content: space-between;
+		
 	}
 	section li{
-		float:left;
-		width:108px;
+		width:110px;	
 		height:150px;
 		background:#fff;
 		margin-top:10px;
@@ -74,8 +79,5 @@
         border:0;
         border:1px solid #ccc;
 	}
-	section .list{
-		margin-left:12px;
-		margin-right:12px;
-	}
+	
 </style>
