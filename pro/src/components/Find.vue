@@ -12,11 +12,23 @@
 					<span class="b-t-d">2458人看过</span>
 				</div>
 
+				<div class="b-cen">
+					<div b-c-l>
+						<h2 class="b-c-a"><span></span>YANG</h2>
+						<p class="b-c-b">补剂特惠只运动补剂<br/>大类8折介绍！！！</p>
+						<span class="b-c-c">健康特惠：48.8元</span>
+						<span class="c-c-d">5285人看过</span>
+					</div>
+					<div b-c-r>
+						<router-link to=""><div class="b-c-r1"></div></router-link>
+					</div>
+				</div>
+
 				<div class="b-foot">
-					<h2 class="b-f-a"><span></span>阿磊</h2>
-					<p class="b-f-b">营养健康品全场九折---什么最值得买</p>
+					<h2 class="b-f-a"><span></span>桐桐</h2>
+					<p class="b-f-b">让生活感到幸福,有时候只要花50块钱就可以了</p>
 					<div class="b-f-c"><router-link to="" style="width:94.6%"><div class="b-t-c1"></div></router-link></div>
-					<span class="b-f-d">2458人看过</span>
+					<span class="b-f-d">17.22w人看过</span>
 				</div>
 			</div>
 		</section>
@@ -111,6 +123,12 @@
 		line-height: 28px;
 		font-size: 14px;
 	}
+
+	.b-cen{
+		height:139px;
+		display: flex;
+	}
+
 
 
 	.b-foot{
