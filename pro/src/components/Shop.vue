@@ -3,9 +3,9 @@
 		<Header msg="关于" class="header" style="background: #ff0;height:90px;overflow:hidden;">
 			<router-link to="" style="width:95%"><input type="text" placeholder="搜索产品" /></router-link>
 			<div class="box" style="width:95%">
-			<router-link to="/health"><p class="teshu">健康主题</p></router-link>
-			<router-link to="/category"><p>类别</p></router-link>
-			<router-link to="/brand"><p>品牌</p></router-link>
+			<router-link to="/health" style="width:33%"><p class="teshu">健康主题</p></router-link>
+			<router-link to="/category" style="width:33%"><p>类别</p></router-link>
+			<router-link to="/brand" style="width:33%"><p>品牌</p></router-link>
 			</div>
 
 		</Header>
@@ -69,7 +69,7 @@
 	}
 	.header p{
 		float:left;
-		width:116px;
+		width:100%;
 		height:26px;		
 		text-align: center;
 		line-height: 26px;
