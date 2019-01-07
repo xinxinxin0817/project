@@ -2,7 +2,7 @@
 	<div id="ohome">
 		<Header msg="关于" class="header" style="background: #ff0;height:90px;">
 			<div class="h-ss" style="height:30px;">
-				<input type="text" placeholder="" />
+				<router-link to="" style="width:80%;"><input type="text" placeholder="" /></router-link>
 			</div>
 			<div class="h-ls">
 			<router-link to=""><p class="teshu">推荐</p></router-link>
@@ -62,7 +62,14 @@
 		<!--产品建议开始-->
 			<div class="cpjy">
 				<h2 class="cp-top"><span>产品建议</span> <router-link class="gd" to="" tag="span">更多》</router-link></h2>
-				
+				<div class="cp-cen">
+					<router-link to="" style="width:40%"><p>3</p></router-link>
+					<router-link to="" style="width:40%"><p>4</p></router-link>
+				</div>
+				<div class="cp-foot">
+					<router-link to="" style="width:40%"><p>1</p></router-link>
+					<router-link to="" style="width:40%"><p>2</p></router-link>
+				</div>
 			</div>
 		<!--产品建议结束-->
 	</div>
@@ -152,7 +159,7 @@ a{
 		align-items: center;
 	}
 	.h-ss input{
-		width:70%;
+		width:100%;
 		height:30px;
 		border-radius: 4px;
 		border:0;
@@ -221,8 +228,8 @@ a{
 		background:pink;
 	 }
 	.cp-top{
-		width:100%;
-		
+		width:90%;
+		padding:0 5%;
 		background:green;
 		height:50px;
 		font-size:16px;
@@ -230,6 +237,27 @@ a{
 		justify-content: space-between;
 		align-items: center;
 	}
+	.cp-cen{
+		
+		width:100%;
+		display: flex;
+		justify-content: space-around;
+	}
+	.cp-cen p{
+		background:red;
+		width:100%;
+		height:100px;
+	}
 
-
+	.cp-foot{
+		margin-top:13px;
+		width:100%;
+		display: flex;
+		justify-content: space-around;
+	}
+	.cp-foot p{
+		background:red;
+		width:100%;
+		height:100px;
+	}
 </style>
