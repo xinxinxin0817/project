@@ -9,7 +9,9 @@
 		
 		<section>
 			<div class="inclod">
-			<div class="cart-list"></div>
+			<div class="cart-list">
+
+			</div>
 			<div class="cart-list"></div>
 			</div>
 			<div class="guess">
@@ -92,6 +94,7 @@ li{
 		background:#fff;
 		margin-top:3%;
 		margin-bottom:3%;
+		display: flex;
 	}
 	.guess{
 		 background:#fff; 
