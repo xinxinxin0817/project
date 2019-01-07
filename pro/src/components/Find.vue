@@ -1,7 +1,25 @@
 <template>
 	<div>
-		<Header msg="发现" style="background: orange;width:100%;height:80px;"></Header>
-		<h1>other</h1>
+		<Header class="header" msg="发现" style="background: #ccc;width:100%;height:40px;">
+			发现
+		</Header>
+		<section class="section">
+			<div class="box">
+				<div class="b-top">
+					<h2 class="b-t-a"><span></span>阿磊</h2>
+					<p class="b-t-b">营养健康品全场九折---什么最值得买</p>
+					<div class="b-t-c"><router-link to="" style="width:94.6%"><div class="b-t-c1"></div></router-link></div>
+					<span class="b-t-d">2458人看过</span>
+				</div>
+
+				<div class="b-foot">
+					<h2 class="b-f-a"><span></span>阿磊</h2>
+					<p class="b-f-b">营养健康品全场九折---什么最值得买</p>
+					<div class="b-f-c"><router-link to="" style="width:94.6%"><div class="b-t-c1"></div></router-link></div>
+					<span class="b-f-d">2458人看过</span>
+				</div>
+			</div>
+		</section>
 	</div>
 </template>
 
@@ -20,10 +38,127 @@
 </script>
 
 <style>
-/* header{
-		height:80px;
-			background: blue;
+	*{
+		margin:0;
+		padding:0;
+	}
+	a{
+		text-decoration: none;
+	}
+	.header{
 		text-align: center;
-		line-height: 50px;
-	} */
+		line-height: 40px;
+		font-size: 16px;
+	}
+	.section{
+		height:86.4vh;
+		display: flex;
+		flex-direction: column;
+		overflow:auto;
+		overflow: hidden;
+		
+	}
+	.box{
+		height:100%;
+		width:100%;
+		overflow: auto;
+	}
+	.b-top{
+		margin-top:10px;
+		height:300px;
+		background:yellow;
+	}
+	.b-t-a{
+		width:97%;
+		padding-left:3%;
+		font-size:14px;
+		height:50px;
+		display: flex;
+		align-items: center;
+
+	}
+	.b-t-a span{
+		margin-right:2%;
+		display: block;
+		background:red;
+		width:30px;
+		height:30px;
+		border-radius: 50%;
+	}
+	.b-t-b{
+		width:97%;
+		padding-left:3%;
+		height:30px;
+		line-height: 30px;
+		font-size: 14px;
+	}
+
+	.b-t-c{
+		width:100%;
+		height:190px;
+		display: flex;
+		justify-content: center;
+	}
+	.b-t-c1{
+		width:100%;
+		height:190px;
+		background:green;
+	}
+	.b-t-d{
+		width:97%;
+		padding-left:3%;
+		height:28px;
+		line-height: 28px;
+		font-size: 14px;
+	}
+
+
+	.b-foot{
+		margin-top:10px;
+		height:300px;
+		background:yellow;
+	}
+	.b-f-a{
+		width:97%;
+		padding-left:3%;
+		font-size:14px;
+		height:50px;
+		display: flex;
+		align-items: center;
+
+	}
+	.b-f-a span{
+		margin-right:2%;
+		display: block;
+		background:red;
+		width:30px;
+		height:30px;
+		border-radius: 50%;
+	}
+	.b-f-b{
+		width:97%;
+		padding-left:3%;
+		height:30px;
+		line-height: 30px;
+		font-size: 14px;
+	}
+
+	.b-f-c{
+		width:100%;
+		height:190px;
+		display: flex;
+		justify-content: center;
+	}
+	.b-f-c1{
+		width:100%;
+		height:190px;
+		background:green;
+	}
+	.b-f-d{
+		width:97%;
+		padding-left:3%;
+		height:28px;
+		line-height: 28px;
+		font-size: 14px;
+	}
 </style>
