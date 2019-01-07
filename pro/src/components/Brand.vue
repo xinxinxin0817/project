@@ -14,7 +14,11 @@
                     <span>Senior Health</span>
 				
 			    </div>
-				
+				<div class="all-brand">
+                    <h2>所有品牌:</h2>
+                    
+
+                </div>
 			
 		</section>
 		
@@ -66,14 +70,14 @@
 		width:100%;
 		height:110px;
 	
-		
-        background: #ccc;
+		padding-left:3%;
+        background: rgb(243, 237, 237);
 		
 	}
 	section .look h2{
 		font-size: 14px;
 		color:rgb(78, 76, 76);
-		
+		margin:2%;
 		margin-bottom:1%;
 	}
 	.look span{
@@ -86,8 +90,23 @@
 		line-height: 30px;
 		padding:3px 5px;
 		color:rgb(78, 76, 76);
-        margin:1% 2%;
+        margin:4% 2%;
+        background:#fff;
 	
 	}
-	
+    .all-brand{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+      
+        width:100%;
+        height:100%;
+    }
+	section .all-brand h2{
+		font-size: 14px;
+		color:rgb(78, 76, 76);
+		margin:2%;
+		margin-bottom:1%;
+        padding:3%;
+	}
 </style>
