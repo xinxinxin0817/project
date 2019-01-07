@@ -6,7 +6,7 @@
 			<li v-for="(item,home) in list" :key="home"><router-link :to="'/detail/'+item.pid">{{item.pname}}</router-link></li>
 		</ul> -->
 		
-		<mt-swipe :auto="4000" style="height:200px">
+		<mt-swipe :auto="4000" style="height:200px; margin:0; padding:0;">
 		  <mt-swipe-item style="background: red;">1</mt-swipe-item>
 		  <mt-swipe-item style="background: yellow;">2</mt-swipe-item>
 		  <mt-swipe-item style="background: pink;">3</mt-swipe-item>
@@ -53,7 +53,11 @@
 	
 </script>
 
-<style scoped="">
+<style>
+*{
+	margin:0;
+	padding:0;
+}
 	h1{
 		color: yellow;
 	}

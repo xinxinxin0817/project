@@ -23,7 +23,11 @@
 	}
 </script>
 
-<style scoped="">
+<style>
+*{
+	margin:0;
+	padding:0;
+}
 header{
 		height:80px;
 			background: #0ff;
