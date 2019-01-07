@@ -1,8 +1,10 @@
 <template>
 	<div id="ohome">
 		<Header msg="关于" class="header" style="background: #ff0;height:90px;">
-			<router-link to=""><input type="text" placeholder="" /></router-link>
-			<div>
+			<div class="h-ss" style="height:30px;">
+				<input type="text" placeholder="" />
+			</div>
+			<div class="h-ls">
 			<router-link to=""><p class="teshu">推荐</p></router-link>
 			<router-link to=""><p>草木顺势疗法</p></router-link>
 			<router-link to=""><p>沐浴和个人护理</p></router-link>
@@ -111,6 +113,9 @@
 	margin:0;
 	padding:0;
 }
+a{
+	text-decoration: none;
+}
 	h1{
 		color: yellow;
 	}
@@ -119,7 +124,7 @@
 		border-bottom: 1px solid red;
 	}
 	.section{
-		height:600px;
+		height:79vh;
 		display: flex;
 		flex-direction: column;
 		overflow:auto;
@@ -132,40 +137,34 @@
 		overflow: auto;
 	}
 	.header{
+		width:100%;
 		flex: 0;
 		display: flex;
 		flex-direction: column;
 		
 	}
-	.header input{
-		width:280px;
-		height:30px;
-		margin-left:65px;
-		margin-top:10px;
-		border-radius: 4px;
-		border:1px solid #cecece;
-		text-align: center;
-		line-height: 30px;
-	
-	}
-	.header div{
+	.h-ss{
+		margin-top:13px;
 		width:100%;
+	
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.h-ss input{
+		width:70%;
 		height:30px;
-		margin:13px 0px 0px 0px;
+		border-radius: 4px;
+		border:0;
 	}
-	.header p{
-		font-size: 14px;
-		float:left;
-		width:102px;
-		height:30px;		
-		text-align: center;
-		line-height: 30px;
-		color:#000;
+	.h-ls{
+		height:50px;
+		width:100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
 	}
-	.header .teshu{
-		border-bottom:4px solid #cecece;
-		margin-left:6px;
-	}
+
 	.header p:hover{
 		border-bottom:4px solid #cecece;
 	}
@@ -222,8 +221,8 @@
 		background:pink;
 	 }
 	.cp-top{
-		width:380px;
-		margin-left:12px;
+		width:100%;
+		
 		background:green;
 		height:50px;
 		font-size:16px;
