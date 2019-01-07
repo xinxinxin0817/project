@@ -2,7 +2,7 @@
 
 	<div>
 		<Header class="header" msg="我的">
-			<div class="sy"><router-link to="/home" ><span>返回首页</span></router-link></div>
+			<div class="sy"><router-link to="/home" ><span @click="fanhui()">返回首页</span></router-link></div>
 		</Header>
 		<section class="section">
 			<div class="logo"></div>
@@ -15,7 +15,7 @@
 
 			<div class="dlzc">
 				<div class="dl-top"><router-link to="" style="width:100%"><p>手机号登录</p></router-link></div>
-				<div class="dl-foot"><router-link to="" style="width:100%"><p>手机号快捷注册</p></router-link></div>
+				<div class="dl-foot"><router-link to="/register" style="width:100%"><p>手机号快捷注册</p></router-link></div>
 			</div>
 		</section>
 		
@@ -33,6 +33,7 @@
 				tit:'我的'
 			}
 		},
+		
 		mounted(){
 			this.$emit('toparent',this.tit)
 		}

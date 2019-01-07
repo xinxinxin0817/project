@@ -1,8 +1,13 @@
 <template>
 	<div>
-		<mt-header fixed title="注册"></mt-header>
+
+		<Header class="header" msg="注册">
+			<div class="sy"><router-link to="" ><span @click="fanhui()">返回</span></router-link></div>
+		</Header>
+
 		
-		<div style="margin-top:40px">
+		
+		<div class="section">
 			<mt-field label="手机号" placeholder="请输入手机号" v-model="phonenum"></mt-field>
 			<mt-field label="密码" placeholder="请输入密码" v-model="pass"></mt-field>
 			<mt-field label="验证码" placeholder="请输入验证码" v-model="yzm"></mt-field>
@@ -50,10 +55,36 @@
 				}).then(function(data){
 					console.log(data.data)
 				})
+			},
+		
+			fanhui(){
+				this.$router.go(-1)
 			}
+	
 		}
 	}
 </script>
 
-<style>
+<style scoped="">
+
+a{
+	text-decoration: none;
+}
+	.header{
+		padding-left:4%;
+		width:96%;
+		height:50px;
+		background:yellow;
+		display:flex;
+		align-items: center;
+	}
+
+	.sy{
+		width:15%;
+		height:30px;
+		line-height: 30px;
+		text-align: center;
+		background:#ccc;
+		font-size:12px;
+	}
 </style>
