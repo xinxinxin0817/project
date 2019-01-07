@@ -1,6 +1,7 @@
 <template>
 
 	<div>
+		<Header msg="我的" style="background: orange;"></Header>
 		
 		<h1>about</h1>
 		
@@ -28,10 +29,10 @@
 	margin:0;
 	padding:0;
 }
-header{
+/* header{
 		height:80px;
 			background: #0ff;
 		text-align: center;
 		line-height: 50px;
-	}
+	} */
 </style>

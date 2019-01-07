@@ -15,7 +15,7 @@ export default new Router({
     {
       path: '/',
       name: 'HelloWorld',
-      redirect:'/register',
+      // redirect:'/register',
       component: HelloWorld,
       children:[
 		     {

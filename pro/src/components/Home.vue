@@ -1,5 +1,6 @@
 <template>
 	<div id="">
+		<Header msg="首页" style="background: orange;height:100px"></Header>
 		<!-- <h1>home</h1> -->
 		<!-- <h2>{{count}}</h2> -->
 		<!-- <ul>

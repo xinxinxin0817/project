@@ -1,5 +1,6 @@
 <template>
 	<div>
+		<Header msg="发现" style="background: orange;"></Header>
 		<h1>other</h1>
 	</div>
 </template>
@@ -19,10 +20,10 @@
 </script>
 
 <style>
-header{
+/* header{
 		height:80px;
 			background: blue;
 		text-align: center;
 		line-height: 50px;
-	}
+	} */
 </style>

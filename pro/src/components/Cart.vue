@@ -1,5 +1,6 @@
 <template>
 	<div>
+		<Header msg="购物车" style="background: yellow;"></Header>
 		<h1>about</h1>
 		
 			
@@ -23,10 +24,10 @@
 </script>
 
 <style>
-header{
+/* header{
 		height:50px;
 			background: pink;
 		text-align: center;
 		line-height: 50px;
-	}
+	} */
 </style>

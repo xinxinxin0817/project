@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-   	<header>{{title}}</header>
+   	<!-- <header>{{title}}</header> -->
    	<!-- <mt-header fixed :title="title"></mt-header>	 -->
    	<section>
    		<router-view @toparent="getdata"></router-view>
@@ -60,7 +60,6 @@ export default {
 	
 	section{
 		flex: 1;
-		margin-top: 40px;
 	}
 	footer{
 		overflow: hidden;

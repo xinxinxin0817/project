@@ -1,6 +1,6 @@
 <template>
 	<div>
-		
+		<Header msg="关于" style="background: blue;"></Header>
 		<h1>about</h1>
 		
 		
@@ -24,10 +24,10 @@
 </script>
 
 <style>
-header{
+/* header{
 		height:80px;
 			background: #ff0;
 		text-align: center;
 		line-height: 50px;
-	}
+	} */
 </style>
