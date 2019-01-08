@@ -28,7 +28,6 @@
 					<p class="xiang">now foods 多巴胺豆 美容养颜 胶囊素食见效</p>
 					<p class="money">
 						<span>￥199</span>
-
 					</p>
 				</div>
 			</div>
@@ -44,6 +43,31 @@
 					<router-link to=""><li><p></p><span>2222</span></li></router-link>
 
 				</ul>
+			</div>
+			<div class="fixed">
+				<div class="fixed1">
+					<div class="box1">
+						<p></p>
+						<span>￥0.00</span>
+					</div>
+					<div class="box2">
+						<p></p>
+						<span>￥0.00</span>
+					</div>
+					<div class="box3">
+						<p></p>
+						<span>￥0.00</span>
+					</div>
+
+				</div>
+				<div class="fixed2">
+				<div class="meme"><input type="checkbox" name="ram" class="quanxuan" style="width:20px;"/>全选</div>
+					<div class="xiadan">
+						合计:<input type="text" value="￥:" class="jine">
+						<router-link to="" style="width:52%;height:40px;"><input type="button" value="下单" class="mai"></router-link>
+					</div>
+				</div>
+
 			</div>
 		</section>
 			
@@ -199,5 +223,94 @@ li{
 		width:170px;
 		height:45px;
 		background:pink;
+	}
+	.fixed{
+		width:100%;
+		height:110px;
+		background:#fff;
+		position: absolute;
+		left:0;
+		top:76%;
+		border-radius: 10px 10px 0 0;
+	}
+	.fixed1{
+		height:55px;
+		border-bottom:1px solid #cecece;
+		border-left:1px solid #cecece;
+		border-right:1px solid #cecece;
+		border-radius: 20px 20px 0 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 12px;
+	}
+	.box1{
+		width:30%;
+		height:40px;
+		display: flex;
+		align-items: center;
+	}
+	.box1 p{
+		width:40%;
+		height:40px;
+		background:#ccc;
+	}
+	.box2{
+		width:30%;
+		height:40px;
+		display: flex;
+		align-items: center;
+	}
+	.box2 p{
+		width:40%;
+		height:40px;
+		background:#ccc;
+	}
+	.box3{
+		width:30%;
+		height:40px;
+		display: flex;
+		align-items: center;
+	}
+	.box3 p{
+		width:40%;
+		height:40px;
+		background:#ccc;
+	}
+	.fixed2{
+		height:54px;
+	
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		font-size: 12px;
+		font-size: 14px;
+	}
+	.meme{
+		width:20%;
+		height:40px;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.xiadan{
+		width:40%;
+		height:40px;
+	
+		display: flex;
+	
+		align-items: center;
+	}
+	.jine{
+		width:36px;
+		height:20px;
+		border:0;
+	}
+	.mai{
+		width:100%;
+		height:40px;
+		border:0;
+		background:#ccc;
 	}
 </style>
