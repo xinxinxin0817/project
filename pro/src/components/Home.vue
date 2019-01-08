@@ -75,21 +75,21 @@
 			<h2 class="mzth"><span></span><em>每周特惠</em><span></span></h2>
 		</div>
 		<div class="th-list">
-			<router-link to="" style="width:30%"><p>1</p></router-link>
-			<router-link to="" style="width:30%"><p>2</p></router-link>
-			<router-link to="" style="width:30%"><p>3</p></router-link>
+			<router-link to="/details" style="width:30%"><p>1</p></router-link>
+			<router-link to="/details" style="width:30%"><p>2</p></router-link>
+			<router-link to="details" style="width:30%"><p>3</p></router-link>
 		</div>
 		<!---->
 		<!--产品建议开始-->
 			<div class="cpjy">
 				<h2 class="cp-top"><span>产品建议</span> <router-link class="gd" to="/more" tag="span" style="font-size:14px;"><p @click="more1()">更多</p></router-link></h2>
 				<div class="cp-cen">
-					<router-link to="" style="width:40%"><p>3</p></router-link>
-					<router-link to="" style="width:40%"><p>4</p></router-link>
+					<router-link to="/details" style="width:40%"><p>3</p></router-link>
+					<router-link to="/details" style="width:40%"><p>4</p></router-link>
 				</div>
 				<div class="cp-foot">
-					<router-link to="" style="width:40%"><p>1</p></router-link>
-					<router-link to="" style="width:40%"><p>2</p></router-link>
+					<router-link to="/details" style="width:40%"><p>1</p></router-link>
+					<router-link to="/details" style="width:40%"><p>2</p></router-link>
 				</div>
 			</div>
 		
@@ -106,19 +106,19 @@
 			<div class="jrrm">
 				<h2 class="rm-top"><span>今日热门</span> <router-link class="gd1" to="/more" tag="span" style="font-size:14px;"><p @click="more2()">更多</p></router-link></h2>
 				<div class="rm-foot">
-					<router-link to="" style="width:28%">
+					<router-link to="/details" style="width:28%">
 						<dl>
 							<dt>图片</dt>
 							<dd>文字1</dd>
 						</dl>
 					</router-link>
-					<router-link to="" style="width:28%">
+					<router-link to="/details" style="width:28%">
 						<dl>
 							<dt>图片</dt>
 							<dd>文字2</dd>
 						</dl>
 					</router-link>
-					<router-link to="" style="width:28%">
+					<router-link to="/details" style="width:28%">
 						<dl>
 							<dt>图片</dt>
 							<dd>文字3</dd>
@@ -133,19 +133,19 @@
 			<div class="xsg">
 				<h2 class="xsg-top"><span>限时购</span> <router-link class="gd2" to="/more" tag="span" style="font-size:14px;">更多 >></router-link></h2>
 				<div class="xsg-foot">
-					<router-link to="" style="width:28%">
+					<router-link to="/details" style="width:28%">
 						<dl>
 							<dt>图片</dt>
 							<dd>文字1</dd>
 						</dl>
 					</router-link>
-					<router-link to="" style="width:28%">
+					<router-link to="/details" style="width:28%">
 						<dl>
 							<dt>图片</dt>
 							<dd>文字2</dd>
 						</dl>
 					</router-link>
-					<router-link to="" style="width:28%">
+					<router-link to="/details" style="width:28%">
 						<dl>
 							<dt>图片</dt>
 							<dd>文字3</dd>
