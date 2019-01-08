@@ -6,13 +6,14 @@
 		</Header>
 		<section class="section">
 			<div class="logo"></div>
+			<router-link to="/banner">
 				<mt-swipe :auto="4000" style="height:200px; margin:0; padding:0;">
 					<mt-swipe-item style="background: red;height:200px;">1</mt-swipe-item>
 					<mt-swipe-item style="background: yellow;height:200px;">2</mt-swipe-item>
 					<mt-swipe-item style="background: pink;height:200px;">3</mt-swipe-item>
 					<mt-swipe-item style="background: blue;height:200px;">4</mt-swipe-item>
 				</mt-swipe>
-
+			</router-link>
 
 			<!-- <mt-swipe :auto="4000" style="height:200px; margin:0; padding:0;">
 				<router-link to="" tag="div"><mt-swipe-item style="background: red;height:200px;">1</mt-swipe-item></router-link>

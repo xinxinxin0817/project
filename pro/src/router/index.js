@@ -14,6 +14,8 @@ import Brand from '@/components/Brand'
 import Login from '@/components/Login'
 import AllC from '@/components/AllC'
 import More from '@/components/More'
+import Banner from '@/components/Banner'
+
 
 
 Vue.use(Router)
@@ -67,6 +69,10 @@ export default new Router({
 					path:'/more',
 					component:More,
 				},
+				{
+					path:'/banner',
+					component:Banner,
+				}
 				
       ]
     },

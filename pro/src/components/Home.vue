@@ -20,12 +20,14 @@
 <section class="section">
 		<!--轮播-->
 		<div class="ddd">
+			<router-link to="/banner">
 		<mt-swipe :auto="4000" style="height:166px; margin:0; padding:0;">
 		  <mt-swipe-item style="background: red;">1</mt-swipe-item>
 		  <mt-swipe-item style="background: yellow;">2</mt-swipe-item>
 		  <mt-swipe-item style="background: pink;">3</mt-swipe-item>
 		   <mt-swipe-item style="background: blue;">4</mt-swipe-item>
 		</mt-swipe>
+		</router-link>
 		<!--轮播结束-->
 		
 		<!---->

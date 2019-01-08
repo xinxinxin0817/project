@@ -15,12 +15,14 @@
 
 			</div>
 			<div class="right" style="width:78%">
+				
 				<mt-swipe :auto="4000" style="height:100px;width:95%;margin:0; padding:0;margin-top:3%;">
 				<mt-swipe-item style="background: red;"></mt-swipe-item>
 				<mt-swipe-item style="background: yellow;"></mt-swipe-item>
 				<mt-swipe-item style="background: pink;"></mt-swipe-item>
 				<mt-swipe-item style="background: blue;"></mt-swipe-item>
 				</mt-swipe>
+				
 				<div class="look">
 					<h2>最近查看的</h2>
 					<span>Senior Health</span>
