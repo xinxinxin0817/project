@@ -69,10 +69,7 @@ export default new Router({
 					path:'/more',
 					component:More,
 				},
-				{
-					path:'/banner',
-					component:Banner,
-				}
+				
 				
       ]
     },
@@ -93,6 +90,10 @@ export default new Router({
 		path:'/Login',
 		component:Login
 	},
+	{
+		path:'/banner',
+		component:Banner,
+	}
 	
   ]
 })

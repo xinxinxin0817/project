@@ -1,22 +1,11 @@
 <template>
 	<div>
-		<Header class="header" msg="发现" style="background: #ccc;width:100%;height:40px;">
-           <span @click="fanhui()">返回</span>
-			<span>更多</span>
+		<Header class="header" msg="发现" style="background: #fff;width:100%;height:50px;">
+           <span @click="fanhui()">《</span>
+			<span>IHerb活动</span>
 		</Header>
 		<section class="section">
-			<div class="guess">
-				
-				<ul class="like">
-					<router-link to=""><li><p></p><span>2222</span></li></router-link>
-					<router-link to=""><li><p></p><span>2222</span></li></router-link>
-					<router-link to=""><li><p></p><span>2222</span></li></router-link>
-					<router-link to=""><li><p></p><span>2222</span></li></router-link>
-					<router-link to=""><li><p></p><span>2222</span></li></router-link>
-					<router-link to=""><li><p></p><span>2222</span></li></router-link>
-
-				</ul>
-			</div>
+			
 		</section>
 	</div>
 </template>
@@ -50,7 +39,7 @@
 	}
 	.header{
 	
-		line-height: 40px;
+		line-height: 50px;
 		font-size: 16px;
         
 	}
@@ -58,7 +47,7 @@
         margin-left:20px;
     }
    .header span:last-child {
-        margin-left:32%;
+        margin-left:30%;
     }
 	.section{
 		height:86.4vh;
