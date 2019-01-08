@@ -14,7 +14,7 @@
 			</mt-swipe>
 
 			<div class="dlzc">
-				<div class="dl-top"><router-link to="" style="width:100%"><p>手机号登录</p></router-link></div>
+				<div class="dl-top"><router-link to="/login" style="width:100%"><p>手机号登录</p></router-link></div>
 				<div class="dl-foot"><router-link to="/register" style="width:100%"><p>手机号快捷注册</p></router-link></div>
 			</div>
 		</section>

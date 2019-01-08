@@ -11,6 +11,7 @@ import Register from '@/components/Register'
 import Category from '@/components/Category'
 import Health from '@/components/Health'
 import Brand from '@/components/Brand'
+import Login from '@/components/Login'
 
 
 Vue.use(Router)
@@ -70,6 +71,10 @@ export default new Router({
 	{
 		path:'/mycenter',
 		component:Mycenter
-	}
+	},
+	{
+		path:'/Login',
+		component:Login
+},
   ]
 })
