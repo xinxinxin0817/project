@@ -11,7 +11,7 @@
 			<mt-field label="手机号" placeholder="请输入手机号" v-model="phonenum"></mt-field>
 			<mt-field label="密码" placeholder="请输入密码" v-model="pass"></mt-field>
 
-			<mt-button size="normal" type="danger" @click="register()">登录</mt-button>
+			<mt-button size="normal" type="danger" @click="login()">登录</mt-button>
 			
 			
 		</div>
@@ -35,15 +35,15 @@
 		},
 		methods:{
 			
-			register(){
+			login(){
 				var _this=this;
-				axios({
-					method:'post',
-					url:'http://localhost:3000/login',
-					params:{phonenum:_this.phonenum,id:'2',pass:_this.pass,yzm:_this.yzm}
-				}).then(function(data){
-					console.log(data.data)
-				})
+				// axios({
+				// 	method:'post',
+				// 	url:'http://localhost:3000/login',
+				// 	params:{phonenum:_this.phonenum,pass:_this.pass}
+				// }).then(function(data){
+				// 	console.log(data.data)
+				// })
 			},
 		
 			fanhui(){
