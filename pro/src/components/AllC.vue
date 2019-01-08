@@ -2,7 +2,11 @@
 
 	<div>
 		<Header class="header" msg="我的">
-			<div class="sy" ><router-link to="/home" ><span >返回首页</span></router-link></div>
+			<div class="h-top">
+				<div class="sy" ><router-link to="/home" ><span style="font-size:26px;">&lt;</span></router-link></div>
+				<div class="sy1" ><router-link to="/home" ><span>放</span></router-link></div>
+				<div class="sy2" ><router-link to="/cart" ><span>购</span></router-link></div>
+			</div>
 		</Header>
 		<section class="section">
 			<div class="logo"></div>
@@ -52,6 +56,25 @@ a{
 
 }
 .sy{
+	float: left;
+	width:15%;
+	height:30px;
+	line-height: 30px;
+	text-align: center;
+	background:#ccc;
+	font-size:12px;
+}
+.sy1{
+	float:right;
+	width:15%;
+	height:30px;
+	line-height: 30px;
+	text-align: center;
+	background:#ccc;
+	font-size:12px;
+}
+.sy2{
+	float:right;
 	width:15%;
 	height:30px;
 	line-height: 30px;
@@ -60,11 +83,6 @@ a{
 	font-size:12px;
 }
 
-.logo{
-	width:100%;
-	height:100px;
-	background:#cfcfcf;
-	margin-bottom:46px;
-}
+
 
 </style>

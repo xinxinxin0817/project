@@ -4,7 +4,7 @@
 		<Header msg="购物车" class="header" style="background: #ccc;width:100%;height:40px;">
 			<router-link to="/cart"><p>购物车</p></router-link>
 			<router-link to=""><span @click="da()">0</span></router-link>
-			<div class="hide1" v-mode>
+			<div class="hide1" v-bind:style="[sty]">
 				<button class="all">选择全部</button>
 				<button class="remove">移除所有商品</button>
 			</div>
@@ -85,15 +85,29 @@
 		name:'Shop',
 		data(){
 			return{
-				tit:'购物车'
+				tit:'购物车',
+				sty:{
+					display:'none'
+				}
 			}
 		},
 		mounted(){
 			this.$emit('toparent',this.tit)
 		},
+		
 		methods:{
 			da(){
-				
+				if(this.sty.display=="none"){
+					console.log("bbb")
+					this.sty={
+						display:'block'
+					}
+				}else{
+					console.log("aaa")
+					this.sty={
+						display:'none'
+					}
+				}
 			}
 		}
 	}
