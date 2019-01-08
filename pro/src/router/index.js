@@ -12,6 +12,7 @@ import Category from '@/components/Category'
 import Health from '@/components/Health'
 import Brand from '@/components/Brand'
 import Login from '@/components/Login'
+import AllC from '@/components/AllC'
 
 
 Vue.use(Router)
@@ -24,9 +25,9 @@ export default new Router({
        redirect:'/home',
       component: HelloWorld,
       children:[
-		     {
-		    		path:'/home',
-		    		component:Home
+		    {
+					path:'/home',
+					component:Home,	
 		    },
 		    {
 					path:'/shop',				
@@ -56,6 +57,10 @@ export default new Router({
 					path:'/cart',
 					component:Cart
 				},
+				{
+					path:'/allc',
+					component:AllC,
+				},
 				
       ]
     },
@@ -75,6 +80,7 @@ export default new Router({
 	{
 		path:'/Login',
 		component:Login
-},
+	},
+	
   ]
 })

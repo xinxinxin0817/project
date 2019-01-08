@@ -30,22 +30,41 @@
 		
 		<!---->
 		<div class="fl">
+		
 			<dl>
-				<dt>图片</dt>
-				<dd>特价产品</dd>
+				<router-link to="/allc">
+					<dt>图片</dt>
+					<dd>特价产品</dd>
+				</router-link>
 			</dl>
+		
+			
 			<dl>
-				<dt>图片</dt>
-				<dd>尖货排名</dd>
+				<router-link to="/allc">	
+					<dt>图片</dt>
+					<dd>尖货排名</dd>
+				</router-link>
 			</dl>
+	
+
+		
 			<dl>
-				<dt>图片</dt>
-				<dd>新品上架</dd>
+				<router-link to="/allc">	
+					<dt>图片</dt>
+					<dd>新品上架</dd>
+				</router-link>
 			</dl>
+		
+
+	
 			<dl>
-				<dt>图片</dt>
-				<dd>限时抢购</dd>
+				<router-link to="/allc">	
+					<dt>图片</dt>
+					<dd>限时抢购</dd>
+				</router-link>
 			</dl>
+		
+
 		</div>
 		<!---->
 
