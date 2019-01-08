@@ -3,15 +3,15 @@
 		
 		<section>
 			<div class="left">
-				<router-link to=""><p>补充剂</p></router-link>
-				<router-link to=""><p>草本和顺势疗法</p></router-link>
-				<router-link to=""><p>沐浴和个人护理</p></router-link>
-				<router-link to=""><p>美容</p></router-link>
-				<router-link to=""><p>运动营养</p></router-link>
-				<router-link to=""><p>食品百货</p></router-link>
-				<router-link to=""><p>婴幼儿</p></router-link>
-				<router-link to=""><p>家具</p></router-link>
-				<router-link to=""><p>宠物</p></router-link>
+				<router-link to="" ><p @click="da()">补充剂</p></router-link>
+				<router-link to="" ><p @click="db()">草本和顺势疗法</p></router-link>
+				<router-link to=""><p @click="dc()">沐浴和个人护理</p></router-link>
+				<router-link to=""><p @click="dd()">美容</p></router-link>
+				<router-link to=""><p @click="de()">运动营养</p></router-link>
+				<router-link to=""><p @click="df()">食品百货</p></router-link>
+				<router-link to=""><p @click="dg()">婴幼儿</p></router-link>
+				<router-link to=""><p @click="dh()">家具</p></router-link>
+				<router-link to=""><p @click="di()">宠物</p></router-link>
 
 			</div>
 			<div class="right" style="width:78%">
@@ -27,7 +27,7 @@
 					<span>维生素</span>
 			    </div>
 				<div class="cate-list">
-					<h6>你好</h6>
+					<h6>{{str}}</h6>
 					<router-link to=""><span>查看全部</span></router-link>
 				</div>
 				<ul>
@@ -56,10 +56,42 @@
 <script>
 	export default{
 		name:'Category',
+		
 		data(){
 			return{
-				tit:'关于'
+				tit:'关于',
+				str:"补充剂"
 			}
+		},
+		methods:{
+			da(){
+				this.str="补充剂"
+			},
+			db(){
+				this.str="草本和顺势疗法"
+			},
+			dc(){
+				this.str="沐浴和个人护理"
+			},
+			dd(){
+				this.str="美容"
+			},
+			de(){
+				this.str="运动营养"
+			},
+			df(){
+				this.str="食品百货"
+			},
+			dg(){
+				this.str="婴幼儿"
+			},
+			dh(){
+				this.str="家具"
+			},
+			di(){
+				this.str="宠物"
+			},
+
 		},
 		mounted(){
 			this.$emit('toparent',this.tit)
