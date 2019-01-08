@@ -38,23 +38,23 @@
 		methods:{
 			send(){
 				var _this=this;
-				axios({
-					method:'post',
-					url:'http://localhost:3000/register',
-					params:{phonenum:_this.phonenum,id:'1'}
-				}).then(function(data){
-					console.log(data.data)
-				})
+				// axios({
+				// 	method:'post',
+				// 	url:'http://localhost:3000/register',
+				// 	params:{phonenum:_this.phonenum,id:'1'}
+				// }).then(function(data){
+				// 	console.log(data.data)
+				// })
 			},
 			register(){
 				var _this=this;
-				axios({
-					method:'post',
-					url:'http://localhost:3000/register',
-					params:{phonenum:_this.phonenum,id:'2',pass:_this.pass,yzm:_this.yzm}
-				}).then(function(data){
-					console.log(data.data)
-				})
+				// axios({
+				// 	method:'post',
+				// 	url:'http://localhost:3000/register',
+				// 	params:{phonenum:_this.phonenum,id:'2',pass:_this.pass,yzm:_this.yzm}
+				// }).then(function(data){
+				// 	console.log(data.data)
+				// })
 			},
 		
 			fanhui(){

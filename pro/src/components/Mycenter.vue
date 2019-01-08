@@ -2,16 +2,24 @@
 
 	<div>
 		<Header class="header" msg="我的">
-			<div class="sy"><router-link to="/home" ><span @click="fanhui()">返回首页</span></router-link></div>
+			<div class="sy" ><router-link to="/home" ><span >返回首页</span></router-link></div>
 		</Header>
 		<section class="section">
 			<div class="logo"></div>
-			<mt-swipe :auto="4000" style="height:200px; margin:0; padding:0;">
+				<mt-swipe :auto="4000" style="height:200px; margin:0; padding:0;">
+					<mt-swipe-item style="background: red;height:200px;">1</mt-swipe-item>
+					<mt-swipe-item style="background: yellow;height:200px;">2</mt-swipe-item>
+					<mt-swipe-item style="background: pink;height:200px;">3</mt-swipe-item>
+					<mt-swipe-item style="background: blue;height:200px;">4</mt-swipe-item>
+				</mt-swipe>
+
+
+			<!-- <mt-swipe :auto="4000" style="height:200px; margin:0; padding:0;">
 				<router-link to="" tag="div"><mt-swipe-item style="background: red;height:200px;">1</mt-swipe-item></router-link>
 				<router-link to="" tag="div"><mt-swipe-item style="background: yellow;height:200px;">2</mt-swipe-item></router-link>
 				<router-link to="" tag="div"><mt-swipe-item style="background: pink;height:200px;">3</mt-swipe-item></router-link>
 				<router-link to="" tag="div"><mt-swipe-item style="background: blue;height:200px;">4</mt-swipe-item></router-link>
-			</mt-swipe>
+			</mt-swipe> -->
 
 			<div class="dlzc">
 				<div class="dl-top"><router-link to="/login" style="width:100%"><p>手机号登录</p></router-link></div>
@@ -27,13 +35,15 @@
 
 <script>
 	export default{
-		name:'Shop',
+		name:'Mycenter',
 		data(){
 			return{
 				tit:'我的'
 			}
 		},
-		
+		methods:{
+			
+		},
 		mounted(){
 			this.$emit('toparent',this.tit)
 		}
