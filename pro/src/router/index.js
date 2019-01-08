@@ -13,6 +13,7 @@ import Health from '@/components/Health'
 import Brand from '@/components/Brand'
 import Login from '@/components/Login'
 import AllC from '@/components/AllC'
+import More from '@/components/More'
 
 
 Vue.use(Router)
@@ -28,6 +29,7 @@ export default new Router({
 		    {
 					path:'/home',
 					component:Home,	
+					
 		    },
 		    {
 					path:'/shop',				
@@ -60,6 +62,10 @@ export default new Router({
 				{
 					path:'/allc',
 					component:AllC,
+				},
+				{
+					path:'/more',
+					component:More,
 				},
 				
       ]

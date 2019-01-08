@@ -51,15 +51,15 @@
 			<div class="fixed">
 				<div class="fixed1">
 					<div class="box1">
-						<p></p>
+						<p>小计</p>
 						<span>￥0.00</span>
 					</div>
 					<div class="box2">
-						<p></p>
+						<p>邮</p>
 						<span>￥0.00</span>
 					</div>
 					<div class="box3">
-						<p></p>
+						<p>税</p>
 						<span>￥0.00</span>
 					</div>
 
@@ -277,7 +277,11 @@ li{
 		width:40%;
 		height:40px;
 		background:#ccc;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
+	
 	.box2{
 		width:30%;
 		height:40px;
@@ -288,7 +292,11 @@ li{
 		width:40%;
 		height:40px;
 		background:#ccc;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
+	
 	.box3{
 		width:30%;
 		height:40px;
@@ -299,6 +307,9 @@ li{
 		width:40%;
 		height:40px;
 		background:#ccc;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 	.fixed2{
 		height:54px;
