@@ -100,6 +100,8 @@ export default new Router({
 	{
 		path:'/title',
 		component:Title,
+	},
+	{	
 		path:'/details',
 		component:Details,
 	}
