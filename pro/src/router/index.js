@@ -15,6 +15,7 @@ import Login from '@/components/Login'
 import AllC from '@/components/AllC'
 import More from '@/components/More'
 import Banner from '@/components/Banner'
+import Details from '@/components/Details'
 
 
 
@@ -93,6 +94,10 @@ export default new Router({
 	{
 		path:'/banner',
 		component:Banner,
+	},
+	{
+		path:'/details',
+		component:Details,
 	}
 	
   ]
