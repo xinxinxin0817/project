@@ -65,7 +65,14 @@
 					<div class="banner">
 							banner活动
 					</div>
-			
+					<div class="yhpj">
+						<p class="yh-top"><span>用户评价（319）</span><span>99%好评率》</span></p>
+						<div class="yh-foot">
+							<h2 class="b-t-a"><span></span>小***</h2>
+							<p>2018.12.10 10:22 10毫克</p>
+							<p>产品不错，给老人买的。效果可以以后会再买！</p>
+						</div>
+					</div>
 
 			</div>
 	
@@ -97,7 +104,66 @@
 </script>
 
 <style scoped="">
+.yh-foot{
+	height:195px;
+	width:100%;
+}
+.yh-foot p:nth-child(2){
+	width:95%;
+	padding-left:5%;
+	font-size:12px;
+	height:30px;
+	line-height: 30px;
+}
+.yh-foot p:nth-child(3){
+	width:95%;
+	padding-left:5%;
+	height:30px;
+	line-height: 30px;
+}
 
+.b-t-a{
+		width:95%;
+		padding-left:5%;
+		font-size:14px;
+		height:50px;
+		display: flex;
+		align-items: center;
+
+	}
+	.b-t-a span{
+		margin-right:2%;
+		display: block;
+		background:red;
+		width:40px;
+		height:40px;
+		border-radius: 50%;
+	}
+
+.yhpj{
+	height:235px;
+	width:100%;
+	background:green;
+	border-bottom:5px solid #ccc;
+}
+.yh-top{
+	width:100%;
+	height:38px;
+	line-height: 38px;
+	border-top:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+}
+.yh-top span:first-child{
+	display: inline-block;
+	width:50%;
+	text-align: center;
+}
+.yh-top span:last-child{
+	font-size: 15px;
+	display: inline-block;
+	width:50%;
+	text-align: center;
+}
 
 .banner{
 	text-align: center;
@@ -207,7 +273,7 @@ a{
 	text-decoration: none;
 }
 .section{
-		height:76vh;
+		height:91vh;
 		display: flex;
 		flex-direction: column;
 		overflow:auto;
