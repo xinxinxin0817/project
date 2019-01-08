@@ -10,9 +10,28 @@
 		<section>
 			<div class="inclod">
 			<div class="cart-list">
+				<input type="checkbox" name="ral" class="duoxuan" style="width:20px;height:100px;color:#fff"/>
+				<p class="img"><img src="" alt=""></p>
+				<div class="jisuan">
+					<p class="xiang">now foods 多巴胺豆 美容养颜 胶囊素食见效</p>
+					<p class="money">
+						<span>￥199</span>
+
+					</p>
+				</div>
 
 			</div>
-			<div class="cart-list"></div>
+			<div class="cart-list">
+				<input type="checkbox" name="ral" class="duoxuan" style="width:20px;height:100px;color:#fff"/>
+				<p class="img"><img src="" alt=""></p>
+				<div class="jisuan">
+					<p class="xiang">now foods 多巴胺豆 美容养颜 胶囊素食见效</p>
+					<p class="money">
+						<span>￥199</span>
+
+					</p>
+				</div>
+			</div>
 			</div>
 			<div class="guess">
 				<p>猜你喜欢</p>
@@ -95,7 +114,46 @@ li{
 		margin-top:3%;
 		margin-bottom:3%;
 		display: flex;
+		align-items: center;
 	}
+	.duoxuan{
+		
+		background-color:#fff;
+		border-radius: 20px;
+		margin-left:20px;
+		
+	}
+	.img{
+		width:80px;
+		height:80px;
+		background:pink;
+		margin-left:10px;
+	}
+	.jisuan{
+		display: flex;
+	
+		width:70%;
+		height:80%;
+		flex-direction: column;
+	}
+	.xiang{
+		margin-left:10px;
+		font-size: 14px;
+		color:#504e4e;
+	}
+	.money{
+		display: flex;
+		justify-content: flex-start;
+		margin-top:10px;
+		margin-left:5px;
+		font-size: 14px;
+	}
+
+
+
+
+
+
 	.guess{
 		 background:#fff; 
 
