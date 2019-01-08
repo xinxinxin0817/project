@@ -3,7 +3,11 @@
 	
 		<Header msg="购物车" class="header" style="background: #ccc;width:100%;height:40px;">
 			<router-link to="/cart"><p>购物车</p></router-link>
-			<router-link to=""><span>0</span></router-link>
+			<router-link to=""><span @click="da()">0</span></router-link>
+			<div class="hide1" v-mode>
+				<button class="all">选择全部</button>
+				<button class="remove">移除所有商品</button>
+			</div>
 
 		</Header>
 		
@@ -86,6 +90,11 @@
 		},
 		mounted(){
 			this.$emit('toparent',this.tit)
+		},
+		methods:{
+			da(){
+				
+			}
 		}
 	}
 </script>
@@ -313,4 +322,27 @@ li{
 		border:0;
 		background:#ccc;
 	}
+	.hide1{
+		width:40%;
+		height:80px;
+		position:absolute;
+		left:60%;
+		top:36px;
+		background:#fff;
+		
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: space-around;
+		display: none;
+	}
+	.hide1 button{
+		border:0;
+		background:#fff;
+		font-size: 14px;
+		color:#000;
+		padding-left:10px;
+	
+	}
+	
 </style>
