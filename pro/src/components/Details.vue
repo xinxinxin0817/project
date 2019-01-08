@@ -3,11 +3,10 @@
 	<div>
 		<Header class="header" msg="我的">
 			<div class="h-top">
-				<div class="sy" ><router-link to="/home" ><span style="font-size:26px;">&lt;</span></router-link></div>
-				<div class="sy1" ><router-link to="/home" ><span>放</span></router-link></div>
-				<div class="sy2" ><router-link to="/cart" ><span>购</span></router-link></div>
+				<div class="sy" ><router-link to="/home" ><span style="font-size:26px;">&lt;</span><em>《</em></router-link></div>
+				<div class="sy1" ><router-link to="/home" ><span>商品</span><em>详情</em></router-link></div>
+				<div class="sy2" ><router-link to="/cart" ><span>首页</span><em>分享</em></router-link></div>
 			</div>
-			<h3 class="cp-top"><span>所有类别</span> <router-link class="gd" to="" tag="span" style="font-size:14px;">类别></router-link></h3>
 		</Header>
 		<section class="section">
 			<div class="ddd">
