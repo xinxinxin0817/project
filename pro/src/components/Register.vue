@@ -83,8 +83,8 @@ a{
 		width:15%;
 		height:30px;
 		line-height: 30px;
-		text-align: center;
-		background:#ccc;
+		
+	
 		font-size:12px;
 	}
 </style>

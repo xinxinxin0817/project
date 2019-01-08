@@ -161,20 +161,20 @@
 			<div class="jkjy">
 				<h2 class="jk-top">健康建议</h2>
 				<div class="jk-foot">
-					<dl>
+					<router-link to="/title" style="display:flex;flex-direction:row;"><dl>
 						<dt></dt>
 						<dd>
 							<h3>肠胃保健汤</h3>
 							<p>健康建议肠胃保健汤肠胃保健汤</p>
 						</dd>
 					</dl>
-					<dl>
+				<dl>
 						<dt></dt>
 						<dd>
 							<h3>肠胃保健汤</h3>
 							<p>健康建议肠胃保健汤肠胃保健汤</p>
 						</dd>
-					</dl>
+					</dl></router-link>
 				</div>
 			</div>
 
@@ -468,11 +468,15 @@ a{
 		line-height:50px;
 	}
 	.jk-foot{
+		width:100%;
+		height:170px;
+	
 		display: flex;
-		justify-content: space-around;
+		flex-direction:row
 	}
 	.jk-foot dl{
 		width:45%;
+		margin-left:10%;
 	}
 	.jk-foot dt{
 		background:blue;

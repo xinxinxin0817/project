@@ -5,8 +5,23 @@
 			<span>IHerb活动</span>
 		</Header>
 		<section class="section">
-			
+			<div class="banner1"></div>
+             <h1>相关商品推荐</h1>
+            <div class="banner2">
+               <ul class="like">
+					<router-link to=""><li><p></p><span>2222</span></li></router-link>
+					<router-link to=""><li><p></p><span>2222</span></li></router-link>
+					<router-link to=""><li><p></p><span>2222</span></li></router-link>
+					<router-link to=""><li><p></p><span>2222</span></li></router-link>
+					<router-link to=""><li><p></p><span>2222</span></li></router-link>
+					<router-link to=""><li><p></p><span>2222</span></li></router-link>
+
+				</ul>
+            </div>
 		</section>
+        <footer>
+            <router-link to=""><p></p></router-link>
+        </footer>
 	</div>
 </template>
 
@@ -38,7 +53,7 @@
 		text-decoration: none;
 	}
 	.header{
-	
+        flex-shrink: 0;
 		line-height: 50px;
 		font-size: 16px;
         
@@ -54,50 +69,86 @@
 		display: flex;
 		flex-direction: column;
 		overflow:auto;
+		flex:1;
+        align-items: center;
 		
-		
-	}
-    
-	.guess{
-		 background:#fff; 
+	}	
+    section h1{
+        width:40%;
+        height:30px;
+        font-size: 16px;
+        font-weight: 100px;
+        border:1px solid #ccc;
+        border-radius: 5px;
+        line-height: 30px;
+        text-align: center;
+        margin-top:2%;
+         margin-bottom:2%;
+    }
+	.banner1{
+        width:90%;
+        height:60%;
+        background:#ccc;
+        margin-top:20px;
 
-		height:100%;
-		
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		margin-top:10px;
-	}
+    }
+    .banner2{
+        width:95%;
+       height:29vh;
+     
+        display: flex;
+        
+    }
 	
-	.like{
+    .like{
 	
 		width:94%;
-		height:100%;
-		display: flex;
 	
+		display: flex;
+       
 		justify-content: space-between;
 		flex-wrap: wrap;
 	}
 	.like li{
-		height:285px;
-		width:170px;
-	
-		margin-bottom:5%;
+		height:174px;
+		width:136px;
+        margin-left:20px;
+		
+		margin-top:10%;
+
 		display: flex;
 		flex-direction: column;
 	}
 	.like p{
-		width:170px;
-		height:240px;
+		width:136px;
+		height:132px;
 		background:#ff0;
 
 	}
 	.like span{
 		font-size: 12px;
 		color:#504e4e;
-		width:170px;
-		height:45px;
+		width:136px;
+		height:40px;
 		background:pink;
 	}
-
+	
+    footer{
+		height: 50px;
+		width:100%;
+		background: #f0ebeb;
+		
+		line-height: 50px;
+		flex-shrink: 0;
+		display: flex;
+      
+     
+	}
+    footer p{
+        position:absolute;
+          font-size: 30px;
+          font-weight: 700;
+          right:10%;
+    }
+	
 </style>

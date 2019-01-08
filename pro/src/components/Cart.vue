@@ -38,7 +38,7 @@
 			</div>
 			<div class="guess">
 				<p>猜你喜欢</p>
-				<ul class="like">
+				<ul class="like1">
 					<router-link to=""><li><p></p><span>2222</span></li></router-link>
 					<router-link to=""><li><p></p><span>2222</span></li></router-link>
 					<router-link to=""><li><p></p><span>2222</span></li></router-link>
@@ -217,7 +217,7 @@ li{
 		line-height: 45px;
 		margin-top:1px;
 	}
-	.like{
+	.like1{
 	
 		width:94%;
 		height:100%;
@@ -226,7 +226,7 @@ li{
 		justify-content: space-between;
 		flex-wrap: wrap;
 	}
-	.like li{
+	.like1 li{
 		height:285px;
 		width:170px;
 	
@@ -234,13 +234,13 @@ li{
 		display: flex;
 		flex-direction: column;
 	}
-	.like p{
+	.like1 p{
 		width:170px;
 		height:240px;
 		background:#ff0;
 
 	}
-	.like span{
+	.like1 span{
 		font-size: 12px;
 		color:#504e4e;
 		width:170px;
