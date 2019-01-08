@@ -17,6 +17,7 @@ import More from '@/components/More'
 import Banner from '@/components/Banner'
 import Title from '@/components/Title'
 
+import Details from '@/components/Details'
 
 
 
@@ -99,6 +100,8 @@ export default new Router({
 	{
 		path:'/title',
 		component:Title,
+		path:'/details',
+		component:Details,
 	}
 	
   ]
