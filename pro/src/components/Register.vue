@@ -8,12 +8,12 @@
 		
 		
 		<div class="section">
-			<mt-field label="手机号" placeholder="请输入手机号" v-model="phonenum"></mt-field>
+			<mt-field label="手机号" placeholder="请输入手机号" v-model="phonenum" style="width:100%"></mt-field>
 			<mt-field label="密码" placeholder="请输入密码" v-model="pass"></mt-field>
 			<mt-field label="验证码" placeholder="请输入验证码" v-model="yzm"></mt-field>
 			
-			<mt-button size="normal" type="primary" @click="send()">发送验证码</mt-button>
-			<mt-button size="normal" type="danger" @click="register()">注册</mt-button>
+			<mt-button size="normal" type="primary" @click="send()" style="width:80%;margin-left:10%;">发送验证码</mt-button>
+			<mt-button size="normal" type="danger" @click="register()" style="width:80%;margin-left:10%;margin-top:2%;">注册</mt-button>
 			
 			
 		</div>

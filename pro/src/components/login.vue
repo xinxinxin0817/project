@@ -9,9 +9,9 @@
 		
 		<div class="section">
 			<mt-field label="手机号" placeholder="请输入手机号" v-model="phonenum"></mt-field>
-			<mt-field label="密码" placeholder="请输入密码" v-model="pass"></mt-field>
+			<mt-field label="密码" placeholder="请输入密码" v-model="pass" style="border-bottom:1px solid #ccc;width:100%;"></mt-field>
 
-			<mt-button size="normal" type="danger" @click="login()">登录</mt-button>
+			<mt-button size="normal" type="danger" @click="login()" style="width:80%;margin-left:10%;margin-top:30px;">登录</mt-button>
 			
 			
 		</div>
@@ -69,7 +69,7 @@ a{
 	}
 
 	.sy{
-		width:15%;
+		width:10%;
 		height:30px;
 		line-height: 30px;
 		text-align: center;
