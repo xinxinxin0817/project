@@ -22,10 +22,10 @@
 		<div class="ddd">
 			<router-link to="/banner">
 		<mt-swipe :auto="4000" style="height:166px; margin:0; padding:0;">
-		  <mt-swipe-item style="background: red;">1</mt-swipe-item>
-		  <mt-swipe-item style="background: yellow;">2</mt-swipe-item>
-		  <mt-swipe-item style="background: pink;">3</mt-swipe-item>
-		   <mt-swipe-item style="background: blue;">4</mt-swipe-item>
+		  <mt-swipe-item style="background: red;" v-for="(item,home) in list" :key="home"><img :src="item.img" style="width:100%;height:166px;"></mt-swipe-item>
+		  <!-- <mt-swipe-item style="background: yellow;"></mt-swipe-item>
+		  <mt-swipe-item style="background: pink;"></mt-swipe-item>
+		   <mt-swipe-item style="background: blue;"></mt-swipe-item> -->
 		</mt-swipe>
 		</router-link>
 		<!--轮播结束-->
@@ -35,7 +35,7 @@
 		
 			<dl>
 				<router-link to="/allc">
-					<dt>图片</dt>
+					<dt></dt>
 					<dd>特价产品</dd>
 				</router-link>
 			</dl>
@@ -43,7 +43,7 @@
 			
 			<dl>
 				<router-link to="/allc">	
-					<dt>图片</dt>
+					<dt></dt>
 					<dd>尖货排名</dd>
 				</router-link>
 			</dl>
@@ -52,7 +52,7 @@
 		
 			<dl>
 				<router-link to="/allc">	
-					<dt>图片</dt>
+					<dt></dt>
 					<dd>新品上架</dd>
 				</router-link>
 			</dl>
@@ -61,7 +61,7 @@
 	
 			<dl>
 				<router-link to="/allc">	
-					<dt>图片</dt>
+					<dt></dt>
 					<dd>限时抢购</dd>
 				</router-link>
 			</dl>
@@ -75,9 +75,9 @@
 			<h2 class="mzth"><span></span><em>每周特惠</em><span></span></h2>
 		</div>
 		<div class="th-list">
-			<router-link to="/details" style="width:30%"><p>1</p></router-link>
-			<router-link to="/details" style="width:30%"><p>2</p></router-link>
-			<router-link to="details" style="width:30%"><p>3</p></router-link>
+			<router-link to="/details" style="width:30%"><p><img src="" alt=""></p></router-link>
+			<router-link to="/details" style="width:30%"><p></p></router-link>
+			<router-link to="details" style="width:30%"><p></p></router-link>
 		</div>
 		<!---->
 		<!--产品建议开始-->
@@ -189,7 +189,19 @@
 	
 </template>
 <script>
+	
 	import axios from 'axios';
+		import Mock from 'mockjs'
+
+		Mock.mock('http://www.ddd.com',{
+			'users|4':[
+				{
+					"img":"@image('')",
+					
+				}
+			]
+		})
+
 
 	import {mapGetters,mapActions} from 'vuex';
 	export default {
@@ -210,13 +222,13 @@
 		mounted(){
 			this.$emit('toparent',this.tit)
 			var _this=this;
-			// axios({
-			// 	method:'get',
-			// 	url:'http://jx.xuzhixiang.top/ap/api/productlist.php',
-			// 	params:{uid:'11475'}
-			// }).then((data)=>{
-			// 	_this.list=data.data.data
-			// })
+			axios({
+					method:'get',
+					url:"http://www.ddd.com"
+				}).then((data)=>{
+					console.log(data.data.users)
+					this.list=data.data.users
+				})
 			
 			
 		}
@@ -301,13 +313,17 @@ a{
 		height:90px;
 		display: flex;
 		justify-content: space-around;
+	
 	}
 	.fl dt{
 		width:55px;
 		height:55px;
-		background:red;
+		background:rgb(182, 178, 178);
 		border-radius: 50%;
 		margin-bottom:10px;
+	}
+	.fl dd{
+			color:rgb(37, 36, 36);
 	}
 	.th-fu{
 		display: flex;
@@ -315,13 +331,17 @@ a{
 	}
 	.mzth{
 		width:200px;
-		background:red;
+		
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
 		font-size:16px;
 		height:50px;
 		
+		
+	}
+	.mzth em{
+		font-style:normal;
 	}
 	.mzth span{
 		display:block;
@@ -333,7 +353,7 @@ a{
 	.th-list{
 		display: flex;
 		justify-content: space-around;
-		background:yellow;	
+			
 	}
 	.th-list p{
 		width:100%;
