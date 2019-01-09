@@ -74,11 +74,91 @@
 						</div>
 					</div>
 
+					<div class="djdzk">
+						<h2 class="dj-top"><div><span>大家都在看</span></div><div><span>今日热门</span></div></h2>
+						<div class="dj-cen">
+							<dl>
+								<dt></dt>
+								<dd>
+									<span>纯好油，8冉思</span>
+									<span>￥68.88</span>
+								</dd>
+							</dl>
+							<dl>
+								<dt></dt>
+								<dd>
+									<span>纯好油，8冉思</span>
+									<span>￥68.88</span>
+								</dd>
+							</dl>
+							<dl>
+								<dt></dt>
+								<dd>
+									<span>纯好油，8冉思</span>
+									<span>￥68.88</span>
+								</dd>
+							</dl>
+						</div>
+
+						<div class="dj-foot">
+							<dl>
+								<dt></dt>
+								<dd>
+									<span>纯好油，8冉思</span>
+									<span>￥68.88</span>
+								</dd>
+							</dl>
+							<dl>
+								<dt></dt>
+								<dd>
+									<span>纯好油，8冉思</span>
+									<span>￥68.88</span>
+								</dd>
+							</dl>
+							<dl>
+								<dt></dt>
+								<dd>
+									<span>纯好油，8冉思</span>
+									<span>￥68.88</span>
+								</dd>
+							</dl>
+						</div>
+					</div>
+
+					<div class="cpgs">
+						<h2 class="cp-t">产品概述</h2>
+						<div class="cp-f">
+							<div></div>
+							<div>
+								<p>品名：</p>
+								<p>净含量</p>
+								<p>保质期</p>
+								<p>产地</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="xqjs">
+						新华社北京1月8日电 国家主席习近平1月8日同吉布提总统盖莱互致贺电，庆祝两国建交40周年。
+
+　　习近平在贺电中指出，建交40年来，中吉关系健康稳定发展，双方在涉及彼此核心利益和重大关切问题上相互理解、相互支持，各领域合作成果丰硕。2017年11月，你来华进行国事访问，我们共同宣布中吉建立战略伙伴关系。去年9月中非合作论坛北京峰会期间，我们就发展中吉关系达成新共识，并见证签署共同推进“一带一路”建设谅解备忘录。我高度重视中吉关系发展，愿同你一道努力，以两国建交40周年为契机，巩固两国政治互信，深化共建“一带一路”合作，落实中非合作论坛北京峰会成果，推动中吉战略伙伴关系不断迈上新台阶。
+
+　　盖莱在贺电中表示，1979年1月8日是吉中外交关系奠基性的时刻，我对40年来吉中关系顺利发展感到满意和自豪。2017年11月，我们共同决定将吉中关系确定为战略伙伴关系，充分表明双方深化吉中关系的决心，也为两国经贸合作指明了方向。吉布提衷心感谢中国政府和人民给予的帮助和支持，将继续坚定奉行一个中国原则。我愿同你共同努力，促进吉中关系不断深入发展。
+新华社北京1月8日电 国家主席习近平1月8日同吉布提总统盖莱互致贺电，庆祝两国建交40周年。
+
+　　习近平在贺电中指出，建交40年来，中吉关系健康稳定发展，双方在涉及彼此核心利益和重大关切问题上相互理解、相互支持，各领域合作成果丰硕。2017年11月，你来华进行国事访问，我们共同宣布中吉建立战略伙伴关系。去年9月中非合作论坛北京峰会期间，我们就发展中吉关系达成新共识，并见证签署共同推进“一带一路”建设谅解备忘录。我高度重视中吉关系发展，愿同你一道努力，以两国建交40周年为契机，巩固两国政治互信，深化共建“一带一路”合作，落实中非合作论坛北京峰会成果，推动中吉战略伙伴关系不断迈上新台阶。
+
+　　盖莱在贺电中表示，1979年1月8日是吉中外交关系奠基性的时刻，我对40年来吉中关系顺利发展感到满意和自豪。2017年11月，我们共同决定将吉中关系确定为战略伙伴关系，充分表明双方深化吉中关系的决心，也为两国经贸合作指明了方向。吉布提衷心感谢中国政府和人民给予的帮助和支持，将继续坚定奉行一个中国原则。我愿同你共同努力，促进吉中关系不断深入发展。
+					</div>
+
 			</div>
 	
 		</section>
 		
-		
+		<footer class="foot-d">
+			<div><router-link to="" style="color: #fff;">立即购买</router-link></div>
+			<div><router-link to="/cart" style="color: #fff;">加入购物车</router-link></div>
+		</footer>
 		
 		
 	</div>
@@ -104,6 +184,272 @@
 </script>
 
 <style scoped="">
+.xqjs{
+	height:400px;
+	overflow: auto;
+}
+
+.cpgs{
+	height:160px;
+	width:100%;
+	background:yellow;
+}
+.cp-t{
+	width: 90%;
+    padding: 0 5%;
+    background: #fff;
+    height: 40px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cp-f{
+	height:120px;
+	width:100%;
+	display: flex;
+	justify-content:center;
+}
+.cp-f div:first-child{
+	width:50%;
+	height:120px;
+	background:red;
+}
+.cp-f div:last-child{
+	width:40%;
+	height:120px;
+	background:orchid
+}
+.cp-f div:last-child p{
+	height:30px;
+	line-height: 30px;
+}
+
+
+
+.djdzk{
+	height:403px;
+	width:100%;
+	background:orchid;
+}
+.dj-top{
+	padding:0 15%;
+	line-height: 30px;
+	height:30px;
+	width:70%;
+	display: flex;
+	justify-content: space-between;
+}
+.dj-top div:first-child{
+	width:40%;
+	text-align: center;
+	font-size:12px;
+}
+.dj-top div:last-child{
+	width:40%;
+	text-align: center;
+	font-size:12px;
+}
+
+.dj-top span:first-child:hover{	
+	font-size:20px;
+	border-bottom:2px solid #ccc;
+}
+.dj-top span:last-child:hover{
+	font-size:20px;
+	border-bottom:2px solid #ccc;
+}
+.dj-cen{
+	margin-top:20px;
+	height:160px;
+	background:olive;
+	display: flex;
+	justify-content: space-around;
+}
+.dj-cen dl:nth-child(1){
+	width:30%;
+	height:160px;
+	background:orange;
+}
+.dj-cen dl:nth-child(1) dt{
+	height:120px;
+	width:100%;
+	background:orangered;
+}
+.dj-cen dl:nth-child(1) dd{
+	width:100%;
+	height:40px;
+}
+.dj-cen dl:nth-child(1) dd span:first-child{
+	font-size:12px;
+	text-align: center;
+	width:100%;
+	display: block;
+	height:20px;
+	line-height: 20px;
+}
+.dj-cen dl:nth-child(1) dd span:last-child{
+	font-size:15px;
+	text-align: center;
+	width:100%;
+	display: block;
+}
+
+.dj-cen dl:nth-child(2){
+	width:30%;
+	height:160px;
+	background:orange;
+}
+.dj-cen dl:nth-child(2) dt{
+	height:120px;
+	width:100%;
+	background:orangered;
+}
+.dj-cen dl:nth-child(2) dd{
+	width:100%;
+	height:40px;
+}
+.dj-cen dl:nth-child(2) dd span:first-child{
+	font-size:12px;
+	text-align: center;
+	width:100%;
+	display: block;
+	height:20px;
+	line-height: 20px;
+}
+.dj-cen dl:nth-child(2) dd span:last-child{
+	font-size:15px;
+	text-align: center;
+	width:100%;
+	display: block;
+}
+
+
+.dj-cen dl:nth-child(3){
+	width:30%;
+	height:160px;
+	background:orange;
+}
+.dj-cen dl:nth-child(3) dt{
+	height:120px;
+	width:100%;
+	background:orangered;
+}
+.dj-cen dl:nth-child(3) dd{
+	width:100%;
+	height:40px;
+}
+.dj-cen dl:nth-child(3) dd span:first-child{
+	font-size:12px;
+	text-align: center;
+	width:100%;
+	display: block;
+	height:20px;
+	line-height: 20px;
+}
+.dj-cen dl:nth-child(3) dd span:last-child{
+	font-size:15px;
+	text-align: center;
+	width:100%;
+	display: block;
+}
+
+
+.dj-foot{
+	height:160px;
+	background:olive;
+	display: flex;
+	justify-content: space-around;
+}
+.dj-foot dl:nth-child(1){
+	width:30%;
+	height:160px;
+	background:orange;
+}
+.dj-foot dl:nth-child(1) dt{
+	height:120px;
+	width:100%;
+	background:orangered;
+}
+.dj-foot dl:nth-child(1) dd{
+	width:100%;
+	height:40px;
+}
+.dj-foot dl:nth-child(1) dd span:first-child{
+	font-size:12px;
+	text-align: center;
+	width:100%;
+	display: block;
+	height:20px;
+	line-height: 20px;
+}
+.dj-foot dl:nth-child(1) dd span:last-child{
+	font-size:15px;
+	text-align: center;
+	width:100%;
+	display: block;
+}
+
+.dj-foot dl:nth-child(2){
+	width:30%;
+	height:160px;
+	background:orange;
+}
+.dj-foot dl:nth-child(2) dt{
+	height:120px;
+	width:100%;
+	background:orangered;
+}
+.dj-foot dl:nth-child(2) dd{
+	width:100%;
+	height:40px;
+}
+.dj-foot dl:nth-child(2) dd span:first-child{
+	font-size:12px;
+	text-align: center;
+	width:100%;
+	display: block;
+	height:20px;
+	line-height: 20px;
+}
+.dj-foot dl:nth-child(2) dd span:last-child{
+	font-size:15px;
+	text-align: center;
+	width:100%;
+	display: block;
+}
+
+
+.dj-foot dl:nth-child(3){
+	width:30%;
+	height:160px;
+	background:orange;
+}
+.dj-foot dl:nth-child(3) dt{
+	height:120px;
+	width:100%;
+	background:orangered;
+}
+.dj-foot dl:nth-child(3) dd{
+	width:100%;
+	height:40px;
+}
+.dj-foot dl:nth-child(3) dd span:first-child{
+	font-size:12px;
+	text-align: center;
+	width:100%;
+	display: block;
+	height:20px;
+	line-height: 20px;
+}
+.dj-foot dl:nth-child(3) dd span:last-child{
+	font-size:15px;
+	text-align: center;
+	width:100%;
+	display: block;
+}
+
+
 .yh-foot{
 	height:195px;
 	width:100%;
@@ -273,7 +619,7 @@ a{
 	text-decoration: none;
 }
 .section{
-		height:91vh;
+		height:84vh;
 		display: flex;
 		flex-direction: column;
 		overflow:auto;
@@ -448,6 +794,28 @@ a{
 	text-align: center;
 	border:1px solid #ccc;
 	font-size:13px;
+}
+.foot-d{
+	width:100%;
+	height:50px;
+	display: flex;
+	
+	justify-content: space-around;
+}
+.foot-d div:first-child{
+	width:40%;
+	height:50px;
+	line-height: 50px;
+	text-align: center;
+	background:red;
+	
+}
+.foot-d div:last-child{
+	width:40%;
+	height:50px;
+	line-height: 50px;
+	text-align: center;
+	background:blueviolet;
 }
 
 </style>
