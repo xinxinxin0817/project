@@ -160,8 +160,9 @@
 		<!--健康建议-->
 			<div class="jkjy">
 				<h2 class="jk-top">健康建议</h2>
+					<router-link to="/title" style="display:flex;flex-direction:row;">
 				<div class="jk-foot">
-					<router-link to="/title" style="display:flex;flex-direction:row;"><dl>
+				<dl>
 						<dt></dt>
 						<dd>
 							<h3>肠胃保健汤</h3>
@@ -174,8 +175,9 @@
 							<h3>肠胃保健汤</h3>
 							<p>健康建议肠胃保健汤肠胃保健汤</p>
 						</dd>
-					</dl></router-link>
+					</dl>
 				</div>
+				</router-link>
 			</div>
 
 		<!--健康建议end-->
@@ -500,7 +502,7 @@ a{
 	}
 	.jk-foot dl{
 		width:45%;
-		margin-left:10%;
+		margin-left:4%;
 	}
 	.jk-foot dt{
 		background:blue;

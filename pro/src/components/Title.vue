@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<Header class="header-title" msg="发现" style="background: #fff;width:100%;height:50px;">
-           <span @click="fanhui()">《</span>
+           <span @click="fanhui()" class="span-t">《</span>
 			<span class="biaoti">标题</span>
 		</Header>
 		<section class="section1">
@@ -66,19 +66,28 @@
         flex-shrink: 0;
 		line-height: 50px;
 		font-size: 16px;
+		display: flex; 
+		width:100%;
+		height:50px;
+		align-items: center;
+	
         
 	}
-    .header-title span:first-child {
-        margin-left:20px;
-    }
-   .header-title .biaoti {
-        margin-left:20%;
+	.span-t{
+		margin-right:26%;
+		margin-left:2%;
+	}
+    
+   .biaoti {
+       
         width:40%;
         height:30px;
         background:rgb(240, 234, 234);
         display: inline-block;
         text-align: center;
         line-height: 30px;margin-top:4%;
+		margin:0;
+		
     }
 	.section1{
 		height:86.4vh;
