@@ -20,6 +20,7 @@ import Title from '@/components/Title'
 import Details from '@/components/Details'
 import Logina from '@/components/Logina'
 import Setting from '@/components/Setting'
+import Payment from '@/components/Payment'
 
 
 
@@ -116,6 +117,10 @@ export default new Router({
 	{	
 		path:'/setting',
 		component:Setting,
+	},
+	{	
+		path:'/payment',
+		component:Payment,
 	}
 	
   ]
