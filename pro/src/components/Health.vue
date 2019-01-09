@@ -4,7 +4,7 @@
 		<section>
 			
 			<ul class="list-h">
-				<router-link to="/details"><li v-for="(item,health) in list" :key="health"><p><img :src="item.img" alt=""></p><span>{{item.title}}</span></li></router-link>
+				<router-link to="/details/"><li v-for="(item,health) in list" :key="health" :pid="item.pid"><p><img :src="item.img" alt=""></p><span>{{item.title}}</span></li></router-link>
 				
 				
 			</ul>
@@ -24,8 +24,10 @@
 		Mock.mock('http://www.aaa.com',{
 			'users|10-20':[
 				{
+					"pid|+1":0,
 					"img":"@image('110x120')",
-					"title":"@ctitle()"
+					"title":"@ctitle()",
+					
 				}
 			]
 		})
@@ -45,7 +47,7 @@
 					method:'get',
 					url:"http://www.aaa.com"
 				}).then((data)=>{
-					console.log(data.data.users)
+					//console.log(data.data.users)
 					this.list=data.data.users
 				})
 		},

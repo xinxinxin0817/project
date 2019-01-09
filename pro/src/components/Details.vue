@@ -166,12 +166,17 @@
 
 <script>
 
+	import axios from 'axios';
 
 	export default{
 		name:'Details',
 		data(){
 			return{
-				tit:'所有商品'
+				tit:'所有商品',
+				title:'',
+				img:'',
+				jg:'￥55'
+
 			}
 		},
 		methods:{
@@ -181,6 +186,15 @@
 		},
 		mounted(){
 			this.$emit('toparent',this.tit)
+			var _this=this;
+			axios({
+				method:'get',
+				url:'http://www.aaa.com',
+				params:{pid:_this.$route.params.pid}
+			}).then((data)=>{
+				console.log(data.data.users)
+				//_this.title=data.data.data.pdesc;
+			})
 		}
 	}
 </script>
