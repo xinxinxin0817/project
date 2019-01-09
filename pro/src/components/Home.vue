@@ -364,12 +364,12 @@ a{
 	 .cpjy{
 		 margin-top:20px;
 		height:280px;
-		background:pink;
+		background:rgb(248, 244, 245);
 	 }
 	.cp-top{
 		width:90%;
 		padding:0 5%;
-		background:green;
+		background:rgb(245, 248, 245);
 		height:50px;
 		font-size:16px;
 		display: flex;
@@ -414,12 +414,12 @@ a{
 		 .jrrm{
 		 margin-top:20px;
 		height:211px;
-		background:pink;
+		background:rgb(251, 249, 249);
 	 }
 	.rm-top{
 		width:90%;
 		padding:0 5%;
-		background:green;
+		background:rgb(246, 248, 246);
 		height:50px;
 		font-size:16px;
 		display: flex;
@@ -448,12 +448,12 @@ a{
 		 .xsg{
 		 margin-top:20px;
 		height:211px;
-		background:pink;
+		background:rgb(250, 246, 247);
 	 }
 	.xsg-top{
 		width:90%;
 		padding:0 5%;
-		background:green;
+		background:rgb(243, 248, 243);
 		height:50px;
 		font-size:16px;
 		display: flex;
@@ -480,7 +480,7 @@ a{
 	/*健康建议*/
 	.jkjy{
 		height:220px;
-		background:yellow;
+	
 		display: flex;
 		flex-direction: column;
 	}
