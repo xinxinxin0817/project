@@ -33,7 +33,7 @@
 					<router-link to=""><span>查看全部</span></router-link>
 				</div>
 				<ul class="list-c">
-				<router-link to="/details"><li v-for="(item,category) in list" :key="category"><p><img :src="item.img" alt=""></p><span>{{item.title}}</span></li></router-link>
+				<router-link to="/details"><li v-for="(item,category) in list1" :key="category"><p><img :src="item.img" alt=""></p><span>{{item.title}}</span></li></router-link>
 				
 				
 					
@@ -55,8 +55,8 @@
 		import Mock from 'mockjs'
 
 
-		Mock.mock('http://www.aaa.com',{
-			'users|7-10':[
+		Mock.mock('http://www.bbb.com',{
+			'users1|7-10':[
 				{
 					"img":"@image('84x100')",
 					"title":"@ctitle()"
@@ -70,7 +70,7 @@
 			return{
 				tit:'关于',
 				str:"补充剂",
-				list:[]
+				list1:[]
 			}
 		},
 		methods:{
@@ -107,10 +107,10 @@
 			this.$emit('toparent',this.tit)
 			axios({
 					method:'get',
-					url:"http://www.aaa.com"
+					url:"http://www.bbb.com"
 				}).then((data)=>{
-					console.log(data.data.users)
-					this.list=data.data.users
+					console.log(data.data.users1)
+					this.list1=data.data.users1
 				})
 		}
 	}
