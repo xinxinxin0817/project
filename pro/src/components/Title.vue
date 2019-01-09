@@ -19,12 +19,12 @@
              <h2 class="title-h">相关商品推荐</h2>
             <div class="banner4">
                <ul class="like-title">
-					<router-link to=""><li><p></p><span>2222</span></li></router-link>
-					<router-link to=""><li><p></p><span>2222</span></li></router-link>
-					<router-link to=""><li><p></p><span>2222</span></li></router-link>
-					<router-link to=""><li><p></p><span>2222</span></li></router-link>
-					<router-link to=""><li><p></p><span>2222</span></li></router-link>
-					<router-link to=""><li><p></p><span>2222</span></li></router-link>
+					<router-link to="/details"><li><p></p><span>2222</span></li></router-link>
+					<router-link to="/details"><li><p></p><span>2222</span></li></router-link>
+					<router-link to="/details"><li><p></p><span>2222</span></li></router-link>
+					<router-link to="/details"><li><p></p><span>2222</span></li></router-link>
+					<router-link to="/details"><li><p></p><span>2222</span></li></router-link>
+					<router-link to="/details"><li><p></p><span>2222</span></li></router-link>
 
 				</ul>
             </div>

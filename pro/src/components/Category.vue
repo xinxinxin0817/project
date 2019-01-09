@@ -33,15 +33,15 @@
 					<router-link to=""><span>查看全部</span></router-link>
 				</div>
 				<ul>
-					<router-link to=""><li></li></router-link>
-					<router-link to=""><li></li></router-link>
-					<router-link to=""><li></li></router-link>
-					<router-link to=""><li></li></router-link>
-					<router-link to=""><li></li></router-link>
-					<router-link to=""><li></li></router-link>
-					<router-link to=""><li></li></router-link>
-					<router-link to=""><li></li></router-link>
-					<router-link to=""><li></li></router-link>
+					<router-link to="/details"><li></li></router-link>
+					<router-link to="/details"><li></li></router-link>
+					<router-link to="/details"><li></li></router-link>
+					<router-link to="/details"><li></li></router-link>
+					<router-link to="/details"><li></li></router-link>
+					<router-link to="/details"><li></li></router-link>
+					<router-link to="/details"><li></li></router-link>
+					<router-link to="/details"><li></li></router-link>
+					<router-link to="/details"><li></li></router-link>
 					
 				</ul>
 			</div>

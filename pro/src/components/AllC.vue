@@ -11,7 +11,7 @@
 		</Header>
 		<section class="section">
 			<div class="ddd">
-				<router-link to="">
+				<router-link to="/details">
 					<div class="box">
 					
 						<div class="b-l"></div>
@@ -23,7 +23,7 @@
 					</div>
 				</router-link>
 
-				<router-link to="">
+				<router-link to="/details">
 					<div class="box">
 					
 						<div class="b-l"></div>
@@ -35,7 +35,7 @@
 					</div>
 				</router-link>
 
-				<router-link to="">
+				<router-link to="/details">
 					<div class="box">
 					
 						<div class="b-l"></div>
@@ -47,7 +47,7 @@
 					</div>
 				</router-link>
 
-				<router-link to="">
+				<router-link to="/details">
 					<div class="box">
 					
 						<div class="b-l"></div>

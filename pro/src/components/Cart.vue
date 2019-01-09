@@ -13,6 +13,7 @@
 		
 		<section>
 			<div class="inclod">
+				<router-link to="details">
 			<div class="cart-list">
 				<input type="checkbox" name="ral" class="duoxuan" style="width:20px;height:100px;color:#fff"/>
 				<p class="img"><img src="" alt=""></p>
@@ -23,8 +24,10 @@
 
 					</p>
 				</div>
-
+				
 			</div>
+			</router-link>
+			<router-link to="details">
 			<div class="cart-list">
 				<input type="checkbox" name="ral" class="duoxuan" style="width:20px;height:100px;color:#fff"/>
 				<p class="img"><img src="" alt=""></p>
@@ -35,16 +38,18 @@
 					</p>
 				</div>
 			</div>
+			</router-link>
+
 			</div>
 			<div class="guess">
 				<p>猜你喜欢</p>
 				<ul class="like1">
-					<router-link to=""><li><p></p><span>2222</span></li></router-link>
-					<router-link to=""><li><p></p><span>2222</span></li></router-link>
-					<router-link to=""><li><p></p><span>2222</span></li></router-link>
-					<router-link to=""><li><p></p><span>2222</span></li></router-link>
-					<router-link to=""><li><p></p><span>2222</span></li></router-link>
-					<router-link to=""><li><p></p><span>2222</span></li></router-link>
+					<router-link to="/details"><li><p></p><span>2222</span></li></router-link>
+					<router-link to="/details"><li><p></p><span>2222</span></li></router-link>
+					<router-link to="/details"><li><p></p><span>2222</span></li></router-link>
+					<router-link to="/details"><li><p></p><span>2222</span></li></router-link>
+					<router-link to="/details"><li><p></p><span>2222</span></li></router-link>
+					<router-link to="/details"><li><p></p><span>2222</span></li></router-link>
 
 				</ul>
 			</div>

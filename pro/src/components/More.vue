@@ -8,12 +8,12 @@
 			<div class="guess-m">
 				
 				<ul class="like-m">
-					<router-link to=""><li><p></p><span>2222</span></li></router-link>
-					<router-link to=""><li><p></p><span>2222</span></li></router-link>
-					<router-link to=""><li><p></p><span>2222</span></li></router-link>
-					<router-link to=""><li><p></p><span>2222</span></li></router-link>
-					<router-link to=""><li><p></p><span>2222</span></li></router-link>
-					<router-link to=""><li><p></p><span>2222</span></li></router-link>
+					<router-link to="/details"><li><p></p><span>2222</span></li></router-link>
+					<router-link to="/details"><li><p></p><span>2222</span></li></router-link>
+					<router-link to="/details"><li><p></p><span>2222</span></li></router-link>
+					<router-link to="/details"><li><p></p><span>2222</span></li></router-link>
+					<router-link to="/details"><li><p></p><span>2222</span></li></router-link>
+					<router-link to="/details"><li><p></p><span>2222</span></li></router-link>
 
 				</ul>
 			</div>

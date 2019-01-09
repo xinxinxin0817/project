@@ -3,21 +3,21 @@
 			
 		<section>
 			<ul>
-				<li></li>
-				<li class="list"></li>
-				<li></li>
-				<li></li>
-				<li class="list"></li>
-				<li></li>
-				<li></li>
-				<li class="list"></li>
-				<li></li>
-				<li></li>
-				<li class="list"></li>
-				<li></li>
-				<li></li>
-				<li class="list"></li>
-				<li></li>
+				<router-link to="/details"><li></li></router-link>
+				<router-link to="/details"><li class="list"></li></router-link>
+				<router-link to="/details"><li></li></router-link>
+				<router-link to="/details"><li></li></router-link>
+				<router-link to="/details"><li class="list"></li></router-link>
+				<router-link to="/details"><li></li></router-link>
+				<router-link to="/details"><li></li></router-link>
+				<router-link to="/details"><li class="list"></li></router-link>
+				<router-link to="/details"><li></li></router-link>
+				<router-link to="/details"><li></li></router-link>
+				<router-link to="/details"><li class="list"></li></router-link>
+				<router-link to="/details"><li></li></router-link>
+				<router-link to="/details"><li></li></router-link>
+				<router-link to="/details"><li class="list"></li></router-link>
+				<router-link to="/details"><li></li></router-link>
 				
 			</ul>
 
