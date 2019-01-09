@@ -44,13 +44,8 @@
 			<div class="guess">
 				<p>猜你喜欢</p>
 				<ul class="like1">
-					<router-link to="/details"><li><p></p><span>2222</span></li></router-link>
-					<router-link to="/details"><li><p></p><span>2222</span></li></router-link>
-					<router-link to="/details"><li><p></p><span>2222</span></li></router-link>
-					<router-link to="/details"><li><p></p><span>2222</span></li></router-link>
-					<router-link to="/details"><li><p></p><span>2222</span></li></router-link>
-					<router-link to="/details"><li><p></p><span>2222</span></li></router-link>
-
+					<router-link to="/details"><li v-for="(item,cart) in list" :key="cart"><p><img :src="item.img" alt=""></p><span>{{item.title}}</span></li></router-link>
+					
 				</ul>
 			</div>
 			<div class="fixed">
@@ -86,6 +81,17 @@
 </template>
 
 <script>
+	import axios from 'axios';
+	import Mock from 'mockjs'
+	Mock.mock('http://www.ccc.com',{
+			'users|6-10':[
+				{
+					"img":"@image('170x240')",
+					"title":"@ctitle()"
+				}
+			]
+		})
+
 	export default{
 		name:'Shop',
 		data(){
@@ -93,11 +99,19 @@
 				tit:'购物车',
 				sty:{
 					display:'none'
-				}
+				},
+				list:[]
 			}
 		},
 		mounted(){
 			this.$emit('toparent',this.tit)
+			axios({
+					method:'get',
+					url:"http://www.ccc.com"
+				}).then((data)=>{
+					console.log(data.data.users)
+					this.list=data.data.users
+				})
 		},
 		
 		methods:{
@@ -113,7 +127,8 @@
 						display:'none'
 					}
 				}
-			}
+			},
+
 		}
 	}
 </script>
@@ -234,8 +249,9 @@ li{
 	.like1 li{
 		height:285px;
 		width:170px;
-	
-		margin-bottom:5%;
+		float:left;
+		margin:5px 3px;
+		
 		display: flex;
 		flex-direction: column;
 	}
@@ -251,6 +267,8 @@ li{
 		width:170px;
 		height:45px;
 		background:pink;
+		line-height: 45px;
+		text-align: center;
 	}
 	.fixed{
 		width:100%;
