@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<Header msg="关于" class="header" style="background: #ff0;height:90px;overflow:hidden;">
+		<Header msg="关于" class="header" style="background: #fff;height:90px;overflow:hidden;">
 			<router-link to="" style="width:95%"><input type="text" placeholder="搜索产品" /></router-link>
 			<div class="box" style="width:95%">
 			<router-link to="/health" style="width:33%"><p class="teshu">健康主题</p></router-link>

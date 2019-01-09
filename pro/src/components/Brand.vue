@@ -61,6 +61,7 @@
 		flex:1;
         flex-direction: column;
          align-items: center;
+		border-top:1px solid #ccc;
        
      
 	   

@@ -1,8 +1,8 @@
 <template>
 	<div id="ohome">
-		<Header msg="关于" class="header" style="background: #ff0;height:90px;">
+		<Header msg="关于" class="header" style="background: #fff;height:90px;">
 			<div class="h-ss" style="height:30px;">
-				<router-link to="" style="width:80%;"><input type="text" placeholder="" /></router-link>
+				<router-link to="" style="width:80%;"><input type="text" placeholder="搜索产品" /></router-link>
 			</div>
 			<div class="h-ls">
 			<router-link to="/home"><p class="teshu">推荐</p></router-link>
@@ -272,7 +272,10 @@ a{
 		width:100%;
 		height:30px;
 		border-radius: 4px;
-		border:0;
+		border:1px solid #ccc;
+		text-align: center;
+		line-height: 30px;
+		margin-top:15px;
 	}
 	.h-ls{
 		height:50px;
@@ -284,6 +287,7 @@ a{
 		font-size: 14px;
 		height:46px;
 		line-height: 70px;
+		color:rgb(34, 32, 32);
 	}
 
 	.header p:hover{

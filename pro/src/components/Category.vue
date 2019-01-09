@@ -33,15 +33,9 @@
 					<router-link to=""><span>查看全部</span></router-link>
 				</div>
 				<ul>
-					<router-link to="/details"><li></li></router-link>
-					<router-link to="/details"><li></li></router-link>
-					<router-link to="/details"><li></li></router-link>
-					<router-link to="/details"><li></li></router-link>
-					<router-link to="/details"><li></li></router-link>
-					<router-link to="/details"><li></li></router-link>
-					<router-link to="/details"><li></li></router-link>
-					<router-link to="/details"><li></li></router-link>
-					<router-link to="/details"><li></li></router-link>
+				<router-link to="/details"><li v-for="(item,category) in list" :key="category"><p><img :src="item.img" alt=""></p><span>{{item.title}}</span></li></router-link>
+				
+				
 					
 				</ul>
 			</div>
@@ -56,13 +50,27 @@
 </template>
 
 <script>
+
+		import axios from 'axios';
+		import Mock from 'mockjs'
+
+
+		Mock.mock('http://www.aaa.com',{
+			'users|7-10':[
+				{
+					"img":"@image('84x100')",
+					"title":"@ctitle()"
+				}
+			]
+		})
 	export default{
 		name:'Category',
 		
 		data(){
 			return{
 				tit:'关于',
-				str:"补充剂"
+				str:"补充剂",
+				list:[]
 			}
 		},
 		methods:{
@@ -97,6 +105,13 @@
 		},
 		mounted(){
 			this.$emit('toparent',this.tit)
+			axios({
+					method:'get',
+					url:"http://www.aaa.com"
+				}).then((data)=>{
+					console.log(data.data.users)
+					this.list=data.data.users
+				})
 		}
 	}
 </script>
@@ -118,6 +133,7 @@
 		overflow: auto;
 		width:100%;
 		flex:1;
+		border-top:1px solid #ccc;
 	   
 	}
 	section .left{
@@ -214,10 +230,29 @@
 	.right li{
 		width:84px;	
 		height:116px;
-		background:pink;
+		float:left;
+		margin:5px 3px;
+	
 		margin-bottom:10px;
 		list-style: none;
         border:0;
         border:1px solid #ccc;
+		display: flex;
+		flex-direction: column;
+	}
+	.right li p{
+		width:84px;
+		height:100px;
+		padding:0;
+		margin:0;
+	}
+	.right li span{
+		width:84px;
+		height:16px;
+		line-height: 16px;
+		background:#fff;
+		text-align: center;
+		color: rgb(66, 64, 64);
+		font-size: 12px;
 	}
 </style>

@@ -54,11 +54,12 @@ export default {
 	footer{
 		height: 50px;
 		width:100%;
-		background: #cecece;
+		background: #e0dada;
 		text-align: center;
 		line-height: 50px;
 		flex-shrink: 0;
 		display: flex;
+		color:rgb(71, 67, 67);
 	}
 	
 	section{
@@ -75,7 +76,7 @@ export default {
 	}
 	footer span:hover{
 		color: #fff;
-		background:red;
+		background:rgb(148, 142, 142);
 	}
 	
 	

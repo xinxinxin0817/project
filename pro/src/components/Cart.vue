@@ -13,12 +13,12 @@
 		
 		<section>
 			<div class="inclod">
-				<router-link to="details">
+				
 			<div class="cart-list">
 				<input type="checkbox" name="ral" class="duoxuan" style="width:20px;height:100px;color:#fff"/>
 				<p class="img"><img src="" alt=""></p>
 				<div class="jisuan">
-					<p class="xiang">now foods 多巴胺豆 美容养颜 胶囊素食见效</p>
+					<router-link to="details"><p class="xiang">now foods 多巴胺豆 美容养颜 胶囊素食见效</p></router-link>
 					<p class="money">
 						<span>￥199</span>
 
@@ -26,19 +26,19 @@
 				</div>
 				
 			</div>
-			</router-link>
-			<router-link to="details">
+			
+			
 			<div class="cart-list">
 				<input type="checkbox" name="ral" class="duoxuan" style="width:20px;height:100px;color:#fff"/>
 				<p class="img"><img src="" alt=""></p>
 				<div class="jisuan">
-					<p class="xiang">now foods 多巴胺豆 美容养颜 胶囊素食见效</p>
+					<router-link to="details"><p class="xiang">now foods 多巴胺豆 美容养颜 胶囊素食见效</p></router-link>
 					<p class="money">
 						<span>￥199</span>
 					</p>
 				</div>
 			</div>
-			</router-link>
+			
 
 			</div>
 			<div class="guess">
