@@ -4,7 +4,7 @@
 		<section>
 			
 			<ul class="list-h">
-				<router-link to="/details/"><li v-for="(item,health) in list" :key="health" :pid="item.pid"><p><img :src="item.img" alt=""></p><span>{{item.title}}</span></li></router-link>
+				<li v-for="(item,health) in list" :key="health" :pid="item.pid"><router-link style="width:100%;"  :to="'/details/'+item.pid"><p><img :src="item.img" alt=""></p><span>{{item.title}}</span></router-link></li>
 				
 				
 			</ul>
@@ -58,6 +58,9 @@
 </script>
 
 <style scoped="">
+a{
+	text-decoration: none;
+}
     *{
         margin:0;
         padding:0;
@@ -99,12 +102,14 @@
 		font-size: 12px;
 		color:rgb(43, 41, 41);
 	}
-	.list-h p{
+	.list-h li p{
 		width:100%;
 		height:120px;
 		background:chartreuse;
 	}
-	.list-h span{
+	.list-h li span{
+		color:rgb(102, 101, 101);
+		display:block;
 		width:100%;
 		height:28px;
 		background:#fff;

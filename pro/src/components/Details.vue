@@ -22,7 +22,7 @@
 					<div class="box">
 					
 						<div class="b-r">
-							<p class="b-r-t">Super Omega-3 Gems,<br/>1200毫克，100+30粒软胶囊</p>
+							<p class="b-r-t">{{title}}</p>
 							<p class="b-r-f"><span>￥56.09</span></p>
 						</div>
 						<div class="b-l">
@@ -185,16 +185,25 @@
 			}
 		},
 		mounted(){
+			var id=this.$route.params.id
+			console.log(id)
 			this.$emit('toparent',this.tit)
 			var _this=this;
 			axios({
 				method:'get',
 				url:'http://www.aaa.com',
-				params:{pid:_this.$route.params.pid}
+				// params:{id:_this.$route.params.id}
 			}).then((data)=>{
-				console.log(data.data.users)
-				//_this.title=data.data.data.pdesc;
+				console.log(data.data)
+				for(var i=0;i<data.data.users.length;i++){
+					console.log(data.data.users[i].pid)
+					if(data.data.users[i].pid==id){
+						console.log(data.data.users[i])
+						_this.title=data.data.users[i].title
+					}
+				}
 			})
+			console.log(this.$route.params)
 		}
 	}
 </script>
@@ -202,6 +211,7 @@
 <style scoped="">
 .xqjs{
 	height:400px;
+	text-indent: 2rem;
 	
 }
 

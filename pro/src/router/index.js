@@ -111,7 +111,7 @@ export default new Router({
 		component:Title,
 	},
 	{	
-		path:'/details',
+		path:'/details/:id',
 		component:Details,
 	},
 	{	
