@@ -32,7 +32,7 @@
 					<h6>{{str}}</h6>
 					<router-link to=""><span>查看全部</span></router-link>
 				</div>
-				<ul>
+				<ul class="list-c">
 				<router-link to="/details"><li v-for="(item,category) in list" :key="category"><p><img :src="item.img" alt=""></p><span>{{item.title}}</span></li></router-link>
 				
 				
@@ -217,7 +217,7 @@
 		font-size: 12px;
 		color:#ccc;
 	}
-	.right ul{
+	.list-c{
 		width:95%;
 		height:100%;	 
 		display: flex;
@@ -227,7 +227,7 @@
 		justify-content: space-between;
 	
 	}
-	.right li{
+	.list-c li{
 		width:84px;	
 		height:116px;
 		float:left;
@@ -240,13 +240,13 @@
 		display: flex;
 		flex-direction: column;
 	}
-	.right li p{
+	.list-c p{
 		width:84px;
 		height:100px;
 		padding:0;
 		margin:0;
 	}
-	.right li span{
+	.list-c span{
 		width:84px;
 		height:16px;
 		line-height: 16px;

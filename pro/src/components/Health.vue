@@ -4,7 +4,7 @@
 		<section>
 			
 			<ul class="list-h">
-				<router-link to="/details"><li v-for="(item,health) in list" :key="health"><p><img :src="item.img1" alt=""></p><span>{{item.title1}}</span></li></router-link>
+				<router-link to="/details"><li v-for="(item,health) in list" :key="health"><p><img :src="item.img" alt=""></p><span>{{item.title}}</span></li></router-link>
 				
 				
 			</ul>
@@ -24,8 +24,8 @@
 		Mock.mock('http://www.aaa.com',{
 			'users|10-20':[
 				{
-					"img1":"@image('110x120')",
-					"title1":"@ctitle()"
+					"img":"@image('110x120')",
+					"title":"@ctitle()"
 				}
 			]
 		})
@@ -50,9 +50,7 @@
 				})
 		},
 		methods:{
-			tap(){
-				
-			}
+			
 		}
 	}
 </script>
@@ -73,7 +71,7 @@
 	    justify-content: center;
 		align-items: center;
 	}
-	section ul{
+	.list-h{
 		width:94%;
 		height:100%;
 		 
@@ -84,7 +82,7 @@
 		
 		
 	}
-	section li{
+	.list-h li{
 		float:left;
 		width:110px;	
 		height:150px;
