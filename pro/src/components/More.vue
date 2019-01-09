@@ -1,13 +1,13 @@
 <template>
 	<div>
-		<Header class="header" msg="发现" style="background: #ccc;width:100%;height:40px;">
+		<Header class="header-m" msg="发现" style="background: #ccc;width:100%;height:40px;">
            <span @click="fanhui()">返回</span>
 			<span>更多</span>
 		</Header>
-		<section class="section">
-			<div class="guess">
+		<section class="section-m">
+			<div class="guess-m">
 				
-				<ul class="like">
+				<ul class="like-m">
 					<router-link to=""><li><p></p><span>2222</span></li></router-link>
 					<router-link to=""><li><p></p><span>2222</span></li></router-link>
 					<router-link to=""><li><p></p><span>2222</span></li></router-link>
@@ -48,19 +48,19 @@
 	a{
 		text-decoration: none;
 	}
-	.header{
+	.header-m{
 	
 		line-height: 40px;
 		font-size: 16px;
         
 	}
-    .header span:first-child {
+    .header-m span:first-child {
         margin-left:20px;
     }
-   .header span:last-child {
+   .header-m span:last-child {
         margin-left:32%;
     }
-	.section{
+	.section-m{
 		height:86.4vh;
 		display: flex;
 		flex-direction: column;
@@ -69,7 +69,7 @@
 		
 	}
     
-	.guess{
+	.guess-m{
 		 background:#fff; 
 
 		height:100%;
@@ -80,7 +80,7 @@
 		margin-top:10px;
 	}
 	
-	.like{
+	.like-m{
 	
 		width:94%;
 		height:100%;
@@ -89,7 +89,7 @@
 		justify-content: space-between;
 		flex-wrap: wrap;
 	}
-	.like li{
+	.like-m li{
 		height:285px;
 		width:170px;
 	
@@ -97,13 +97,13 @@
 		display: flex;
 		flex-direction: column;
 	}
-	.like p{
+	.like-m p{
 		width:170px;
 		height:240px;
 		background:#ff0;
 
 	}
-	.like span{
+	.like-m span{
 		font-size: 12px;
 		color:#504e4e;
 		width:170px;

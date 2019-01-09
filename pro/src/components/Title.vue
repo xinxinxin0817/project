@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<Header class="header" msg="发现" style="background: #fff;width:100%;height:50px;">
+		<Header class="header-title" msg="发现" style="background: #fff;width:100%;height:50px;">
            <span @click="fanhui()">《</span>
 			<span class="biaoti">标题</span>
 		</Header>
@@ -16,9 +16,9 @@
 与此同时，在检查中，检查人员还要求各食品生产经营单位负责人积极展开食品安全风险自查，切实落实食品安全主体责任，认真检查食品安全防范措施的落实情况，及时消除食品安全隐患。同时以承办团圆饭、年夜饭的大中型餐饮单位、火锅店等区域为重点对象，对许可情况、从业人员健康体检及持证情况、采购进货查验、索证索票、台账记录制度落实
           
             </div>
-             <h1>相关商品推荐</h1>
+             <h2 class="title-h">相关商品推荐</h2>
             <div class="banner4">
-               <ul class="like2">
+               <ul class="like-title">
 					<router-link to=""><li><p></p><span>2222</span></li></router-link>
 					<router-link to=""><li><p></p><span>2222</span></li></router-link>
 					<router-link to=""><li><p></p><span>2222</span></li></router-link>
@@ -62,16 +62,16 @@
 	a{
 		text-decoration: none;
 	}
-	.header{
+	.header-title{
         flex-shrink: 0;
 		line-height: 50px;
 		font-size: 16px;
         
 	}
-    .header span:first-child {
+    .header-title span:first-child {
         margin-left:20px;
     }
-   .header .biaoti {
+   .header-title .biaoti {
         margin-left:20%;
         width:40%;
         height:30px;
@@ -89,7 +89,7 @@
         align-items: center;
 		
 	}	
-    section h1{
+    .title-h{
         width:40%;
         height:30px;
         font-size: 16px;
@@ -127,7 +127,7 @@
         
     }
 	
-    .like2{
+    .like-title{
 	
 		width:94%;
 	
@@ -136,7 +136,7 @@
 		justify-content: space-between;
 		flex-wrap: wrap;
 	}
-	.like2 li{
+	.like-title li{
 		height:174px;
 		width:136px;
         margin-left:20px;
@@ -146,13 +146,13 @@
 		display: flex;
 		flex-direction: column;
 	}
-	.like2 p{
+	.like-title p{
 		width:136px;
 		height:132px;
 		background:#ff0;
 
 	}
-	.like2 span{
+	.like-title span{
 		font-size: 12px;
 		color:#504e4e;
 		width:136px;

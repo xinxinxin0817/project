@@ -2,7 +2,7 @@
 	<div>
 
 		<Header class="header" msg="登录">
-			<div class="sy"><router-link to="" ><span @click="fanhui()">返回</span></router-link></div>
+			<div class="sy-login"><router-link to="" ><span @click="fanhui()">返回</span></router-link></div>
 		</Header>
 
 		
@@ -68,7 +68,7 @@ a{
 		align-items: center;
 	}
 
-	.sy{
+	.sy-login{
 		width:10%;
 		height:30px;
 		line-height: 30px;

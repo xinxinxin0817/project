@@ -1,7 +1,7 @@
 <template>
 
 	<div>
-		<Header class="header" msg="我的">
+		<Header class="header-d" msg="我的">
 			<div class="h-top">
 				<div class="sy" ><router-link to="/home" ><span style="font-size:22px;" class="fh1">&lt;</span><em class="fh2">《</em></router-link></div>
 				<div class="sy1" ><router-link to="/home" ><span class="sp">商品</span><em class="xq">详情</em></router-link></div>
@@ -286,7 +286,7 @@ a{
 		overflow: auto;
 	}
 
-.header{
+.header-d{
 	background:yellow;
 	
 	height:60px;
