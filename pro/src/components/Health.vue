@@ -4,7 +4,7 @@
 		<section>
 			
 			<ul class="list-h">
-				<li v-for="(item,health) in list" :key="health" :pid="item.pid"><router-link style="width:100%;"  :to="'/details/'+item.pid"><p><img :src="item.img" alt=""></p><span>{{item.title}}</span></router-link></li>
+				<li v-for="(item,health) in list" :key="health" :pid="item.pid"><router-link style="width:100%;"  :to="'/details/'+item.pid"><p><img :src="item.pimg" alt=""></p><span>{{item.pname}}</span></router-link></li>
 				
 				
 			</ul>
@@ -21,16 +21,16 @@
 		import axios from 'axios';
 		import Mock from 'mockjs'
 
-		Mock.mock('http://www.aaa.com',{
-			'users|10-20':[
-				{
-					"pid|+1":0,
-					"img":"@image('110x120')",
-					"title":"@ctitle()",
+		// Mock.mock('http://www.aaa.com',{
+		// 	'users|10-20':[
+		// 		{
+		// 			"pid|+1":1,
+		// 			"img":"@image('110x120')",
+		// 			"title":"@ctitle()",
 					
-				}
-			]
-		})
+		// 		}
+		// 	]
+		// })
 
 
 	export default{
@@ -43,12 +43,15 @@
 		},
 		mounted(){
 			this.$emit('toparent',this.tit)
+			var _this=this;
+
 			axios({
 					method:'get',
-					url:"http://www.aaa.com"
+					url:'http://jx.xuzhixiang.top/ap/api/productlist.php',
+					params:{uid:'11475'}
 				}).then((data)=>{
-					//console.log(data.data.users)
-					this.list=data.data.users
+					console.log(data.data.data)
+					this.list=data.data.data
 				})
 		},
 		methods:{
@@ -107,7 +110,15 @@ a{
 		height:120px;
 		background:chartreuse;
 	}
+	.list-h p img{
+		width:100%;
+		height:120px;
+	}
 	.list-h li span{
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+
 		color:rgb(102, 101, 101);
 		display:block;
 		width:100%;

@@ -23,7 +23,7 @@
 					
 						<div class="b-r">
 							<p class="b-r-t">{{title}}</p>
-							<p class="b-r-f"><span>￥56.09</span></p>
+							<p class="b-r-f"><span>￥{{jg}}</span></p>
 						</div>
 						<div class="b-l">
 							<div class="b-l-top">
@@ -191,17 +191,21 @@
 			var _this=this;
 			axios({
 				method:'get',
-				url:'http://www.aaa.com',
-				// params:{id:_this.$route.params.id}
+				url:'http://jx.xuzhixiang.top/ap/api/detail.php',
+				params:{uid:'11475',id:_this.$route.params.id}
 			}).then((data)=>{
 				console.log(data.data)
-				for(var i=0;i<data.data.users.length;i++){
-					console.log(data.data.users[i].pid)
-					if(data.data.users[i].pid==id){
-						console.log(data.data.users[i])
-						_this.title=data.data.users[i].title
-					}
-				}
+				_this.title=data.data.data.pname
+				_this.jg=data.data.data.pprice
+
+				// for(var i=0;i<data.data.users.length;i++){
+				// 	_this.title=data.data.users.title
+				// 	console.log(data.data.users[i].pid)
+				// 	if(data.data.users[i].pid==id){
+				// 		console.log(data.data.users[i])
+				// 		_this.title=data.data.users[i].title
+				// 	}
+				// }
 			})
 			console.log(this.$route.params)
 		}
