@@ -3,7 +3,7 @@
 	<div>
 		<Header class="header-d" msg="我的">
 			<div class="h-top">
-				<div class="sy" ><router-link to="/home" ><span style="font-size:22px;" class="fh1">&lt;</span><em class="fh2">《</em></router-link></div>
+				<div class="sy" ><router-link to="/home" ><span style="font-size:22px;" class="fh1" @click="fanhui()">&lt;</span></router-link></div>
 				<div class="sy1" ><router-link to="/home" ><span class="sp">商品</span><em class="xq">详情</em></router-link></div>
 				<div class="sy2" ><router-link to="/cart" style="width:100%;"><span class="osy">首页</span><em class="fx">分享</em></router-link></div>
 			</div>
@@ -175,7 +175,9 @@
 			}
 		},
 		methods:{
-			
+			fanhui(){
+				this.$router.go(-1)
+			}
 		},
 		mounted(){
 			this.$emit('toparent',this.tit)
@@ -186,7 +188,7 @@
 <style scoped="">
 .xqjs{
 	height:400px;
-	overflow: auto;
+	
 }
 
 .cpgs{
