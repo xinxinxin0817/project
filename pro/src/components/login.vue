@@ -11,7 +11,7 @@
 			<mt-field label="手机号" placeholder="请输入手机号" v-model="phonenum"></mt-field>
 			<mt-field label="密码" placeholder="请输入密码" v-model="pass" style="border-bottom:1px solid #ccc;width:100%;"></mt-field>
 
-			<mt-button size="normal" type="danger" @click="login()" style="width:80%;margin-left:10%;margin-top:30px;">登录</mt-button>
+			<router-link to="/logina"><mt-button size="normal" type="danger" @click="login()" style="width:80%;margin-left:10%;margin-top:30px;">登录</mt-button></router-link>
 			
 			
 		</div>

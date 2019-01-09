@@ -18,6 +18,10 @@ import Banner from '@/components/Banner'
 import Title from '@/components/Title'
 
 import Details from '@/components/Details'
+import Logina from '@/components/Logina'
+import Setting from '@/components/Setting'
+
+
 
 
 
@@ -72,6 +76,10 @@ export default new Router({
 					path:'/more',
 					component:More,
 				},
+				{	
+					path:'/logina',
+					component:Logina,
+				}
 				
 				
       ]
@@ -104,6 +112,10 @@ export default new Router({
 	{	
 		path:'/details',
 		component:Details,
+	},
+	{	
+		path:'/setting',
+		component:Setting,
 	}
 	
   ]
