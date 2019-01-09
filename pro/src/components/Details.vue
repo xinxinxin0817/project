@@ -12,9 +12,8 @@
 			<div class="ddd">
 				<router-link to="/banner">
 					<mt-swipe :auto="4000" style="height:135px; margin:0; padding:0;">
-						<mt-swipe-item style="background: red;">1</mt-swipe-item>
-						<mt-swipe-item style="background: yellow;">2</mt-swipe-item>
-						<mt-swipe-item style="background: pink;">3</mt-swipe-item>
+						<mt-swipe-item style="background: red;"><img style="width:100%;height:100%;" :src="img"/></mt-swipe-item>
+						
 					</mt-swipe>
 				</router-link>
 
@@ -197,6 +196,7 @@
 				console.log(data.data)
 				_this.title=data.data.data.pname
 				_this.jg=data.data.data.pprice
+				_this.img=data.data.data.pimg
 
 				// for(var i=0;i<data.data.users.length;i++){
 				// 	_this.title=data.data.users.title
