@@ -76,18 +76,51 @@
 					<div class="djdzk">
 						<h2 class="dj-top"><div><span style="border-bottom:1px solid #000;padding-bottom:4px;">大家都在看</span></div><div><span>今日热门</span></div></h2>
 						<div class="dj-cen">
-							
-							<dl v-for="(item,details) in list" :key="details">
-								<router-link :to="'/details/'+item.pid">
-									<dt><img :src="item.pimg" alt="" style=""></dt>
-									<dd>
-										<span>纯好油，8冉思</span>
-										<span>￥68.88</span>
-									</dd>	
-								</router-link>
+							<dl>
+								<dt></dt>
+								<dd>
+									<span>纯好油，8冉思</span>
+									<span>￥68.88</span>
+								</dd>
 							</dl>
-						
-							
+							<dl>
+								<dt></dt>
+								<dd>
+									<span>纯好油，8冉思</span>
+									<span>￥68.88</span>
+								</dd>
+							</dl>
+							<dl>
+								<dt></dt>
+								<dd>
+									<span>纯好油，8冉思</span>
+									<span>￥68.88</span>
+								</dd>
+							</dl>
+						</div>
+
+						<div class="dj-foot">
+							<dl>
+								<dt></dt>
+								<dd>
+									<span>纯好油，8冉思</span>
+									<span>￥68.88</span>
+								</dd>
+							</dl>
+							<dl>
+								<dt></dt>
+								<dd>
+									<span>纯好油，8冉思</span>
+									<span>￥68.88</span>
+								</dd>
+							</dl>
+							<dl>
+								<dt></dt>
+								<dd>
+									<span>纯好油，8冉思</span>
+									<span>￥68.88</span>
+								</dd>
+							</dl>
 						</div>
 					</div>
 

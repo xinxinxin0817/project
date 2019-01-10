@@ -202,7 +202,7 @@ a{
 	margin-top:2%;
 	width:56%;
 	height:112px;
-	background:#efefef;
+
 	display:flex;
 	flex-direction: column;
 	justify-content: space-between;
