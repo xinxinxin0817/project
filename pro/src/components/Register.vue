@@ -24,12 +24,13 @@
 		<section>
 			<div class="box2">
 				<input type="email" placeholder="请输入邮箱" v-model="email" class="tex">
-				 <input type="text" placeholder="邮箱验证码" v-model="code" class="txt">
-				
-
+				<div class="box3">
+					<input type="text" placeholder="邮箱验证码" v-model="code" class="txt">
+					<button size="normal" type="primary" @click="send()" class="yzm">发送验证码</button>
+				</div>
 				<input type="password" placeholder="请设置密码" v-model="password" class="pas">
-				<router-link to="" style="width:90%;"   ><button @click="register()">注册</button></router-link>
-				<button size="normal" type="primary" @click="send()">发送验证码</button>
+				<router-link to="" style="width:90%;"   ><button @click="register()" class="btn2">注册</button></router-link>
+				
 			</div>
 		</section>
 
@@ -127,13 +128,13 @@ a{
 
 	.box2{
 		width:83%;
-		height:262px;
+		height:280px;
 		
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 	}
-	.box2 input{
+	.tex,.pas,.box3{
 		width:85%;
 		height:50px;
 		background:rgb(236, 231, 231);
@@ -142,7 +143,19 @@ a{
 		font-size: 16px;
 		margin-bottom:15px;
 	}
-	.box2 button{
+	.txt{
+		width:70%;
+		height:48px;
+		border:0;
+		background:rgb(236, 231, 231);
+	}
+	.yzm{
+		background:rgb(236, 231, 231);
+		border:1px solid #ccc;
+		width:27%;
+		height:30px;
+	}
+	.btn2{
 		width:100%;
 		height:50px;
 		background:rgb(236, 231, 231);
