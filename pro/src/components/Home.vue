@@ -3,7 +3,7 @@
 		<Header msg="关于" class="header" style="background: #fff;height:90px;">
 			<div class="h-ss" style="height:30px;">
 				<router-link to="" style="width:80%;">
-					<input type="text" placeholder="搜索产品" />
+					<input type="text" placeholder="搜索产品"/>
 					</router-link>
 			</div>
 			<div class="h-ls">
@@ -24,7 +24,7 @@
 		<div class="ddd">
 			<router-link to="/banner">
 		<mt-swipe :auto="4000" style="height:166px; margin:0; padding:0;">
-		  <mt-swipe-item style="background: red;" v-for="(item,home) in list" :key="home"><img :src="item.pimg" style="width:100%;height:166px;"></mt-swipe-item>
+		  <mt-swipe-item style="background: red;" v-for="(item,home) in list1" :key="home"><img :src="item.banner_img_url" style="width:100%;height:166px;"></mt-swipe-item>
 		  <!-- <mt-swipe-item style="background: yellow;"></mt-swipe-item>
 		  <mt-swipe-item style="background: pink;"></mt-swipe-item>
 		   <mt-swipe-item style="background: blue;"></mt-swipe-item> -->
@@ -63,7 +63,7 @@
 	
 			<dl>
 				<router-link to="/allc">	
-					<dt><img  v-if="list[0]" :src="list[0].pimg" alt=""></dt>
+					<dt><img  v-if="list[6]" :src="list[6].pimg" alt=""></dt>
 					<dd>限时抢购</dd>
 				</router-link>
 			</dl>
@@ -77,21 +77,21 @@
 			<h2 class="mzth"><span></span><em>每周特惠</em><span></span></h2>
 		</div>
 		<div class="th-list">
-			<router-link  v-if="list[0]" :to="'/details/'+list[0].pid" style="width:30%"><p><img  v-if="list[0]" :src="list[0].pimg" alt=""></p></router-link>
-			<router-link  v-if="list[1]" :to="'/details/'+list[1].pid" style="width:30%"><p><img  v-if="list[1]" :src="list[1].pimg" alt=""></p></router-link>
-			<router-link  v-if="list[2]" :to="'/details/'+list[2].pid" style="width:30%"><p><img  v-if="list[2]" :src="list[2].pimg" alt=""></p></router-link>
+			<router-link  v-if="list[4]" :to="'/details/'+list[4].pid" style="width:30%"><p><img  v-if="list[4]" :src="list[4].pimg" alt=""></p></router-link>
+			<router-link  v-if="list[5]" :to="'/details/'+list[5].pid" style="width:30%"><p><img  v-if="list[5]" :src="list[5].pimg" alt=""></p></router-link>
+			<router-link  v-if="list[6]" :to="'/details/'+list[6].pid" style="width:30%"><p><img  v-if="list[6]" :src="list[6].pimg" alt=""></p></router-link>
 		</div>
 		<!---->
 		<!--产品建议开始-->
 			<div class="cpjy">
-				<h2 class="cp-top"><span>产品建议</span> <router-link class="gd" to="/more" tag="span" style="font-size:14px;"><p @click="more1()">更多</p></router-link></h2>
+				<h2 class="cp-top"><span>产品建议</span> <router-link class="gd" to="/more" tag="span" style="font-size:14px;"><p @click="more1()">更多 >></p></router-link></h2>
 				<div class="cp-cen">
-					<router-link  v-if="list[0]" :to="'/details/'+list[0].pid" style="width:40%"><p><img  v-if="list[0]" :src="list[0].pimg" alt=""></p></router-link>
-					<router-link  v-if="list[1]" :to="'/details/'+list[1].pid" style="width:40%"><p><img  v-if="list[1]" :src="list[1].pimg" alt=""></p></router-link>
+					<router-link  v-if="list[7]" :to="'/details/'+list[7].pid" style="width:40%"><p><img  v-if="list[7]" :src="list[7].pimg" alt=""></p></router-link>
+					<router-link  v-if="list[8]" :to="'/details/'+list[8].pid" style="width:40%"><p><img  v-if="list[8]" :src="list[8].pimg" alt=""></p></router-link>
 				</div>
 				<div class="cp-foot">
-					<router-link  v-if="list[2]" :to="'/details/'+list[2].pid" style="width:40%"><p><img  v-if="list[2]" :src="list[2].pimg" alt=""></p></router-link>
-					<router-link  v-if="list[3]" :to="'/details/'+list[3].pid" style="width:40%"><p><img  v-if="list[3]" :src="list[3].pimg" alt=""></p></router-link>
+					<router-link  v-if="list[9]" :to="'/details/'+list[9].pid" style="width:40%"><p><img  v-if="list[9]" :src="list[9].pimg" alt=""></p></router-link>
+					<router-link  v-if="list[1]" :to="'/details/'+list[1].pid" style="width:40%"><p><img  v-if="list[1]" :src="list[1].pimg" alt=""></p></router-link>
 				</div>
 			</div>
 		
@@ -99,21 +99,17 @@
 		<!--bander-->
 
 		<div class="banner">
-				banner
+				<!-- <img v-if="list1[3]" :src="list1[3].banner_img_ur" style="width:100%;height:100%;" alt=""> -->
+				<router-link  v-if="list[0]" :to="'/details/'+list[0].pid" style="width:40%"><img  v-if="list[0]" :src="list[0].pimg" alt="" style="width:100%;height:100%"></router-link>
+
 		</div>
 		<!--bander-->
 
 
 		<!--今日热门-->
 			<div class="jrrm">
-				<h2 class="rm-top"><span>今日热门</span> <router-link class="gd1" to="/more" tag="span" style="font-size:14px;"><p @click="more2()">更多</p></router-link></h2>
+				<h2 class="rm-top"><span>今日热门</span> <router-link class="gd1" to="/more" tag="span" style="font-size:14px;"><p @click="more2()">更多 >></p></router-link></h2>
 				<div class="rm-foot">
-					<router-link  v-if="list[0]" :to="'/details/'+list[0].pid" style="width:28%">
-						<dl>
-							<dt><img  v-if="list[0]" :src="list[0].pimg" alt=""></dt>
-							<dd>{{list[0].pname}}</dd>
-						</dl>
-					</router-link>
 					<router-link  v-if="list[1]" :to="'/details/'+list[1].pid" style="width:28%">
 						<dl>
 							<dt><img  v-if="list[1]" :src="list[1].pimg" alt=""></dt>
@@ -126,6 +122,12 @@
 							<dd>{{list[2].pname}}</dd>
 						</dl>
 					</router-link>
+					<router-link  v-if="list[3]" :to="'/details/'+list[3].pid" style="width:28%">
+						<dl>
+							<dt><img  v-if="list[3]" :src="list[3].pimg" alt=""></dt>
+							<dd>{{list[3].pname}}</dd>
+						</dl>
+					</router-link>
 				
 				</div>
 			</div>
@@ -135,22 +137,22 @@
 			<div class="xsg">
 				<h2 class="xsg-top"><span>限时购</span> <router-link class="gd2" to="/more" tag="span" style="font-size:14px;">更多 >></router-link></h2>
 				<div class="xsg-foot">
-					<router-link  v-if="list[0]" :to="'/details/'+list[0].pid" style="width:28%">
+					<router-link  v-if="list[4]" :to="'/details/'+list[4].pid" style="width:28%">
 						<dl>
-							<dt><img  v-if="list[0]" :src="list[0].pimg" alt=""></dt>
-							<dd>{{list[0].pname}}</dd>
+							<dt><img  v-if="list[4]" :src="list[4].pimg" alt=""></dt>
+							<dd>{{list[4].pname}}</dd>
 						</dl>
 					</router-link>
-					<router-link  v-if="list[3]" :to="'/details/'+list[3].pid" style="width:28%">
+					<router-link  v-if="list[5]" :to="'/details/'+list[5].pid" style="width:28%">
 						<dl>
-							<dt><img  v-if="list[3]" :src="list[3].pimg" alt=""></dt>
-							<dd>{{list[3].pname}}</dd>
+							<dt><img  v-if="list[5]" :src="list[5].pimg" alt=""></dt>
+							<dd>{{list[5].pname}}</dd>
 						</dl>
 					</router-link>
-					<router-link  v-if="list[2]" :to="'/details/'+list[2].pid" style="width:28%">
+					<router-link  v-if="list[6]" :to="'/details/'+list[6].pid" style="width:28%">
 						<dl>
-							<dt><img  v-if="list[2]" :src="list[2].pimg" alt=""></dt>
-							<dd>{{list[2].pname}}</dd>
+							<dt><img  v-if="list[6]" :src="list[6].pimg" alt=""></dt>
+							<dd>{{list[6].pname}}</dd>
 						</dl>
 					</router-link>
 				
@@ -218,6 +220,7 @@
 				img:'',
 				jg:'',
 				list:[],
+				list1:[]
 			}
 		},
 		computed:{
@@ -232,10 +235,21 @@
 			axios({
 					method:'get',
 					url:'http://jx.xuzhixiang.top/ap/api/productlist.php',
-					params:{uid:'11475'}
+					params:{uid:'14632'}
 				}).then((data)=>{
 					console.log(data.data.data)
 					_this.list=data.data.data
+					_this.title=data.data.data.pname
+					_this.jg=data.data.data.pprice
+					
+				}),
+				axios({
+					method:'get',
+					url:'http://jx.xuzhixiang.top/ap/api/bannerlist.php?uid=227',
+					params:{uid:'14632'}
+				}).then((data)=>{
+					console.log(data.data.data)
+					_this.list1=data.data.data
 					_this.title=data.data.data.pname
 					_this.jg=data.data.data.pprice
 					

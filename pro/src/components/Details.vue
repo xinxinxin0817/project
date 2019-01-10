@@ -141,7 +141,10 @@
 					<div class="cpgs">
 						<h2 class="cp-t">产品概述</h2>
 						<div class="cp-f">
-							<div></div>
+							<div>
+				<router-link  v-if="list[1]" :to="'/details/'+list[1].pid" style="width:40%"><img  v-if="list[1]" :src="list[1].pimg" alt="" style="width:100%;height:100%"></router-link>
+
+							</div>
 							<div>
 								<p>品名：</p>
 								<p>净含量</p>
