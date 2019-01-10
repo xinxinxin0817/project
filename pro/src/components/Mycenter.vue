@@ -2,7 +2,7 @@
 
 	<div>
 		<Header class="header" msg="我的">
-			<div class="sy" ><router-link to="/home" ><span style="color:#000;">返回首页</span></router-link></div>
+			<div class="sy" ><router-link to="/home" ><span style="color:#000;">返回</span></router-link></div>
 		</Header>
 		<section class="section">
 			<div class="logo"></div>
@@ -74,15 +74,9 @@ a{
 	line-height: 30px;
 	
 	
-	font-size:12px;
+	font-size:16px;
 }
-.sy span{
-	width:50px;
-	height:30px;
-	background:#ccc;
-	display: inline-block;
-	border-radius: 5px;
-}
+
 
 .logo{
 	width:100%;
