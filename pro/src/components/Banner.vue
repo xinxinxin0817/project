@@ -9,13 +9,12 @@
              <h1>相关商品推荐</h1>
             <div class="banner-c">
                <ul class="like-ban">
-					<router-link to="/details"><li><p></p><span>2222</span></li></router-link>
-					<router-link to="/details"><li><p></p><span>2222</span></li></router-link>
-					<router-link to="/details"><li><p></p><span>2222</span></li></router-link>
-					<router-link to="/details"><li><p></p><span>2222</span></li></router-link>
-					<router-link to="/details"><li><p></p><span>2222</span></li></router-link>
-					<router-link to="/details"><li><p></p><span>2222</span></li></router-link>
-
+					<li><router-link  v-if="list[0]" :to="'/details/'+list[0].pid"><p><img  v-if="list[0]" :src="list[0].pimg" alt=""></p><span>{{list[0].pname}}</span></router-link></li>
+					<li><router-link  v-if="list[1]" :to="'/details/'+list[1].pid"><p><img  v-if="list[1]" :src="list[1].pimg" alt=""></p><span>{{list[1].pname}}</span></router-link></li>
+					<li><router-link  v-if="list[2]" :to="'/details/'+list[2].pid"><p><img  v-if="list[2]" :src="list[2].pimg" alt=""></p><span>{{list[2].pname}}</span></router-link></li>
+					<li><router-link  v-if="list[3]" :to="'/details/'+list[3].pid"><p><img  v-if="list[3]" :src="list[3].pimg" alt=""></p><span>{{list[3].pname}}</span></router-link></li>
+					<li><router-link  v-if="list[0]" :to="'/details/'+list[0].pid"><p><img  v-if="list[0]" :src="list[0].pimg" alt=""></p><span>{{list[0].pname}}</span></router-link></li>
+					<li><router-link  v-if="list[1]" :to="'/details/'+list[1].pid"><p><img  v-if="list[1]" :src="list[1].pimg" alt=""></p><span>{{list[1].pname}}</span></router-link></li>
 				</ul>
             </div>
 		</section>
@@ -26,11 +25,14 @@
 </template>
 
 <script>
+	import axios from 'axios';
 	export default {
 		name:'More',
 		data(){
 			return{
-				tit:'更多'
+				tit:'更多',
+				'list':[],
+
 			}
 		},
 		mounted(){
@@ -40,7 +42,19 @@
           fanhui(){
 				this.$router.go(-1)
 			}
-        }
+		},
+		mounted(){
+			this.$emit('toparent',this.tit)
+			var _this=this;
+			axios({
+					method:'get',
+					url:'http://jx.xuzhixiang.top/ap/api/productlist.php',
+					params:{uid:'11475'}
+				}).then((data)=>{
+					console.log(data.data.data)
+					_this.list=data.data.data
+				})
+		}
 	}
 </script>
 
@@ -122,15 +136,23 @@
 	.like-ban p{
 		width:136px;
 		height:132px;
-		background:#ff0;
+		
 
+	}
+	.like-ban p img{
+		width:100%;
+		height:100%;
 	}
 	.like-ban span{
 		font-size: 12px;
 		color:#504e4e;
 		width:136px;
 		height:40px;
-		background:pink;
+		line-height: 40px;
+		display: inline-block;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 	
     footer{
