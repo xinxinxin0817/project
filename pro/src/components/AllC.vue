@@ -209,6 +209,7 @@ a{
 }
 .b-r-t{
 	font-size:14px;
+	color:#fff;
 }
 .b-r-f span:first-child{
 	display: inline-block;
