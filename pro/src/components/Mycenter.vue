@@ -2,16 +2,16 @@
 
 	<div>
 		<Header class="header" msg="我的">
-			<div class="sy" ><router-link to="/home" ><span >返回首页</span></router-link></div>
+			<div class="sy" ><router-link to="/home" ><span style="color:#000;">返回首页</span></router-link></div>
 		</Header>
 		<section class="section">
 			<div class="logo"></div>
 			<router-link to="/banner">
 				<mt-swipe :auto="4000" style="height:200px; margin:0; padding:0;">
-					<mt-swipe-item style="background: red;height:200px;">1</mt-swipe-item>
-					<mt-swipe-item style="background: yellow;height:200px;">2</mt-swipe-item>
-					<mt-swipe-item style="background: pink;height:200px;">3</mt-swipe-item>
-					<mt-swipe-item style="background: blue;height:200px;">4</mt-swipe-item>
+					<mt-swipe-item style="background: red;height:200px;"></mt-swipe-item>
+					<mt-swipe-item style="background: yellow;height:200px;"></mt-swipe-item>
+					<mt-swipe-item style="background: pink;height:200px;"></mt-swipe-item>
+					<mt-swipe-item style="background: blue;height:200px;"></mt-swipe-item>
 				</mt-swipe>
 			</router-link>
 
@@ -23,8 +23,8 @@
 			</mt-swipe> -->
 
 			<div class="dlzc">
-				<div class="dl-top"><router-link to="/login" style="width:100%"><p>手机号登录</p></router-link></div>
-				<div class="dl-foot"><router-link to="/register" style="width:100%"><p>手机号快捷注册</p></router-link></div>
+				<div class="dl-top"><router-link to="/login" style="width:100%"><p style="color:#000">手机号登录</p></router-link></div>
+				<div class="dl-foot"><router-link to="/register" style="width:100%"><p  style="color:#000">手机号快捷注册</p></router-link></div>
 			</div>
 		</section>
 		
@@ -60,7 +60,7 @@ a{
 	text-decoration: none;
 }
 .header{
-	background:yellow;
+
 	padding-left:4%;
 	height:50px;
 	width:96%;
@@ -75,6 +75,13 @@ a{
 	
 	
 	font-size:12px;
+}
+.sy span{
+	width:50px;
+	height:30px;
+	background:#ccc;
+	display: inline-block;
+	border-radius: 5px;
 }
 
 .logo{

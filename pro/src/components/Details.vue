@@ -5,7 +5,7 @@
 			<div class="h-top">
 				<div class="sy" ><router-link to="/home" ><span style="font-size:22px;" class="fh1" @click="fanhui()">&lt;</span></router-link></div>
 				<div class="sy1" ><router-link to="/home" ><span class="sp">商品</span><em class="xq">详情</em></router-link></div>
-				<div class="sy2" ><router-link to="/cart" style="width:100%;"><span class="osy">首页</span><em class="fx">分享</em></router-link></div>
+				<div class="sy2" style="text-align:center;"><router-link to="/cart" style="width:100%;"><span class="osy">首页</span></router-link></div>
 			</div>
 		</Header>
 		<section class="section">
@@ -222,7 +222,7 @@
 .cpgs{
 	height:160px;
 	width:100%;
-	background:yellow;
+
 }
 .cp-t{
 	width: 90%;
@@ -248,7 +248,8 @@
 .cp-f div:last-child{
 	width:40%;
 	height:120px;
-	background:orchid
+	background:#fff;
+	padding-left:20px;
 }
 .cp-f div:last-child p{
 	height:30px;
@@ -260,7 +261,8 @@
 .djdzk{
 	height:403px;
 	width:100%;
-	background:orchid;
+	background:#fff;
+	
 }
 .dj-top{
 	padding:0 15%;
@@ -292,14 +294,14 @@
 .dj-cen{
 	margin-top:20px;
 	height:160px;
-	background:olive;
+	background:#fff;
 	display: flex;
 	justify-content: space-around;
 }
 .dj-cen dl:nth-child(1){
 	width:30%;
 	height:160px;
-	background:orange;
+	background:rgb(243, 242, 241);
 }
 .dj-cen dl:nth-child(1) dt{
 	height:120px;
@@ -328,7 +330,7 @@
 .dj-cen dl:nth-child(2){
 	width:30%;
 	height:160px;
-	background:orange;
+	background:rgb(245, 244, 242);
 }
 .dj-cen dl:nth-child(2) dt{
 	height:120px;
@@ -358,7 +360,7 @@
 .dj-cen dl:nth-child(3){
 	width:30%;
 	height:160px;
-	background:orange;
+	background:rgb(235, 233, 231);
 }
 .dj-cen dl:nth-child(3) dt{
 	height:120px;
@@ -387,14 +389,14 @@
 
 .dj-foot{
 	height:160px;
-	background:olive;
+	background:#fff;
 	display: flex;
 	justify-content: space-around;
 }
 .dj-foot dl:nth-child(1){
 	width:30%;
 	height:160px;
-	background:orange;
+	background:rgb(243, 242, 241);
 }
 .dj-foot dl:nth-child(1) dt{
 	height:120px;
@@ -423,7 +425,7 @@
 .dj-foot dl:nth-child(2){
 	width:30%;
 	height:160px;
-	background:orange;
+	background:rgb(236, 235, 232);
 }
 .dj-foot dl:nth-child(2) dt{
 	height:120px;
@@ -453,7 +455,7 @@
 .dj-foot dl:nth-child(3){
 	width:30%;
 	height:160px;
-	background:orange;
+	background:rgb(247, 246, 245);
 }
 .dj-foot dl:nth-child(3) dt{
 	height:120px;
@@ -519,7 +521,7 @@
 .yhpj{
 	height:235px;
 	width:100%;
-	background:green;
+	background:#fff;
 	border-bottom:5px solid #ccc;
 }
 .yh-top{
@@ -544,7 +546,7 @@
 .banner{
 	text-align: center;
 	line-height: 53px;
-	background:yellow;
+	background:rgb(230, 230, 227);
 	width:100%;
 	height:53px;
 	border-top:5px solid #ccc;
@@ -553,6 +555,8 @@
 .al-d{
 	width:100%;
 	height:41px;
+	border-bottom:1px solid #ccc;
+
 }
 .al-d span:nth-child(1){
 	display: inline-block;
@@ -570,6 +574,8 @@
 .al-c{
 	width:100%;
 	height:41px;
+	border-bottom:1px solid #ccc;
+
 }
 .al-c span:nth-child(1){
 	display: inline-block;
@@ -593,6 +599,8 @@
 .al-b{
 	width:100%;
 	height:41px;
+	border-bottom:1px solid #ccc;
+
 }
 .al-b span:nth-child(1){
 	display: inline-block;
@@ -603,6 +611,8 @@
 	display: inline-block;
 	width:28%;
 	text-align: center;
+	font-size: 12px;
+
 }
 .al-b span:nth-child(3){
 	display: inline-block;
@@ -616,6 +626,7 @@
 .al-a{
 	width:100%;
 	height:41px;
+	border-bottom:1px solid #ccc;
 }
 .al-a span:nth-child(1){
 	display: inline-block;
@@ -626,11 +637,14 @@
 	display: inline-block;
 	width:18%;
 	text-align: center;
+	font-size: 12px;
 }
 .al-a span:nth-child(3){
 	display: inline-block;
 	width:18%;
 	text-align: center;
+	font-size: 12px;
+
 }
 .al-a span:nth-child(4){
 
@@ -663,7 +677,7 @@ a{
 	}
 
 .header-d{
-	background:yellow;
+	background:rgba(226, 225, 225, 0.973);
 	
 	height:60px;
 	width:100%;
@@ -708,9 +722,10 @@ a{
 	
 }
 .osy{
-	float: left;
+	float: right;
 	display:block;
 	width:47%;
+	color:rgb(7, 7, 7);
 	
 }
 .sp{
@@ -727,11 +742,11 @@ a{
 }
 .sy{
 	
-	width:31%;
+	width:10%;
 	height:30px;
 	line-height: 30px;
 	text-align: center;
-	background:#ccc;
+	
 	font-size:12px;
 	
 }
@@ -741,11 +756,19 @@ a{
 	height:30px;
 	line-height: 30px;
 	text-align: center;
-	background:#ccc;
+	margin-left:80px;
 	font-size:12px;
-	margin:0 3%;
+
 	
 	
+}
+.sy1 span{
+	color:#fff;
+	background:rgb(184, 182, 182);
+}
+.sy1 em{
+	color:rgb(37, 37, 37);
+	background:rgb(240, 239, 239);
 }
 .sy2{
 	
@@ -754,7 +777,7 @@ a{
 	height:30px;
 	line-height: 30px;
 	text-align: center;
-	background:#ccc;
+	
 	font-size:12px;
 	
 }
@@ -774,9 +797,10 @@ a{
 	border-top:5px solid #ccc;
 	width:100%;
 	height:85px;
-	background:yellow;
+	background:#fff;
 	display: flex;
 	border-bottom: 5px solid #ccc;
+	
 
 }
 .b-c-r{
@@ -790,7 +814,6 @@ a{
 	margin:0 5%;
 	width:29%;
 	height:85px;
-	background:bisque;
 }
 .b-l-t1{
 	border-left: 1px solid #ccc;
@@ -802,7 +825,7 @@ a{
 .b-r{
 	width:55%;
 	height:85px;
-	background:pink;
+
 	display:flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -837,7 +860,7 @@ a{
 	height:50px;
 	line-height: 50px;
 	text-align: center;
-	background:red;
+	background:rgb(151, 150, 150);
 	
 }
 .foot-d div:last-child{
@@ -845,7 +868,7 @@ a{
 	height:50px;
 	line-height: 50px;
 	text-align: center;
-	background:blueviolet;
+	background:rgb(95, 94, 95);
 }
 
 </style>
