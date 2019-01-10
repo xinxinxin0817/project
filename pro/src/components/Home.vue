@@ -22,7 +22,7 @@
 		<div class="ddd">
 			<router-link to="/banner">
 		<mt-swipe :auto="4000" style="height:166px; margin:0; padding:0;">
-		  <mt-swipe-item style="background: red;" v-for="(item,home) in list" :key="home"><img :src="item.img" style="width:100%;height:166px;"></mt-swipe-item>
+		  <mt-swipe-item style="background: red;" v-for="(item,home) in list" :key="home"><img :src="item.pimg" style="width:100%;height:166px;"></mt-swipe-item>
 		  <!-- <mt-swipe-item style="background: yellow;"></mt-swipe-item>
 		  <mt-swipe-item style="background: pink;"></mt-swipe-item>
 		   <mt-swipe-item style="background: blue;"></mt-swipe-item> -->
@@ -35,7 +35,7 @@
 		
 			<dl>
 				<router-link to="/allc">
-					<dt></dt>
+					<dt><img  v-if="list[3]" :src="list[3].pimg" alt=""></dt>
 					<dd>特价产品</dd>
 				</router-link>
 			</dl>
@@ -43,7 +43,7 @@
 			
 			<dl>
 				<router-link to="/allc">	
-					<dt></dt>
+					<dt><img  v-if="list[2]" :src="list[2].pimg" alt=""></dt>
 					<dd>尖货排名</dd>
 				</router-link>
 			</dl>
@@ -52,7 +52,7 @@
 		
 			<dl>
 				<router-link to="/allc">	
-					<dt></dt>
+					<dt><img  v-if="list[1]" :src="list[1].pimg" alt=""></dt>
 					<dd>新品上架</dd>
 				</router-link>
 			</dl>
@@ -61,7 +61,7 @@
 	
 			<dl>
 				<router-link to="/allc">	
-					<dt></dt>
+					<dt><img  v-if="list[0]" :src="list[0].pimg" alt=""></dt>
 					<dd>限时抢购</dd>
 				</router-link>
 			</dl>
@@ -75,21 +75,21 @@
 			<h2 class="mzth"><span></span><em>每周特惠</em><span></span></h2>
 		</div>
 		<div class="th-list">
-			<router-link to="/details/id" style="width:30%"><p><img src="" alt=""></p></router-link>
-			<router-link to="/details/id" style="width:30%"><p></p></router-link>
-			<router-link to="details/id" style="width:30%"><p></p></router-link>
+			<router-link :to="'/details/'+list[0].pid" style="width:30%"><p><img  v-if="list[0]" :src="list[0].pimg" alt=""></p></router-link>
+			<router-link :to="'/details/'+list[1].pid" style="width:30%"><p><img  v-if="list[1]" :src="list[1].pimg" alt=""></p></router-link>
+			<router-link :to="'/details/'+list[2].pid" style="width:30%"><p><img  v-if="list[2]" :src="list[2].pimg" alt=""></p></router-link>
 		</div>
 		<!---->
 		<!--产品建议开始-->
 			<div class="cpjy">
 				<h2 class="cp-top"><span>产品建议</span> <router-link class="gd" to="/more" tag="span" style="font-size:14px;"><p @click="more1()">更多</p></router-link></h2>
 				<div class="cp-cen">
-					<router-link to="/details/id" style="width:40%"><p>3</p></router-link>
-					<router-link to="/details/id" style="width:40%"><p>4</p></router-link>
+					<router-link :to="'/details/'+list[0].pid" style="width:40%"><p><img  v-if="list[0]" :src="list[0].pimg" alt=""></p></router-link>
+					<router-link :to="'/details/'+list[1].pid" style="width:40%"><p><img  v-if="list[1]" :src="list[1].pimg" alt=""></p></router-link>
 				</div>
 				<div class="cp-foot">
-					<router-link to="/details/id" style="width:40%"><p>1</p></router-link>
-					<router-link to="/details/id" style="width:40%"><p>2</p></router-link>
+					<router-link :to="'/details/'+list[2].pid" style="width:40%"><p><img  v-if="list[2]" :src="list[2].pimg" alt=""></p></router-link>
+					<router-link :to="'/details/'+list[3].pid" style="width:40%"><p><img  v-if="list[3]" :src="list[3].pimg" alt=""></p></router-link>
 				</div>
 			</div>
 		
@@ -106,22 +106,22 @@
 			<div class="jrrm">
 				<h2 class="rm-top"><span>今日热门</span> <router-link class="gd1" to="/more" tag="span" style="font-size:14px;"><p @click="more2()">更多</p></router-link></h2>
 				<div class="rm-foot">
-					<router-link to="/details/id" style="width:28%">
+					<router-link :to="'/details/'+list[0].pid" style="width:28%">
 						<dl>
-							<dt>图片</dt>
-							<dd>文字1</dd>
+							<dt><img  v-if="list[0]" :src="list[0].pimg" alt=""></dt>
+							<dd>{{list[0].pname}}</dd>
 						</dl>
 					</router-link>
-					<router-link to="/details/id" style="width:28%">
+					<router-link :to="'/details/'+list[1].pid" style="width:28%">
 						<dl>
-							<dt>图片</dt>
-							<dd>文字2</dd>
+							<dt><img  v-if="list[1]" :src="list[1].pimg" alt=""></dt>
+							<dd>{{list[1].pname}}</dd>
 						</dl>
 					</router-link>
-					<router-link to="/details/id" style="width:28%">
+					<router-link :to="'/details/'+list[2].pid" style="width:28%">
 						<dl>
-							<dt>图片</dt>
-							<dd>文字3</dd>
+							<dt><img  v-if="list[2]" :src="list[2].pimg" alt=""></dt>
+							<dd>{{list[2].pname}}</dd>
 						</dl>
 					</router-link>
 				
@@ -133,22 +133,22 @@
 			<div class="xsg">
 				<h2 class="xsg-top"><span>限时购</span> <router-link class="gd2" to="/more" tag="span" style="font-size:14px;">更多 >></router-link></h2>
 				<div class="xsg-foot">
-					<router-link to="/details/id" style="width:28%">
+					<router-link :to="'/details/'+list[0].pid" style="width:28%">
 						<dl>
-							<dt>图片</dt>
-							<dd>文字1</dd>
+							<dt><img  v-if="list[0]" :src="list[0].pimg" alt=""></dt>
+							<dd>{{list[0].pname}}</dd>
 						</dl>
 					</router-link>
-					<router-link to="/details/id" style="width:28%">
+					<router-link :to="'/details/'+list[3].pid" style="width:28%">
 						<dl>
-							<dt>图片</dt>
-							<dd>文字2</dd>
+							<dt><img  v-if="list[3]" :src="list[3].pimg" alt=""></dt>
+							<dd>{{list[3].pname}}</dd>
 						</dl>
 					</router-link>
-					<router-link to="/details/id" style="width:28%">
+					<router-link :to="'/details/'+list[2].pid" style="width:28%">
 						<dl>
-							<dt>图片</dt>
-							<dd>文字3</dd>
+							<dt><img  v-if="list[2]" :src="list[2].pimg" alt=""></dt>
+							<dd>{{list[2].pname}}</dd>
 						</dl>
 					</router-link>
 				
@@ -195,14 +195,14 @@
 	import axios from 'axios';
 		import Mock from 'mockjs'
 
-		Mock.mock('http://www.ddd.com',{
-			'users|4':[
-				{
-					"img":"@image('')",
+		// Mock.mock('http://www.ddd.com',{
+		// 	'users|4':[
+		// 		{
+		// 			"img":"@image('')",
 					
-				}
-			]
-		})
+		// 		}
+		// 	]
+		// })
 
 
 	import {mapGetters,mapActions} from 'vuex';
@@ -212,7 +212,10 @@
 			return{
 				str:'hello world vuejiashoujia',
 				tit:'首页',
-				list:[]
+				title:'',
+				img:'',
+				jg:'',
+				list:[],
 			}
 		},
 		computed:{
@@ -226,10 +229,17 @@
 			var _this=this;
 			axios({
 					method:'get',
-					url:"http://www.ddd.com"
+					url:'http://jx.xuzhixiang.top/ap/api/productlist.php',
+					params:{uid:'11475'}
 				}).then((data)=>{
-					console.log(data.data.users)
-					this.list=data.data.users
+					console.log(data.data.data)
+					_this.list=data.data.data
+					_this.title=data.data.data.pname
+					_this.jg=data.data.data.pprice
+					// this.img1=data.data.data[0].pimg
+					// this.img2=data.data.data[1].pimg
+					// this.img3=data.data.data[2].pimg
+					// this.img4=data.data.data[3].pimg
 				})
 			
 			
@@ -324,6 +334,11 @@ a{
 		border-radius: 50%;
 		margin-bottom:10px;
 	}
+	.fl dt img{
+		width:100%;
+		height:100%;
+		border-radius: 50%;
+	}
 	.fl dd{
 			color:rgb(37, 36, 36);
 	}
@@ -360,7 +375,11 @@ a{
 	.th-list p{
 		width:100%;
 		height:110px;
-		background:blue;
+		
+	}
+	.th-list p img{
+		width:100%;
+		height:100%;
 	}
 	/*产品建议*/
 	 .cpjy{
@@ -385,9 +404,13 @@ a{
 		justify-content: space-around;
 	}
 	.cp-cen p{
-		background:red;
+		
 		width:100%;
 		height:100px;
+	}
+	.cp-cen p img{
+		width:100%;
+		height:100%;
 	}
 
 	.cp-foot{
@@ -397,9 +420,13 @@ a{
 		justify-content: space-around;
 	}
 	.cp-foot p{
-		background:red;
+		
 		width:100%;
 		height:100px;
+	}
+	.cp-foot p img{
+		width:100%;
+		height:100%;
 	}
 	/*产品建议end*/
 
@@ -435,13 +462,23 @@ a{
 		justify-content: space-around;
 	}
 	.rm-foot dt{
-		background:red;
+	
 		width:100%;
 		height:100px;
 	}
 	.rm-foot dd{
+		font-size:14px;
 		height:34px;
-		background:yellow;
+		line-height: 34px;
+		color:#000;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	.rm-foot dt img{
+		width:100%;
+		height:100%;
 	}
 
 	/*今日热门end*/
@@ -469,13 +506,22 @@ a{
 		justify-content: space-around;
 	}
 	.xsg-foot dt{
-		background:red;
+	
 		width:100%;
 		height:100px;
 	}
 	.xsg-foot dd{
+		color:#000;
+		font-size:14px;
 		height:34px;
-		background:yellow;
+		line-height: 34px;		
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	.xsg-foot dt img{
+		width:100%;
+		height:100%;
 	}
 
 	/*限时购end*/
