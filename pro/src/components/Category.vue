@@ -33,7 +33,7 @@
 					<router-link to=""><span>查看全部</span></router-link>
 				</div>
 				<ul class="list-c">
-				<router-link to="/details"><li v-for="(item,category) in list1" :key="category"><p><img :src="item.img" alt=""></p><span>{{item.title}}</span></li></router-link>
+				<li v-for="(item,category) in list" :key="category"><router-link :to="'/details/'+item.pid" style="width:84px;height:116px;"><p><img :src="item.pimg" alt="" style="width:84px;height:100px;"></p><span style="width:84px;height:16px;">{{item.pname}}</span></router-link></li>
 				
 				
 					
@@ -55,14 +55,14 @@
 		import Mock from 'mockjs'
 
 
-		Mock.mock('http://www.bbb.com',{
-			'users1|7-10':[
-				{
-					"img":"@image('84x100')",
-					"title":"@ctitle()"
-				}
-			]
-		})
+		// Mock.mock('http://www.bbb.com',{
+		// 	'users1|7-10':[
+		// 		{
+		// 			"img":"@image('84x100')",
+		// 			"title":"@ctitle()"
+		// 		}
+		// 	]
+		// })
 	export default{
 		name:'Category',
 		
@@ -70,7 +70,10 @@
 			return{
 				tit:'关于',
 				str:"补充剂",
-				list1:[]
+				list:[],
+				title:'',
+				img:'',
+				jg:'',
 			}
 		},
 		methods:{
@@ -105,13 +108,19 @@
 		},
 		mounted(){
 			this.$emit('toparent',this.tit)
+			var _this=this;
 			axios({
 					method:'get',
-					url:"http://www.bbb.com"
+					url:'http://jx.xuzhixiang.top/ap/api/productlist.php',
+					params:{uid:'11475'}
 				}).then((data)=>{
-					console.log(data.data.users1)
-					this.list1=data.data.users1
+					console.log(data.data.data)
+					_this.list=data.data.data
+					_this.title=data.data.data.pname
+					_this.jg=data.data.data.pprice
+					
 				})
+			
 		}
 	}
 </script>
@@ -226,25 +235,31 @@
 		flex-wrap:wrap ;
 		justify-content: space-between;
 	
+		
 	}
 	.list-c li{
 		width:84px;	
 		height:116px;
-		float:left;
-		margin:5px 3px;
+		
+		
 	
-		margin-bottom:10px;
+		margin-top:5px;
 		list-style: none;
         border:0;
         border:1px solid #ccc;
 		display: flex;
 		flex-direction: column;
+		
 	}
 	.list-c p{
 		width:84px;
 		height:100px;
 		padding:0;
 		margin:0;
+	}
+	.list-c img{
+		margin:0;
+		padding:0;
 	}
 	.list-c span{
 		width:84px;
@@ -254,5 +269,10 @@
 		text-align: center;
 		color: rgb(66, 64, 64);
 		font-size: 12px;
+		display: inline-block;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+
 	}
 </style>

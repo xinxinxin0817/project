@@ -28,7 +28,7 @@
 							<div class="b-l-top">
 								<p class="b-l-t1">99%<br/>好评率</p>
 							
-								<p class="b-l-foot">购买最高可获2积分</p>
+								<p class="b-l-foot">购买可获2积分</p>
 							</div>
 						</div>
 						<div class="b-c-r">></div>
@@ -65,7 +65,7 @@
 							banner活动
 					</div>
 					<div class="yhpj">
-						<p class="yh-top"><span>用户评价（319）</span><span>99%好评率》</span></p>
+						<p class="yh-top"><span>用户评价（319）</span><span>99%好评率 ></span></p>
 						<div class="yh-foot">
 							<h2 class="b-t-a"><span></span>小***</h2>
 							<p>2018.12.10 10:22 10毫克</p>
@@ -74,53 +74,20 @@
 					</div>
 
 					<div class="djdzk">
-						<h2 class="dj-top"><div><span>大家都在看</span></div><div><span>今日热门</span></div></h2>
+						<h2 class="dj-top"><div><span style="border-bottom:1px solid #000;padding-bottom:4px;">大家都在看</span></div><div><span>今日热门</span></div></h2>
 						<div class="dj-cen">
-							<dl>
-								<dt></dt>
-								<dd>
-									<span>纯好油，8冉思</span>
-									<span>￥68.88</span>
-								</dd>
+							
+							<dl v-for="(item,details) in list" :key="details">
+								<router-link :to="'/details/'+item.pid">
+									<dt><img :src="item.pimg" alt="" style=""></dt>
+									<dd>
+										<span>纯好油，8冉思</span>
+										<span>￥68.88</span>
+									</dd>	
+								</router-link>
 							</dl>
-							<dl>
-								<dt></dt>
-								<dd>
-									<span>纯好油，8冉思</span>
-									<span>￥68.88</span>
-								</dd>
-							</dl>
-							<dl>
-								<dt></dt>
-								<dd>
-									<span>纯好油，8冉思</span>
-									<span>￥68.88</span>
-								</dd>
-							</dl>
-						</div>
-
-						<div class="dj-foot">
-							<dl>
-								<dt></dt>
-								<dd>
-									<span>纯好油，8冉思</span>
-									<span>￥68.88</span>
-								</dd>
-							</dl>
-							<dl>
-								<dt></dt>
-								<dd>
-									<span>纯好油，8冉思</span>
-									<span>￥68.88</span>
-								</dd>
-							</dl>
-							<dl>
-								<dt></dt>
-								<dd>
-									<span>纯好油，8冉思</span>
-									<span>￥68.88</span>
-								</dd>
-							</dl>
+						
+							
 						</div>
 					</div>
 
@@ -587,6 +554,8 @@
 	width:65%;
 	text-align: center;
 	font-size: 12px;
+	color:rgb(87, 85, 85);
+
 }
 .al-c span:nth-child(3){
 	display: inline-block;
@@ -612,6 +581,8 @@
 	width:28%;
 	text-align: center;
 	font-size: 12px;
+	color:rgb(87, 85, 85);
+
 
 }
 .al-b span:nth-child(3){
@@ -638,6 +609,7 @@
 	width:18%;
 	text-align: center;
 	font-size: 12px;
+	color:rgb(87, 85, 85);
 }
 .al-a span:nth-child(3){
 	display: inline-block;
@@ -703,6 +675,7 @@ a{
 	text-align: center;
 	display:block;
 	width:47%;
+	color:#000;
 	
 }
 .fh2{
@@ -821,6 +794,8 @@ a{
 }
 .b-l-foot{
 	font-size:12px;
+	color:rgb(119, 117, 117);
+	margin-left:10px;
 }
 .b-r{
 	width:55%;
@@ -831,7 +806,8 @@ a{
 	justify-content: space-between;
 }
 .b-r-t{
-	font-size:14px;
+	font-size:12px;
+	margin-top:5px;
 }
 .b-r-f span:first-child{
 	display: inline-block;

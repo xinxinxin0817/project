@@ -44,7 +44,7 @@
 			<div class="guess">
 				<p>猜你喜欢</p>
 				<ul class="like1">
-					<router-link to="/details"><li v-for="(item,cart) in list" :key="cart"><p><img :src="item.img" alt=""></p><span>{{item.title}}</span></li></router-link>
+					<li v-for="(item,cart) in list" :key="cart"><router-link :to="'/details/'+item.pid"><p><img :src="item.pimg" alt="" style="width:170px;height:240px;"></p><span style="overflow:hidden">{{item.pname}}</span></router-link></li>
 					
 				</ul>
 			</div>
@@ -83,14 +83,14 @@
 <script>
 	import axios from 'axios';
 	import Mock from 'mockjs'
-	Mock.mock('http://www.ccc.com',{
-			'users|6-10':[
-				{
-					"img":"@image('170x240')",
-					"title":"@ctitle()"
-				}
-			]
-		})
+	// Mock.mock('http://www.ccc.com',{
+	// 		'users|6-10':[
+	// 			{
+	// 				"img":"@image('170x240')",
+	// 				"title":"@ctitle()"
+	// 			}
+	// 		]
+	// 	})
 
 	export default{
 		name:'Shop',
@@ -100,18 +100,27 @@
 				sty:{
 					display:'none'
 				},
-				list:[]
+				list:[],
+				title:'',
+				img:'',
+				jg:'',
 			}
 		},
 		mounted(){
 			this.$emit('toparent',this.tit)
+			var _this=this;
 			axios({
 					method:'get',
-					url:"http://www.ccc.com"
+					url:'http://jx.xuzhixiang.top/ap/api/productlist.php',
+					params:{uid:'11475'}
 				}).then((data)=>{
-					console.log(data.data.users)
-					this.list=data.data.users
+					console.log(data.data.data)
+					_this.list=data.data.data
+					_this.title=data.data.data.pname
+					_this.jg=data.data.data.pprice
+					
 				})
+			
 		},
 		
 		methods:{
@@ -258,7 +267,7 @@ li{
 	.like1 p{
 		width:170px;
 		height:240px;
-		background:#ff0;
+		
 
 	}
 	.like1 span{
@@ -266,7 +275,7 @@ li{
 		color:#504e4e;
 		width:170px;
 		height:45px;
-		background:pink;
+	
 		line-height: 45px;
 		text-align: center;
 	}

@@ -236,10 +236,7 @@
 					_this.list=data.data.data
 					_this.title=data.data.data.pname
 					_this.jg=data.data.data.pprice
-					// this.img1=data.data.data[0].pimg
-					// this.img2=data.data.data[1].pimg
-					// this.img3=data.data.data[2].pimg
-					// this.img4=data.data.data[3].pimg
+					
 				})
 			
 			
