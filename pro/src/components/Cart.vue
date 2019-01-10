@@ -68,7 +68,7 @@
 				<div class="meme"><input type="checkbox" name="ram" class="quanxuan" style="width:20px;"/>全选</div>
 					<div class="xiadan">
 						合计:<input type="text" value="￥:" class="jine">
-						<router-link to="" style="width:52%;height:40px;"><input type="button" value="下单" class="mai"></router-link>
+						<router-link to="/payment" style="width:52%;height:40px;"><input type="button" value="下单" class="mai"></router-link>
 					</div>
 				</div>
 

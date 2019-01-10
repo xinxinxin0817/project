@@ -10,7 +10,7 @@
 		</Header>
 		<section class="section">
 			<div class="ddd">
-				<router-link to="/banner">
+				<router-link to="">
 					<mt-swipe :auto="4000" style="height:135px; margin:0; padding:0;">
 						<mt-swipe-item style="background: red;"><img style="width:100%;height:100%;" :src="img"/></mt-swipe-item>
 						
@@ -155,7 +155,7 @@
 		</section>
 		
 		<footer class="foot-d">
-			<div><router-link to="" style="color: #fff;">立即购买</router-link></div>
+			<div><router-link to="/payment" style="color: #fff;">立即购买</router-link></div>
 			<div><router-link to="/cart" style="color: #fff;">加入购物车</router-link></div>
 		</footer>
 		
@@ -174,7 +174,7 @@
 				tit:'所有商品',
 				title:'',
 				img:'',
-				jg:'￥55'
+				jg:''
 
 			}
 		},
