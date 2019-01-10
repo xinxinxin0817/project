@@ -75,21 +75,21 @@
 			<h2 class="mzth"><span></span><em>每周特惠</em><span></span></h2>
 		</div>
 		<div class="th-list">
-			<router-link :to="'/details/'+list[0].pid" style="width:30%"><p><img  v-if="list[0]" :src="list[0].pimg" alt=""></p></router-link>
-			<router-link :to="'/details/'+list[1].pid" style="width:30%"><p><img  v-if="list[1]" :src="list[1].pimg" alt=""></p></router-link>
-			<router-link :to="'/details/'+list[2].pid" style="width:30%"><p><img  v-if="list[2]" :src="list[2].pimg" alt=""></p></router-link>
+			<router-link  v-if="list[0]" :to="'/details/'+list[0].pid" style="width:30%"><p><img  v-if="list[0]" :src="list[0].pimg" alt=""></p></router-link>
+			<router-link  v-if="list[1]" :to="'/details/'+list[1].pid" style="width:30%"><p><img  v-if="list[1]" :src="list[1].pimg" alt=""></p></router-link>
+			<router-link  v-if="list[2]" :to="'/details/'+list[2].pid" style="width:30%"><p><img  v-if="list[2]" :src="list[2].pimg" alt=""></p></router-link>
 		</div>
 		<!---->
 		<!--产品建议开始-->
 			<div class="cpjy">
 				<h2 class="cp-top"><span>产品建议</span> <router-link class="gd" to="/more" tag="span" style="font-size:14px;"><p @click="more1()">更多</p></router-link></h2>
 				<div class="cp-cen">
-					<router-link :to="'/details/'+list[0].pid" style="width:40%"><p><img  v-if="list[0]" :src="list[0].pimg" alt=""></p></router-link>
-					<router-link :to="'/details/'+list[1].pid" style="width:40%"><p><img  v-if="list[1]" :src="list[1].pimg" alt=""></p></router-link>
+					<router-link  v-if="list[0]" :to="'/details/'+list[0].pid" style="width:40%"><p><img  v-if="list[0]" :src="list[0].pimg" alt=""></p></router-link>
+					<router-link  v-if="list[1]" :to="'/details/'+list[1].pid" style="width:40%"><p><img  v-if="list[1]" :src="list[1].pimg" alt=""></p></router-link>
 				</div>
 				<div class="cp-foot">
-					<router-link :to="'/details/'+list[2].pid" style="width:40%"><p><img  v-if="list[2]" :src="list[2].pimg" alt=""></p></router-link>
-					<router-link :to="'/details/'+list[3].pid" style="width:40%"><p><img  v-if="list[3]" :src="list[3].pimg" alt=""></p></router-link>
+					<router-link  v-if="list[2]" :to="'/details/'+list[2].pid" style="width:40%"><p><img  v-if="list[2]" :src="list[2].pimg" alt=""></p></router-link>
+					<router-link  v-if="list[3]" :to="'/details/'+list[3].pid" style="width:40%"><p><img  v-if="list[3]" :src="list[3].pimg" alt=""></p></router-link>
 				</div>
 			</div>
 		
@@ -106,19 +106,19 @@
 			<div class="jrrm">
 				<h2 class="rm-top"><span>今日热门</span> <router-link class="gd1" to="/more" tag="span" style="font-size:14px;"><p @click="more2()">更多</p></router-link></h2>
 				<div class="rm-foot">
-					<router-link :to="'/details/'+list[0].pid" style="width:28%">
+					<router-link  v-if="list[0]" :to="'/details/'+list[0].pid" style="width:28%">
 						<dl>
 							<dt><img  v-if="list[0]" :src="list[0].pimg" alt=""></dt>
 							<dd>{{list[0].pname}}</dd>
 						</dl>
 					</router-link>
-					<router-link :to="'/details/'+list[1].pid" style="width:28%">
+					<router-link  v-if="list[1]" :to="'/details/'+list[1].pid" style="width:28%">
 						<dl>
 							<dt><img  v-if="list[1]" :src="list[1].pimg" alt=""></dt>
 							<dd>{{list[1].pname}}</dd>
 						</dl>
 					</router-link>
-					<router-link :to="'/details/'+list[2].pid" style="width:28%">
+					<router-link  v-if="list[2]" :to="'/details/'+list[2].pid" style="width:28%">
 						<dl>
 							<dt><img  v-if="list[2]" :src="list[2].pimg" alt=""></dt>
 							<dd>{{list[2].pname}}</dd>
@@ -133,19 +133,19 @@
 			<div class="xsg">
 				<h2 class="xsg-top"><span>限时购</span> <router-link class="gd2" to="/more" tag="span" style="font-size:14px;">更多 >></router-link></h2>
 				<div class="xsg-foot">
-					<router-link :to="'/details/'+list[0].pid" style="width:28%">
+					<router-link  v-if="list[0]" :to="'/details/'+list[0].pid" style="width:28%">
 						<dl>
 							<dt><img  v-if="list[0]" :src="list[0].pimg" alt=""></dt>
 							<dd>{{list[0].pname}}</dd>
 						</dl>
 					</router-link>
-					<router-link :to="'/details/'+list[3].pid" style="width:28%">
+					<router-link  v-if="list[3]" :to="'/details/'+list[3].pid" style="width:28%">
 						<dl>
 							<dt><img  v-if="list[3]" :src="list[3].pimg" alt=""></dt>
 							<dd>{{list[3].pname}}</dd>
 						</dl>
 					</router-link>
-					<router-link :to="'/details/'+list[2].pid" style="width:28%">
+					<router-link  v-if="list[2]" :to="'/details/'+list[2].pid" style="width:28%">
 						<dl>
 							<dt><img  v-if="list[2]" :src="list[2].pimg" alt=""></dt>
 							<dd>{{list[2].pname}}</dd>
