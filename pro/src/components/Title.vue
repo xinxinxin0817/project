@@ -1,8 +1,8 @@
 <template>
   <div>
     <Header class="header-title" msg="发现" style="background: #fff;width:100%;height:50px;">
-      <span @click="fanhui()" class="span-t">《</span>
-      <span class="biaoti">标题</span>
+      <span @click="fanhui()" class="iconfont icon-fanhui" style="font-size:20px;margin-left:20px;"></span>
+      <span class="biaoti" style="margin-left:80px;">标题</span>
     </Header>
     <section class="section1">
       <div class="banner3"></div>

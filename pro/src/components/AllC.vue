@@ -3,9 +3,9 @@
 	<div>
 		<Header class="header" msg="我的">
 			<div class="h-top">
-				<div class="sy" ><router-link to="/home" ><span style="font-size:26px;">&lt;</span></router-link></div>
-				<div class="sy1" ><router-link to="/home" ><span>放</span></router-link></div>
-				<div class="sy2" ><router-link to="/cart" ><span>购</span></router-link></div>
+				<div class="sy" ><router-link to="/home" ><span class="iconfont icon-fanhui" style="font-size:20px;color:#000;"></span></router-link></div>
+				<div class="sy1" ><router-link to="/cart" ><span class="iconfont icon-gouwucheman" style="font-size:20px;color:#000;"></span></router-link></div>
+				
 			</div>
 			<h3 class="cp-top"><span>所有类别</span> <router-link class="gd" to="" tag="span" style="font-size:14px;">类别></router-link></h3>
 		</Header>
@@ -209,12 +209,14 @@ a{
 }
 .b-r-t{
 	font-size:14px;
-	color:#fff;
+	color:rgb(51, 49, 49);
 }
 .b-r-f span:first-child{
 	display: inline-block;
 	font-size: 15px;
 	margin:4% 5%;
+	color:rgb(51, 49, 49);
+
 }
 .b-r-f span:last-child{
 	display: inline-block;
@@ -225,6 +227,8 @@ a{
 	text-align: center;
 	border:1px solid #ccc;
 	font-size:13px;
+	color:rgb(51, 49, 49);
+
 }
 
 </style>

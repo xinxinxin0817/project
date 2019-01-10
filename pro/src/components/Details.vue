@@ -3,9 +3,9 @@
 	<div>
 		<Header class="header-d" msg="我的">
 			<div class="h-top">
-				<div class="sy" ><router-link to="/home" ><span style="font-size:22px;" class="fh1" @click="fanhui()">&lt;</span></router-link></div>
+				<div class="sy" ><router-link to="/home" ><span style="font-size:20px;" class="iconfont icon-fanhui" @click="fanhui()"></span></router-link></div>
 				<div class="sy1" ><router-link to="/home" ><span class="sp">商品</span><em class="xq">详情</em></router-link></div>
-				<div class="sy2" style="text-align:center;"><router-link to="/cart" style="width:100%;"><span class="osy">首页</span></router-link></div>
+				<div class="sy2" style="text-align:center;"><router-link to="/home" style="width:100%;"><span class="osy">首页</span></router-link></div>
 			</div>
 		</Header>
 		<section class="section">
@@ -775,6 +775,7 @@ a{
 	display:block;
 	width:47%;
 	color:rgb(7, 7, 7);
+	font-size: 14px;
 	
 }
 .sp{

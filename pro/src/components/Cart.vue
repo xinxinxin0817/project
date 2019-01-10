@@ -3,7 +3,7 @@
 	
 		<Header msg="购物车" class="header" style="background: #ccc;width:100%;height:40px;">
 			<router-link to="/cart"><p>购物车</p></router-link>
-			<router-link to=""><span @click="da()">0</span></router-link>
+			<router-link to=""><span @click="da()">三</span></router-link>
 			<div class="hide1" v-bind:style="[sty]">
 				<button class="all">选择全部</button>
 				<button class="remove">移除所有商品</button>
@@ -390,8 +390,10 @@ li{
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		justify-content: space-around;
+		justify-content: center;
 		display: none;
+		border:1px solid #ccc;
+		border-radius: 5px;
 	}
 	.hide1 button{
 		border:0;
@@ -399,6 +401,8 @@ li{
 		font-size: 14px;
 		color:#000;
 		padding-left:10px;
+		margin-top:12px;
+
 	
 	}
 	

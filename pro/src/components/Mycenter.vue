@@ -2,7 +2,7 @@
 
 	<div>
 		<Header class="header" msg="我的">
-			<div class="sy" ><router-link to="/home" ><span style="color:#000;">返回</span></router-link></div>
+			<div class="sy" ><router-link to="/home" ><span  class="iconfont icon-fanhui" style="color:#000;font-size:20px;"></span></router-link></div>
 		</Header>
 		<section class="section">
 			<div class="logo"></div>

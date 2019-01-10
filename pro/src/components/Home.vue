@@ -2,7 +2,9 @@
 	<div id="ohome">
 		<Header msg="关于" class="header" style="background: #fff;height:90px;">
 			<div class="h-ss" style="height:30px;">
-				<router-link to="" style="width:80%;"><input type="text" placeholder="搜索产品" /></router-link>
+				<router-link to="" style="width:80%;">
+					<input type="text" placeholder="搜索产品" />
+					</router-link>
 			</div>
 			<div class="h-ls">
 			<router-link to="/home"><p class="teshu">推荐</p></router-link>

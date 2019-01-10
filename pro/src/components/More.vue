@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<Header class="header-m" msg="发现" style="background: #ccc;width:100%;height:40px;">
-           <span @click="fanhui()">返回</span>
+           <span @click="fanhui()" class="iconfont icon-fanhui" style="font-size:20px;"></span>
 			<span>更多</span>
 		</Header>
 		<section class="section-m">

@@ -4,7 +4,7 @@
 		<Header class="header" msg="注册">
 			<div class="sy">
 				<router-link to="" >
-				<span @click="fanhui()">返回</span>
+				<span @click="fanhui()" class="iconfont icon-fanhui" style="font-size:20px;"></span>
 				</router-link></div>
 				<span class="email">邮箱注册</span>
 		</Header>

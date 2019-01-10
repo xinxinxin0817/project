@@ -3,7 +3,7 @@
 
 		<Header class="header" msg="登录">
 			
-				<router-link to="" ><span @click="fanhui()" class="top-a">返回</span></router-link>
+				<router-link to="" ><span @click="fanhui()" class="iconfont icon-fanhui" style="font-size:20px;"></span></router-link>
 				<span style="" class="top-b">登录</span>
 				<router-link to="/register" ><span class="top-c">注册</span></router-link>
 
