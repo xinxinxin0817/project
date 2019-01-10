@@ -74,53 +74,67 @@
 					</div>
 
 					<div class="djdzk">
-						<h2 class="dj-top"><div><span style="border-bottom:1px solid #000;padding-bottom:4px;">大家都在看</span></div><div><span>今日热门</span></div></h2>
+						<h2 class="dj-top"><div><span style="border-bottom:1px solid #000;padding-bottom:4px;">大家都在看</span></div></h2>
 						<div class="dj-cen">
-							<dl>
-								<dt></dt>
-								<dd>
-									<span>纯好油，8冉思</span>
-									<span>￥68.88</span>
-								</dd>
-							</dl>
-							<dl>
-								<dt></dt>
-								<dd>
-									<span>纯好油，8冉思</span>
-									<span>￥68.88</span>
-								</dd>
-							</dl>
-							<dl>
-								<dt></dt>
-								<dd>
-									<span>纯好油，8冉思</span>
-									<span>￥68.88</span>
-								</dd>
-							</dl>
+							
+								<dl>
+									<router-link  v-if="list[2]" :to="'/details/'+list[2].pid">
+										<dt><img  v-if="list[2]" :src="list[2].pimg" alt=""></dt>
+										<dd>
+											<span>{{list[2].pname}}</span>
+											<span>{{list[2].pprice}}</span>
+										</dd>
+									</router-link>
+								</dl>
+							
+								<dl>
+									<router-link  v-if="list[3]" :to="'/details/'+list[3].pid">
+										<dt><img  v-if="list[3]" :src="list[3].pimg" alt=""></dt>
+										<dd>
+											<span>{{list[3].pname}}</span>
+											<span>{{list[3].pprice}}</span>
+										</dd>
+									</router-link>
+								</dl>
+								<dl>
+									<router-link  v-if="list[1]" :to="'/details/'+list[1].pid">
+										<dt><img  v-if="list[1]" :src="list[1].pimg" alt=""></dt>
+										<dd>
+											<span>{{list[1].pname}}</span>
+											<span>{{list[1].pprice}}</span>
+										</dd>
+									</router-link>
+								</dl>
 						</div>
 
 						<div class="dj-foot">
-							<dl>
-								<dt></dt>
-								<dd>
-									<span>纯好油，8冉思</span>
-									<span>￥68.88</span>
-								</dd>
-							</dl>
-							<dl>
-								<dt></dt>
-								<dd>
-									<span>纯好油，8冉思</span>
-									<span>￥68.88</span>
-								</dd>
-							</dl>
-							<dl>
-								<dt></dt>
-								<dd>
-									<span>纯好油，8冉思</span>
-									<span>￥68.88</span>
-								</dd>
-							</dl>
+								<dl>
+									<router-link  v-if="list[0]" :to="'/details/'+list[0].pid">
+										<dt><img  v-if="list[0]" :src="list[0].pimg" alt=""></dt>
+										<dd>
+											<span>{{list[0].pname}}</span>
+											<span>{{list[0].pprice}}</span>
+										</dd>
+									</router-link>
+								</dl>
+								<dl>
+									<router-link  v-if="list[2]" :to="'/details/'+list[2].pid">
+										<dt><img  v-if="list[2]" :src="list[2].pimg" alt=""></dt>
+										<dd>
+											<span>{{list[2].pname}}</span>
+											<span>{{list[2].pprice}}</span>
+										</dd>
+									</router-link>
+								</dl>
+								<dl>
+									<router-link  v-if="list[3]" :to="'/details/'+list[3].pid">
+										<dt><img  v-if="list[3]" :src="list[3].pimg" alt=""></dt>
+										<dd>
+											<span>{{list[3].pname}}</span>
+											<span>{{list[3].pprice}}</span>
+										</dd>
+									</router-link>
+								</dl>
 						</div>
 					</div>
 
@@ -167,6 +181,9 @@
 
 	import axios from 'axios';
 
+
+
+
 	export default{
 		name:'Details',
 		data(){
@@ -174,7 +191,8 @@
 				tit:'所有商品',
 				title:'',
 				img:'',
-				jg:''
+				jg:'',
+				list:[]
 
 			}
 		},
@@ -184,6 +202,18 @@
 			}
 		},
 		mounted(){
+			var _this=this;
+			axios({
+					method:'get',
+					url:'http://jx.xuzhixiang.top/ap/api/productlist.php',
+					params:{uid:'11475'}
+				}).then((data)=>{
+					console.log(data.data.data)
+					_this.list=data.data.data
+				})
+
+
+
 			var id=this.$route.params.id
 			console.log(id)
 			this.$emit('toparent',this.tit)
@@ -193,7 +223,7 @@
 				url:'http://jx.xuzhixiang.top/ap/api/detail.php',
 				params:{uid:'11475',id:_this.$route.params.id}
 			}).then((data)=>{
-				console.log(data.data)
+				console.log(data.data.data)
 				_this.title=data.data.data.pname
 				_this.jg=data.data.data.pprice
 				_this.img=data.data.data.pimg
@@ -273,30 +303,33 @@
 	justify-content: space-between;
 }
 .dj-top div:first-child{
-	width:40%;
+	width:100%;
 	text-align: center;
 	font-size:12px;
 }
-.dj-top div:last-child{
-	width:40%;
-	text-align: center;
-	font-size:12px;
-}
+
 
 .dj-top span:first-child:hover{	
 	font-size:20px;
 	border-bottom:2px solid #ccc;
 }
-.dj-top span:last-child:hover{
-	font-size:20px;
-	border-bottom:2px solid #ccc;
-}
+
 .dj-cen{
 	margin-top:20px;
 	height:160px;
 	background:#fff;
 	display: flex;
 	justify-content: space-around;
+}
+.dj-cen img{
+	width:100%;
+	height:100%;
+}
+.dj-cen span{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
 }
 .dj-cen dl:nth-child(1){
 	width:30%;
@@ -392,6 +425,16 @@
 	background:#fff;
 	display: flex;
 	justify-content: space-around;
+}
+.dj-foot img{
+	width:100%;
+	height:100%;
+}
+.dj-foot span{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
 }
 .dj-foot dl:nth-child(1){
 	width:30%;
