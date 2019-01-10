@@ -11,49 +11,49 @@
 		</Header>
 		<section class="section">
 			<div class="ddd">
-				<router-link to="/details">
+				<router-link :to="'/details/'+list[0].pid">
 					<div class="box">
 					
-						<div class="b-l"></div>
+						<div class="b-l"><img  v-if="list[0]" :src="list[0].pimg" alt=""></div>
 						<div class="b-r">
-							<p class="b-r-t">Super Omega-3 Gems,<br/>1200毫克，100+30粒软胶囊</p>
-							<p class="b-r-f"><span>￥56.09</span><span>立即购买</span></p>
+							<p class="b-r-t">{{list[0].pname}}</p>
+							<p class="b-r-f"><span>{{list[0].pprice}}</span><span>立即购买</span></p>
 						</div>
 					
 					</div>
 				</router-link>
 
-				<router-link to="/details">
+				<router-link :to="'/details/'+list[1].pid">
 					<div class="box">
 					
-						<div class="b-l"></div>
+						<div class="b-l"><img  v-if="list[1]" :src="list[1].pimg" alt=""></div>
 						<div class="b-r">
-							<p class="b-r-t">Super Omega-3 Gems,<br/>1200毫克，100+30粒软胶囊</p>
-							<p class="b-r-f"><span>￥56.09</span><span>立即购买</span></p>
+							<p class="b-r-t">{{list[1].pname}}</p>
+							<p class="b-r-f"><span>{{list[1].pprice}}</span><span>立即购买</span></p>
 						</div>
 					
 					</div>
 				</router-link>
 
-				<router-link to="/details">
+				<router-link :to="'/details/'+list[2].pid">
 					<div class="box">
 					
-						<div class="b-l"></div>
+						<div class="b-l"><img  v-if="list[2]" :src="list[2].pimg" alt=""></div>
 						<div class="b-r">
-							<p class="b-r-t">Super Omega-3 Gems,<br/>1200毫克，100+30粒软胶囊</p>
-							<p class="b-r-f"><span>￥56.09</span><span>立即购买</span></p>
+							<p class="b-r-t">{{list[2].pname}}</p>
+							<p class="b-r-f"><span>{{list[2].pprice}}</span><span>立即购买</span></p>
 						</div>
 					
 					</div>
 				</router-link>
 
-				<router-link to="/details">
+				<router-link :to="'/details/'+list[3].pid">
 					<div class="box">
 					
-						<div class="b-l"></div>
+						<div class="b-l"><img  v-if="list[3]" :src="list[3].pimg" alt=""></div>
 						<div class="b-r">
-							<p class="b-r-t">Super Omega-3 Gems,<br/>1200毫克，100+30粒软胶囊</p>
-							<p class="b-r-f"><span>￥56.09</span><span>立即购买</span></p>
+							<p class="b-r-t">{{list[3].pname}}</p>
+							<p class="b-r-f"><span>{{list[3].pprice}}</span><span>立即购买</span></p>
 						</div>
 					
 					</div>
@@ -69,13 +69,16 @@
 </template>
 
 <script>
-
-
+	import axios from 'axios';
 	export default{
 		name:'AllC',
 		data(){
 			return{
-				tit:'所有商品'
+				tit:'所有商品',
+				title:'',
+				img:'',
+				jg:'',
+				list:[],
 			}
 		},
 		methods:{
@@ -83,6 +86,17 @@
 		},
 		mounted(){
 			this.$emit('toparent',this.tit)
+			var _this=this;
+			axios({
+					method:'get',
+					url:'http://jx.xuzhixiang.top/ap/api/productlist.php',
+					params:{uid:'11475'}
+				}).then((data)=>{
+					console.log(data.data.data)
+					_this.list=data.data.data
+					_this.title=data.data.data.pname
+					_this.jg=data.data.data.pprice
+				})
 		}
 	}
 </script>
@@ -171,21 +185,24 @@ a{
 	border-top:5px solid #ccc;
 	width:100%;
 	height:130px;
-	background:yellow;
+
 	display: flex;
 
+}
+.b-l img{
+	width:100%;
+	height:100%;
 }
 .b-l{
 	margin:2% 5%;
 	width:24%;
 	height:112px;
-	background:#aaa;
 }
 .b-r{
 	margin-top:2%;
-	width:66%;
+	width:56%;
 	height:112px;
-	background:pink;
+	background:#efefef;
 	display:flex;
 	flex-direction: column;
 	justify-content: space-between;
