@@ -76,6 +76,9 @@ a{
 	
 	font-size:16px;
 }
+.sy span{
+	margin-left:-2px;
+}
 
 
 .logo{
