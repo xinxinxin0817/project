@@ -27,7 +27,7 @@
 				
 			</div>
 			
-			
+<!-- 			
 			<div class="cart-list">
 				<input type="checkbox" name="ral" class="duoxuan" style="width:20px;height:100px;color:#fff"/>
 				<p class="img"><img src="" alt=""></p>
@@ -37,7 +37,7 @@
 						<span>￥199</span>
 					</p>
 				</div>
-			</div>
+			</div> -->
 			
 
 			</div>

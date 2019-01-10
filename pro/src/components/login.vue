@@ -22,9 +22,9 @@
 		</div> -->
 		<section>
 			<div class="box1">
-				<input type="text" placeholder="请输入邮箱" class="tex">
-				<input type="password" placeholder="密码" class="pas">
-				<router-link to="/logina" style="width:90%;"><button>登录</button></router-link>
+				<input type="text" placeholder="请输入邮箱" v-model="email" class="tex">
+				<input type="password" placeholder="密码" v-model="password" class="pas">
+				<router-link to="" style="width:90%;"><button  @click="login()">登录</button></router-link>
 			</div>
 		</section>
 
@@ -40,8 +40,8 @@
 		name:"Login",
 		data(){
 			return{
-				phonenum:'',
-				pass:'',
+				email:'',
+				password:'',
 				yzm:''
 			}
 		},
@@ -49,13 +49,21 @@
 			
 			login(){
 				var _this=this;
-				// axios({
-				// 	method:'post',
-				// 	url:'http://localhost:3000/login',
-				// 	params:{phonenum:_this.phonenum,pass:_this.pass}
-				// }).then(function(data){
-				// 	console.log(data.data)
-				// })
+				axios({
+					method:'get',
+					url:'http://10.8.155.66:8081/user/login.do',
+					params:{email:_this.email,password:_this.password}
+				}).then(function(data){
+					console.log(data)
+					if(data.data.code==1000){
+						alert("登录成功，跳转个人主页");
+						location.href="#/logina"
+					}else{
+						alert("登录失败，请重新登录");
+						location.href="#/login"
+
+					}
+				})
 			},
 		
 			fanhui(){
