@@ -6,7 +6,7 @@
 			<router-link to=""><span @click="da()">三</span></router-link>
 			<div class="hide1" v-bind:style="[sty]">
 				<button class="all">选择全部</button>
-				<button class="remove" @click="remove(cart)">移除所有商品</button>
+				<button class="remove" @click="remove(all)">移除所有商品</button>
 			</div>
 
 		</Header>
@@ -93,7 +93,9 @@
 				title:'',
 				img:'',
 				ajg:'',
-				cart:[]
+				cart:[],
+				all:[],
+				all1:{}
 			}
 		},
 		mounted(){
@@ -107,7 +109,10 @@
 					console.log(data)
 					_this.cart=data.data.data
 					console.log(_this.cart)
-					
+					for(var i=0;i<_this.cart.length;i++){
+						_this.all.push(Number(_this.cart[i].pid))
+					}
+					console.log(_this.all)					
 				})
 
 
@@ -126,20 +131,31 @@
 		},
 		
 		methods:{
-			remove(cart){
-				console.log(cart)
-				var _this=this
-				axios({
-					method:'get',
-					url:'http://jx.xuzhixiang.top/ap/api/cart-delete.php',
-					params:{uid:'11475'}
-				}).then((data)=>{
-					console.log(data.data.data)
-					_this.list=data.data.data
-					_this.title=data.data.data.pname
-					_this.jg=data.data.data.pprice
-					
-				})
+			remove(all){
+				console.log(this.all.length)
+				var _this=this;
+				if(_this.all.length<=0){
+					alert("购物车为空，无法删除")
+					location.href="#/cart"	
+				}else{
+					for(let i =0;i<this.all.length;i++){
+						(function(i){
+							axios({
+								method:'get',
+								url:'http://jx.xuzhixiang.top/ap/api/cart-delete.php',
+								params:{uid:'11475',pid:_this.all[i]}
+							}).then((data)=>{
+								console.log(data)
+								
+								
+							})
+						})(i);
+					}
+					alert("全部删除成功")
+					location.reload()	
+				}
+				
+				
 			},
 			pjg(i){
 				console.log(i)
@@ -206,7 +222,8 @@ li{
 	.inclod{
 		background:rgb(248, 239, 239);
 		width:100%;
-		height:330px;
+		height:70%;
+		overflow: auto;
 	}
 	.cart-list{
 		width:100%;
@@ -262,7 +279,7 @@ li{
 	.guess{
 		 background:#fff; 
 
-		height:100%;
+		height:30%;
 		
 		display: flex;
 		flex-direction: column;
