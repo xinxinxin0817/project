@@ -2,45 +2,192 @@
 	<div>
 		
 		<section>
-			<div class="left">
-				<router-link to="" ><p @click="da()">补充剂</p></router-link>
-				<router-link to="" ><p @click="db()">草本和顺势疗法</p></router-link>
-				<router-link to=""><p @click="dc()">沐浴和个人护理</p></router-link>
-				<router-link to=""><p @click="dd()">美容</p></router-link>
-				<router-link to=""><p @click="de()">运动营养</p></router-link>
-				<router-link to=""><p @click="df()">食品百货</p></router-link>
-				<router-link to=""><p @click="dg()">婴幼儿</p></router-link>
-				<router-link to=""><p @click="dh()">家具</p></router-link>
-				<router-link to=""><p @click="di()">宠物</p></router-link>
-
-			</div>
-			<div class="right" style="width:78%">
-				
-				<mt-swipe :auto="4000" style="height:100px;width:95%;margin:0; padding:0;margin-top:3%;">
-				<mt-swipe-item style="background: red;"></mt-swipe-item>
-				<mt-swipe-item style="background: yellow;"></mt-swipe-item>
-				<mt-swipe-item style="background: pink;"></mt-swipe-item>
-				<mt-swipe-item style="background: blue;"></mt-swipe-item>
-				</mt-swipe>
-				
-				<div class="look">
-					<h2>最近查看的</h2>
-					<span>Senior Health</span>
-					<span>维生素</span>
-			    </div>
-				<div class="cate-list">
-					<h6>{{str}}</h6>
-					<router-link to=""><span>查看全部</span></router-link>
+			<div class="wrap" style="width:100%;height;100%;display:flex;">
+				<div class="left" id="left">
+					<p @click="da()" class="abc">补充剂</p>
+					<p @click="db()" class="abc">草本和顺势疗法</p>
+					<p @click="dc()" class="abc">沐浴和个人护理</p>
+					<p @click="dd()" class="abc">美容</p>
+					<p @click="de()" class="abc">运动营养</p>
+					<p @click="df()" class="abc">食品百货</p>
+					<p @click="dg()" class="abc">婴幼儿</p>
+					<p @click="dh()" class="abc">家具</p>
+					<p @click="di()" class="abc">宠物</p>
 				</div>
-				<ul class="list-c">
-				<li v-for="(item,category) in list" :key="category"><router-link :to="'/details/'+item.pid" style="width:84px;height:116px;"><p><img :src="item.pimg" alt="" style="width:84px;height:100px;"></p><span style="width:84px;height:16px;">{{item.pname}}</span></router-link></li>
-				
-				
-					
-				</ul>
-			</div>
-			
-			
+				<div class="right" style="width:78%" id="right">
+					<div class="hide"  style="background:yellow">	
+						<!-- 轮播			 -->
+						<mt-swipe :auto="4000" style="height:100px;width:95%;margin:0; padding:0;margin-top:3%;">
+						<mt-swipe-item style="background: red;" v-for="(item,category) in list1" :key="category"><img :src="item.banner_img_url" style="width:100%;height:100px;"></mt-swipe-item>
+						</mt-swipe>	
+						<!-- 轮播结束			 -->
+						<div class="look">
+							<h2>最近查看的</h2>
+							<span>Senior Health</span>
+							<span>维生素</span>
+						</div>
+						<div class="cate-list">
+							<h6>1</h6>
+							<router-link to=""><span>查看全部</span></router-link>
+						</div>
+						<ul class="list-c">
+							<li v-for="(item,category) in list" :key="category"><router-link :to="'/details/'+item.pid" style="width:84px;height:116px;"><p><img :src="item.pimg" alt="" style="width:84px;height:100px;"></p><span style="width:84px;height:16px;">{{item.pname}}</span></router-link></li>					
+						</ul>
+					</div>
+					<div class="hide" style="background:pink">	
+						<!-- 轮播			 -->
+						<mt-swipe :auto="4000" style="height:100px;width:95%;margin:0; padding:0;margin-top:3%;">
+						<mt-swipe-item style="background: red;" v-for="(item,category) in list1" :key="category"><img :src="item.banner_img_url" style="width:100%;height:100px;"></mt-swipe-item>
+						</mt-swipe>	
+						<!-- 轮播结束			 -->
+						<div class="look">
+							<h2>最近查看的</h2>
+							<span>Senior Health</span>
+							<span>维生素</span>
+						</div>
+						<div class="cate-list">
+							<h6>2</h6>
+							<router-link to=""><span>查看全部</span></router-link>
+						</div>
+						<ul class="list-c">
+							<li v-for="(item,category) in list" :key="category"><router-link :to="'/details/'+item.pid" style="width:84px;height:116px;"><p><img :src="item.pimg" alt="" style="width:84px;height:100px;"></p><span style="width:84px;height:16px;">{{item.pname}}</span></router-link></li>					
+						</ul>
+					</div>
+					<div class="hide">	
+						<!-- 轮播			 -->
+						<mt-swipe :auto="4000" style="height:100px;width:95%;margin:0; padding:0;margin-top:3%;">
+						<mt-swipe-item style="background: red;" v-for="(item,category) in list1" :key="category"><img :src="item.banner_img_url" style="width:100%;height:100px;"></mt-swipe-item>
+						</mt-swipe>	
+						<!-- 轮播结束			 -->
+						<div class="look">
+							<h2>最近查看的</h2>
+							<span>Senior Health</span>
+							<span>维生素</span>
+						</div>
+						<div class="cate-list">
+							<h6>3</h6>
+							<router-link to=""><span>查看全部</span></router-link>
+						</div>
+						<ul class="list-c">
+							<li v-for="(item,category) in list" :key="category"><router-link :to="'/details/'+item.pid" style="width:84px;height:116px;"><p><img :src="item.pimg" alt="" style="width:84px;height:100px;"></p><span style="width:84px;height:16px;">{{item.pname}}</span></router-link></li>					
+						</ul>
+					</div>
+					<div class="hide">	
+						<!-- 轮播			 -->
+						<mt-swipe :auto="4000" style="height:100px;width:95%;margin:0; padding:0;margin-top:3%;">
+						<mt-swipe-item style="background: red;" v-for="(item,category) in list1" :key="category"><img :src="item.banner_img_url" style="width:100%;height:100px;"></mt-swipe-item>
+						</mt-swipe>	
+						<!-- 轮播结束			 -->
+						<div class="look">
+							<h2>最近查看的</h2>
+							<span>Senior Health</span>
+							<span>维生素</span>
+						</div>
+						<div class="cate-list">
+							<h6>4</h6>
+							<router-link to=""><span>查看全部</span></router-link>
+						</div>
+						<ul class="list-c">
+							<li v-for="(item,category) in list" :key="category"><router-link :to="'/details/'+item.pid" style="width:84px;height:116px;"><p><img :src="item.pimg" alt="" style="width:84px;height:100px;"></p><span style="width:84px;height:16px;">{{item.pname}}</span></router-link></li>					
+						</ul>
+					</div>
+					<div class="hide">	
+						<!-- 轮播			 -->
+						<mt-swipe :auto="4000" style="height:100px;width:95%;margin:0; padding:0;margin-top:3%;">
+						<mt-swipe-item style="background: red;" v-for="(item,category) in list1" :key="category"><img :src="item.banner_img_url" style="width:100%;height:100px;"></mt-swipe-item>
+						</mt-swipe>	
+						<!-- 轮播结束			 -->
+						<div class="look">
+							<h2>最近查看的</h2>
+							<span>Senior Health</span>
+							<span>维生素</span>
+						</div>
+						<div class="cate-list">
+							<h6>5</h6>
+							<router-link to=""><span>查看全部</span></router-link>
+						</div>
+						<ul class="list-c">
+							<li v-for="(item,category) in list" :key="category"><router-link :to="'/details/'+item.pid" style="width:84px;height:116px;"><p><img :src="item.pimg" alt="" style="width:84px;height:100px;"></p><span style="width:84px;height:16px;">{{item.pname}}</span></router-link></li>					
+						</ul>
+					</div>
+					<div class="hide">	
+						<!-- 轮播			 -->
+						<mt-swipe :auto="4000" style="height:100px;width:95%;margin:0; padding:0;margin-top:3%;">
+						<mt-swipe-item style="background: red;" v-for="(item,category) in list1" :key="category"><img :src="item.banner_img_url" style="width:100%;height:100px;"></mt-swipe-item>
+						</mt-swipe>	
+						<!-- 轮播结束			 -->
+						<div class="look">
+							<h2>最近查看的</h2>
+							<span>Senior Health</span>
+							<span>维生素</span>
+						</div>
+						<div class="cate-list">
+							<h6>6</h6>
+							<router-link to=""><span>查看全部</span></router-link>
+						</div>
+						<ul class="list-c">
+							<li v-for="(item,category) in list" :key="category"><router-link :to="'/details/'+item.pid" style="width:84px;height:116px;"><p><img :src="item.pimg" alt="" style="width:84px;height:100px;"></p><span style="width:84px;height:16px;">{{item.pname}}</span></router-link></li>					
+						</ul>
+					</div>
+					<div class="hide">	
+						<!-- 轮播			 -->
+						<mt-swipe :auto="4000" style="height:100px;width:95%;margin:0; padding:0;margin-top:3%;">
+						<mt-swipe-item style="background: red;" v-for="(item,category) in list1" :key="category"><img :src="item.banner_img_url" style="width:100%;height:100px;"></mt-swipe-item>
+						</mt-swipe>	
+						<!-- 轮播结束			 -->
+						<div class="look">
+							<h2>最近查看的</h2>
+							<span>Senior Health</span>
+							<span>维生素</span>
+						</div>
+						<div class="cate-list">
+							<h6>7</h6>
+							<router-link to=""><span>查看全部</span></router-link>
+						</div>
+						<ul class="list-c">
+							<li v-for="(item,category) in list" :key="category"><router-link :to="'/details/'+item.pid" style="width:84px;height:116px;"><p><img :src="item.pimg" alt="" style="width:84px;height:100px;"></p><span style="width:84px;height:16px;">{{item.pname}}</span></router-link></li>					
+						</ul>
+					</div>
+					<div class="hide">	
+						<!-- 轮播			 -->
+						<mt-swipe :auto="4000" style="height:100px;width:95%;margin:0; padding:0;margin-top:3%;">
+						<mt-swipe-item style="background: red;" v-for="(item,category) in list1" :key="category"><img :src="item.banner_img_url" style="width:100%;height:100px;"></mt-swipe-item>
+						</mt-swipe>	
+						<!-- 轮播结束			 -->
+						<div class="look">
+							<h2>最近查看的</h2>
+							<span>Senior Health</span>
+							<span>维生素</span>
+						</div>
+						<div class="cate-list">
+							<h6>8</h6>
+							<router-link to=""><span>查看全部</span></router-link>
+						</div>
+						<ul class="list-c">
+							<li v-for="(item,category) in list" :key="category"><router-link :to="'/details/'+item.pid" style="width:84px;height:116px;"><p><img :src="item.pimg" alt="" style="width:84px;height:100px;"></p><span style="width:84px;height:16px;">{{item.pname}}</span></router-link></li>					
+						</ul>
+					</div>
+					<div class="hide">	
+						<!-- 轮播			 -->
+						<mt-swipe :auto="4000" style="height:100px;width:95%;margin:0; padding:0;margin-top:3%;">
+						<mt-swipe-item style="background: red;" v-for="(item,category) in list1" :key="category"><img :src="item.banner_img_url" style="width:100%;height:100px;"></mt-swipe-item>
+						</mt-swipe>	
+						<!-- 轮播结束			 -->
+						<div class="look">
+							<h2>最近查看的</h2>
+							<span>Senior Health</span>
+							<span>维生素</span>
+						</div>
+						<div class="cate-list">
+							<h6>9</h6>
+							<router-link to=""><span>查看全部</span></router-link>
+						</div>
+						<ul class="list-c">
+							<li v-for="(item,category) in list" :key="category"><router-link :to="'/details/'+item.pid" style="width:84px;height:116px;"><p><img :src="item.pimg" alt="" style="width:84px;height:100px;"></p><span style="width:84px;height:16px;">{{item.pname}}</span></router-link></li>					
+						</ul>
+					</div>
+				</div>	
+			</div>		
 		</section>
 		
 		
@@ -50,19 +197,55 @@
 </template>
 
 <script>
+//     var left=document.getElementById('left');
+// var left_li=document.getElementsByClassName('abc');
+
+// function foo(){
+// 	console.log("aa")
+// }
+// foo()
+var left=document.getElementById('left');
+	var left_li=document.getElementsByClassName('abc');
+	// var ap=document.getElementsByClassName('abc');
+    var right=document.getElementById('right');
+    var right_li=document.getElementsByClassName('hide');
+function tab(){
+
+    var len=left_li.length;
+	var i=0;
+	// console.log(right_li)
+	// console.log(left)
+	
+	// console.log(left_li)
+
+    for(let i=0;i<len;i++){
+		
+			left_li[i].index=i;
+			 
+			left_li[i].onmouseover=function(){
+			 console.log(left_li[i])
+				
+            for(i=0;i<len;i++){
+				left_li[i].className='';
+                right_li[i].className='hide';
+            }
+            left_li[this.index].className='abc';
+            right_li[this.index].className='';
+        }
+    }
+}
+tab("left","p","right","div","onmouseover");
+
+
+
+
+
+
+
 
 		import axios from 'axios';
 		import Mock from 'mockjs'
 
-
-		// Mock.mock('http://www.bbb.com',{
-		// 	'users1|7-10':[
-		// 		{
-		// 			"img":"@image('84x100')",
-		// 			"title":"@ctitle()"
-		// 		}
-		// 	]
-		// })
 	export default{
 		name:'Category',
 		
@@ -74,39 +257,135 @@
 				title:'',
 				img:'',
 				jg:'',
+				list1:[]
 			}
 		},
 		methods:{
 			da(){
 				this.str="补充剂"
+				console.log(left_li)
+				right_li[1].style.display="none"
+				right_li[2].style.display="none"
+				right_li[3].style.display="none"
+				right_li[4].style.display="none"
+				right_li[5].style.display="none"
+				right_li[6].style.display="none"
+				right_li[7].style.display="none"
+				right_li[8].style.display="none"
+				right_li[0].style.display="block"
 			},
 			db(){
 				this.str="草本和顺势疗法"
+			
+
+				
+				right_li[0].style.display="none"
+				right_li[2].style.display="none"
+				right_li[3].style.display="none"
+				right_li[4].style.display="none"
+				right_li[5].style.display="none"
+				right_li[6].style.display="none"
+				right_li[7].style.display="none"
+				right_li[8].style.display="none"
+				right_li[1].style.display="block"
+					console.log(right_li[1])
 			},
 			dc(){
 				this.str="沐浴和个人护理"
+				right_li[0].style.display="none"
+				right_li[1].style.display="none"
+				right_li[3].style.display="none"
+				right_li[4].style.display="none"
+				right_li[5].style.display="none"
+				right_li[6].style.display="none"
+				right_li[7].style.display="none"
+				right_li[8].style.display="none"
+
+				right_li[2].style.display="block"
 			},
 			dd(){
 				this.str="美容"
+				right_li[0].style.display="none"
+				right_li[2].style.display="none"
+				right_li[1].style.display="none"
+				right_li[4].style.display="none"
+				right_li[5].style.display="none"
+				right_li[6].style.display="none"
+				right_li[7].style.display="none"
+				right_li[8].style.display="none"
+				
+				right_li[3].style.display="block"
 			},
 			de(){
 				this.str="运动营养"
+				right_li[0].style.display="none"
+				right_li[2].style.display="none"
+				right_li[3].style.display="none"
+				right_li[1].style.display="none"
+				right_li[5].style.display="none"
+				right_li[6].style.display="none"
+				right_li[7].style.display="none"
+				right_li[8].style.display="none"
+				
+				right_li[4].style.display="block"
+
 			},
 			df(){
 				this.str="食品百货"
+				right_li[0].style.display="none"
+				right_li[2].style.display="none"
+				right_li[3].style.display="none"
+				right_li[4].style.display="none"
+				right_li[1].style.display="none"
+				right_li[6].style.display="none"
+				right_li[7].style.display="none"
+				right_li[8].style.display="none"
+				
+				right_li[5].style.display="block"
 			},
 			dg(){
 				this.str="婴幼儿"
+				right_li[0].style.display="none"
+				right_li[2].style.display="none"
+				right_li[3].style.display="none"
+				right_li[4].style.display="none"
+				right_li[5].style.display="none"
+				right_li[1].style.display="none"
+				right_li[7].style.display="none"
+				right_li[8].style.display="none"
+				
+				right_li[6].style.display="block"
 			},
 			dh(){
 				this.str="家具"
+				right_li[0].style.display="none"
+				right_li[2].style.display="none"
+				right_li[3].style.display="none"
+				right_li[4].style.display="none"
+				right_li[5].style.display="none"
+				right_li[6].style.display="none"
+				right_li[1].style.display="none"
+				right_li[8].style.display="none"
+				
+				right_li[7].style.display="block"
 			},
 			di(){
 				this.str="宠物"
+				right_li[0].style.display="none"
+				right_li[2].style.display="none"
+				right_li[3].style.display="none"
+				right_li[4].style.display="none"
+				right_li[5].style.display="none"
+				right_li[6].style.display="none"
+				right_li[7].style.display="none"
+				right_li[1].style.display="none"
+				
+				right_li[8].style.display="block"
 			},
 
 		},
 		mounted(){
+			right_li[0].style.display="block"
 			this.$emit('toparent',this.tit)
 			var _this=this;
 			axios({
@@ -116,6 +395,17 @@
 				}).then((data)=>{
 					console.log(data.data.data)
 					_this.list=data.data.data
+					_this.title=data.data.data.pname
+					_this.jg=data.data.data.pprice
+					
+				})
+			axios({
+					method:'get',
+					url:'http://jx.xuzhixiang.top/ap/api/bannerlist.php?uid=227',
+					params:{uid:'14632'}
+				}).then((data)=>{
+					console.log(data.data.data)
+					_this.list1=data.data.data
 					_this.title=data.data.data.pname
 					_this.jg=data.data.data.pprice
 					
@@ -274,5 +564,8 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 
+	}
+	.hide{
+		display: none;
 	}
 </style>

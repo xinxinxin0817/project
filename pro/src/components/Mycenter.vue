@@ -8,10 +8,10 @@
 			<div class="logo"></div>
 			<router-link to="/banner">
 				<mt-swipe :auto="4000" style="height:200px; margin:0; padding:0;">
-					<mt-swipe-item style="background: red;height:200px;"></mt-swipe-item>
-					<mt-swipe-item style="background: yellow;height:200px;"></mt-swipe-item>
+					<mt-swipe-item style="background: red;height:200px;" v-for="(item,home) in list1" :key="home"><img :src="item.banner_img_url" style="width:100%;height:200px;"></mt-swipe-item>
+					<!-- <mt-swipe-item style="background: yellow;height:200px;"></mt-swipe-item>
 					<mt-swipe-item style="background: pink;height:200px;"></mt-swipe-item>
-					<mt-swipe-item style="background: blue;height:200px;"></mt-swipe-item>
+					<mt-swipe-item style="background: blue;height:200px;"></mt-swipe-item> -->
 				</mt-swipe>
 			</router-link>
 
@@ -35,11 +35,17 @@
 </template>
 
 <script>
+	import axios from 'axios';
 	export default{
 		name:'Mycenter',
 		data(){
 			return{
-				tit:'我的'
+				tit:'我的',
+				title:'',
+				img:'',
+				jg:'',
+				list:[],
+				list1:[]
 			}
 		},
 		methods:{
@@ -47,6 +53,18 @@
 		},
 		mounted(){
 			this.$emit('toparent',this.tit)
+			var _this=this;
+			axios({
+					method:'get',
+					url:'http://jx.xuzhixiang.top/ap/api/bannerlist.php?uid=227',
+					params:{uid:'14632'}
+				}).then((data)=>{
+					console.log(data.data.data)
+					_this.list1=data.data.data
+					_this.title=data.data.data.pname
+					_this.jg=data.data.data.pprice
+					
+				})
 		}
 	}
 </script>
