@@ -22,14 +22,14 @@
 <section class="section">
 		<!--轮播-->
 		<div class="ddd">
-			<router-link to="/banner">
+			
 		<mt-swipe :auto="4000" style="height:166px; margin:0; padding:0;">
-		  <mt-swipe-item style="background: red;" v-for="(item,home) in list1" :key="home"><img :src="item.banner_img_url" style="width:100%;height:166px;"></mt-swipe-item>
+		  <mt-swipe-item style="background: red;" v-for="(item,home) in list1" :key="home" :pid="item.banner_id"><router-link :to="'/banner/'+item.banner_id"><img :src="item.banner_img_url" style="width:100%;height:166px;"></router-link></mt-swipe-item>
 		  <!-- <mt-swipe-item style="background: yellow;"></mt-swipe-item>
 		  <mt-swipe-item style="background: pink;"></mt-swipe-item>
 		   <mt-swipe-item style="background: blue;"></mt-swipe-item> -->
 		</mt-swipe>
-		</router-link>
+		
 		<!--轮播结束-->
 		
 		<!---->
@@ -252,8 +252,11 @@
 				}).then((data)=>{
 					console.log(data.data.data)
 					_this.list1=data.data.data
-					_this.title=data.data.data.pname
-					_this.jg=data.data.data.pprice
+					_this.img=data.data.data.banner_img_url
+					
+
+
+				
 					
 				})
 			

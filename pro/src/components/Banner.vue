@@ -5,7 +5,9 @@
 			<span>IHerb活动</span>
 		</Header>
 		<section class="section-b">
-			<div class="banner-b"></div>
+			<div class="banner-b">
+				<img  :src="img" alt="" style="width;100%;height:100%">
+			</div>
              <h1>相关商品推荐</h1>
             <div class="banner-c">
                <ul class="like-ban">
@@ -32,6 +34,10 @@
 			return{
 				tit:'更多',
 				'list':[],
+				img:'',
+				jg:'',
+				list:[],
+				list1:[]
 
 			}
 		},
@@ -49,11 +55,30 @@
 			axios({
 					method:'get',
 					url:'http://jx.xuzhixiang.top/ap/api/productlist.php',
-					params:{uid:'11475'}
+					params:{uid:'14632'}
 				}).then((data)=>{
-					console.log(data.data.data)
+				
 					_this.list=data.data.data
 				})
+
+				var id=this.$route.params.id
+			// console.log(id)
+			this.$emit('toparent',this.tit)
+			var _this=this;
+			axios({
+				method:'get',
+				url:'http://jx.xuzhixiang.top/ap/api/detail.php',
+				params:{uid:'14632',id:_this.$route.params.id}
+			}).then((data)=>{
+				console.log(data.data)
+				_this.list1=data.data.data;
+			
+				
+				_this.img=data.data.data.banner_img_url
+				
+
+				
+			})
 		}
 	}
 </script>

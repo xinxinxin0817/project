@@ -15,7 +15,7 @@
 					<p @click="di()" class="abc">宠物</p>
 				</div>
 				<div class="right" style="width:78%" id="right">
-					<div class="hide"  style="background:yellow">	
+					<div class="hide">	
 						<!-- 轮播			 -->
 						<mt-swipe :auto="4000" style="height:100px;width:95%;margin:0; padding:0;margin-top:3%;">
 						<mt-swipe-item style="background: red;" v-for="(item,category) in list1" :key="category"><img :src="item.banner_img_url" style="width:100%;height:100px;"></mt-swipe-item>
@@ -27,26 +27,7 @@
 							<span>维生素</span>
 						</div>
 						<div class="cate-list">
-							<h6>1</h6>
-							<router-link to=""><span>查看全部</span></router-link>
-						</div>
-						<ul class="list-c">
-							<li v-for="(item,category) in list" :key="category"><router-link :to="'/details/'+item.pid" style="width:84px;height:116px;"><p><img :src="item.pimg" alt="" style="width:84px;height:100px;"></p><span style="width:84px;height:16px;">{{item.pname}}</span></router-link></li>					
-						</ul>
-					</div>
-					<div class="hide" style="background:pink">	
-						<!-- 轮播			 -->
-						<mt-swipe :auto="4000" style="height:100px;width:95%;margin:0; padding:0;margin-top:3%;">
-						<mt-swipe-item style="background: red;" v-for="(item,category) in list1" :key="category"><img :src="item.banner_img_url" style="width:100%;height:100px;"></mt-swipe-item>
-						</mt-swipe>	
-						<!-- 轮播结束			 -->
-						<div class="look">
-							<h2>最近查看的</h2>
-							<span>Senior Health</span>
-							<span>维生素</span>
-						</div>
-						<div class="cate-list">
-							<h6>2</h6>
+							<h6>补充剂</h6>
 							<router-link to=""><span>查看全部</span></router-link>
 						</div>
 						<ul class="list-c">
@@ -65,7 +46,7 @@
 							<span>维生素</span>
 						</div>
 						<div class="cate-list">
-							<h6>3</h6>
+							<h6>草本和顺势疗法</h6>
 							<router-link to=""><span>查看全部</span></router-link>
 						</div>
 						<ul class="list-c">
@@ -84,7 +65,7 @@
 							<span>维生素</span>
 						</div>
 						<div class="cate-list">
-							<h6>4</h6>
+							<h6>沐浴和个人护理</h6>
 							<router-link to=""><span>查看全部</span></router-link>
 						</div>
 						<ul class="list-c">
@@ -103,7 +84,7 @@
 							<span>维生素</span>
 						</div>
 						<div class="cate-list">
-							<h6>5</h6>
+							<h6>美容</h6>
 							<router-link to=""><span>查看全部</span></router-link>
 						</div>
 						<ul class="list-c">
@@ -122,7 +103,7 @@
 							<span>维生素</span>
 						</div>
 						<div class="cate-list">
-							<h6>6</h6>
+							<h6>运动营养</h6>
 							<router-link to=""><span>查看全部</span></router-link>
 						</div>
 						<ul class="list-c">
@@ -141,7 +122,7 @@
 							<span>维生素</span>
 						</div>
 						<div class="cate-list">
-							<h6>7</h6>
+							<h6>食品百货</h6>
 							<router-link to=""><span>查看全部</span></router-link>
 						</div>
 						<ul class="list-c">
@@ -160,7 +141,7 @@
 							<span>维生素</span>
 						</div>
 						<div class="cate-list">
-							<h6>8</h6>
+							<h6>婴幼儿</h6>
 							<router-link to=""><span>查看全部</span></router-link>
 						</div>
 						<ul class="list-c">
@@ -179,7 +160,26 @@
 							<span>维生素</span>
 						</div>
 						<div class="cate-list">
-							<h6>9</h6>
+							<h6>家具</h6>
+							<router-link to=""><span>查看全部</span></router-link>
+						</div>
+						<ul class="list-c">
+							<li v-for="(item,category) in list" :key="category"><router-link :to="'/details/'+item.pid" style="width:84px;height:116px;"><p><img :src="item.pimg" alt="" style="width:84px;height:100px;"></p><span style="width:84px;height:16px;">{{item.pname}}</span></router-link></li>					
+						</ul>
+					</div>
+					<div class="hide">	
+						<!-- 轮播			 -->
+						<mt-swipe :auto="4000" style="height:100px;width:95%;margin:0; padding:0;margin-top:3%;">
+						<mt-swipe-item style="background: red;" v-for="(item,category) in list1" :key="category"><img :src="item.banner_img_url" style="width:100%;height:100px;"></mt-swipe-item>
+						</mt-swipe>	
+						<!-- 轮播结束			 -->
+						<div class="look">
+							<h2>最近查看的</h2>
+							<span>Senior Health</span>
+							<span>维生素</span>
+						</div>
+						<div class="cate-list">
+							<h6>宠物</h6>
 							<router-link to=""><span>查看全部</span></router-link>
 						</div>
 						<ul class="list-c">

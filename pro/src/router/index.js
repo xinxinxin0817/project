@@ -103,7 +103,7 @@ export default new Router({
 		component:Login
 	},
 	{
-		path:'/banner',
+		path:'/banner/:id',
 		component:Banner,
 	},
 	{
