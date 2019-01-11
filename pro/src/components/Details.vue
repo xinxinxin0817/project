@@ -173,7 +173,7 @@
 		
 		<footer class="foot-d">
 			<div><router-link to="/payment" style="color: #fff;">立即购买</router-link></div>
-			<div><router-link to="/cart" style="color: #fff;">加入购物车</router-link></div>
+			<div @click="cart"><router-link to="" style="color:#fff;">加入购物车</router-link></div>
 		</footer>
 		
 		
@@ -195,13 +195,26 @@
 				title:'',
 				img:'',
 				jg:'',
-				list:[]
+				list:[],
+				list1:[]
 
 			}
 		},
 		methods:{
 			fanhui(){
 				this.$router.go(-1)
+			},
+			cart(){
+				var _this=this;
+				axios({
+						method:'get',
+						url:'http://jx.xuzhixiang.top/ap/api/add-product.php',
+						params:{uid:'11475',pid:_this.list1.pid,pnum:1}
+					}).then((data)=>{
+						console.log(data)
+						
+					})
+
 			}
 		},
 		mounted(){
@@ -211,7 +224,7 @@
 					url:'http://jx.xuzhixiang.top/ap/api/productlist.php',
 					params:{uid:'11475'}
 				}).then((data)=>{
-					console.log(data.data.data)
+					//console.log(data.data.data)
 					_this.list=data.data.data
 				})
 
@@ -227,6 +240,7 @@
 				params:{uid:'11475',id:_this.$route.params.id}
 			}).then((data)=>{
 				console.log(data.data.data)
+				_this.list1=data.data.data;
 				_this.title=data.data.data.pname
 				_this.jg=data.data.data.pprice
 				_this.img=data.data.data.pimg
@@ -240,7 +254,7 @@
 				// 	}
 				// }
 			})
-			console.log(this.$route.params)
+			//console.log(this.$route.params)
 		}
 	}
 </script>

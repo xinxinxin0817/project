@@ -6,7 +6,7 @@
 			<router-link to=""><span @click="da()">三</span></router-link>
 			<div class="hide1" v-bind:style="[sty]">
 				<button class="all">选择全部</button>
-				<button class="remove">移除所有商品</button>
+				<button class="remove" @click="remove(cart)">移除所有商品</button>
 			</div>
 
 		</Header>
@@ -14,30 +14,19 @@
 		<section>
 			<div class="inclod">
 				
-			<div class="cart-list">
-				<input type="checkbox" name="ral" class="duoxuan" style="width:20px;height:100px;color:#fff"/>
-				<p class="img"><img src="" alt=""></p>
+			<div class="cart-list" v-for="(item,i,cart) in cart" :key="cart">
+				<input type="checkbox"  :ajg="item.pprice" v-on:click="pjg(i)" name="ral" class="duoxuan" style="width:20px;height:100px;color:#fff"/>
+				<p class="img"><img :src="item.pimg" alt=""></p>
 				<div class="jisuan">
-					<router-link to="details"><p class="xiang">now foods 多巴胺豆 美容养颜 胶囊素食见效</p></router-link>
+					<router-link to="details"><p class="xiang">{{item.pname}}</p></router-link>
 					<p class="money">
-						<span>￥199</span>
+						<span>{{item.pprice}}</span>
 
 					</p>
-				</div>
-				
+				</div>	
 			</div>
 			
-<!-- 			
-			<div class="cart-list">
-				<input type="checkbox" name="ral" class="duoxuan" style="width:20px;height:100px;color:#fff"/>
-				<p class="img"><img src="" alt=""></p>
-				<div class="jisuan">
-					<router-link to="details"><p class="xiang">now foods 多巴胺豆 美容养颜 胶囊素食见效</p></router-link>
-					<p class="money">
-						<span>￥199</span>
-					</p>
-				</div>
-			</div> -->
+
 			
 
 			</div>
@@ -103,12 +92,25 @@
 				list:[],
 				title:'',
 				img:'',
-				jg:'',
+				ajg:'',
+				cart:[]
 			}
 		},
 		mounted(){
 			this.$emit('toparent',this.tit)
 			var _this=this;
+			axios({
+					method:'get',
+					url:'http://jx.xuzhixiang.top/ap/api/cart-list.php',
+					params:{id:'11475'}
+				}).then((data)=>{
+					console.log(data)
+					_this.cart=data.data.data
+					console.log(_this.cart)
+					
+				})
+
+
 			axios({
 					method:'get',
 					url:'http://jx.xuzhixiang.top/ap/api/productlist.php',
@@ -124,6 +126,25 @@
 		},
 		
 		methods:{
+			remove(cart){
+				console.log(cart)
+				var _this=this
+				axios({
+					method:'get',
+					url:'http://jx.xuzhixiang.top/ap/api/cart-delete.php',
+					params:{uid:'11475'}
+				}).then((data)=>{
+					console.log(data.data.data)
+					_this.list=data.data.data
+					_this.title=data.data.data.pname
+					_this.jg=data.data.data.pprice
+					
+				})
+			},
+			pjg(i){
+				console.log(i)
+				this.cart.splice(i,1)
+			},
 			da(){
 				if(this.sty.display=="none"){
 					console.log("bbb")
@@ -137,8 +158,12 @@
 					}
 				}
 			},
-
-		}
+		
+			
+		},
+		 directives:{
+			
+		 }
 	}
 </script>
 
@@ -204,6 +229,10 @@ li{
 		height:80px;
 		background:pink;
 		margin-left:10px;
+	}
+	.img img{
+		width:100%;
+		height:100%;
 	}
 	.jisuan{
 		display: flex;
