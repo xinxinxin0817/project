@@ -222,7 +222,7 @@ li{
 	.inclod{
 		background:rgb(248, 239, 239);
 		width:100%;
-		height:70%;
+		
 		overflow: auto;
 	}
 	.cart-list{
