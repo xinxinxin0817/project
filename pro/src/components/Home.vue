@@ -247,7 +247,7 @@
 				}),
 				axios({
 					method:'get',
-					url:'http://jx.xuzhixiang.top/ap/api/bannerlist.php?uid=227',
+					url:'http://jx.xuzhixiang.top/ap/api/bannerlist.php',
 					params:{uid:'14632'}
 				}).then((data)=>{
 					console.log(data.data.data)

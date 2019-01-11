@@ -224,7 +224,8 @@
 					url:'http://jx.xuzhixiang.top/ap/api/productlist.php',
 					params:{uid:'14632'}
 				}).then((data)=>{
-					//console.log(data.data.data)
+					// console.log(data.data.data)
+					//所有数据列表
 					_this.list=data.data.data
 				})
 
@@ -239,6 +240,7 @@
 				url:'http://jx.xuzhixiang.top/ap/api/detail.php',
 				params:{uid:'14632',id:_this.$route.params.id}
 			}).then((data)=>{
+				//根据点谁的 商品详情
 				console.log(data.data.data)
 				_this.list1=data.data.data;
 				_this.title=data.data.data.pname

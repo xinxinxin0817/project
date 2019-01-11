@@ -61,8 +61,8 @@
 					_this.list=data.data.data
 				})
 
-				var id=this.$route.params.id
-			// console.log(id)
+			var id=this.$route.params.id
+			console.log(id)
 			this.$emit('toparent',this.tit)
 			var _this=this;
 			axios({
@@ -70,11 +70,9 @@
 				url:'http://jx.xuzhixiang.top/ap/api/detail.php',
 				params:{uid:'14632',id:_this.$route.params.id}
 			}).then((data)=>{
-				console.log(data.data)
+				//根据点谁的 商品详情
+				console.log(data)
 				_this.list1=data.data.data;
-			
-				
-				_this.img=data.data.data.banner_img_url
 				
 
 				
