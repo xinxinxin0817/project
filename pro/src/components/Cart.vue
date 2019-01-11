@@ -15,7 +15,7 @@
 			<div class="inclod">
 				
 			<div class="cart-list" v-for="(item,i,cart) in cart" :key="cart">
-				<input type="checkbox"  :ajg="item.pprice" v-on:click="pjg(i)" name="ral" class="duoxuan" style="width:20px;height:100px;color:#fff"/>
+				<input type="checkbox" checked="false" :ajg="item.pprice" v-on:click="pjg($event)" name="ral" class="duoxuan" style="width:20px;height:100px;color:#fff"/>
 				<p class="img"><img :src="item.pimg" alt=""></p>
 				<div class="jisuan">
 					<router-link to="details"><p class="xiang">{{item.pname}}</p></router-link>
@@ -41,7 +41,7 @@
 				<div class="fixed1">
 					<div class="box1">
 						<p>小计</p>
-						<span>￥0.00</span>
+						<span>￥{{jg}}</span>
 					</div>
 					<div class="box2">
 						<p>邮</p>
@@ -92,6 +92,8 @@
 				list:[],
 				title:'',
 				img:'',
+				count:0,
+				jg:"",
 				ajg:'',
 				cart:[],
 				all:[],
@@ -157,9 +159,13 @@
 				
 				
 			},
-			pjg(i){
-				console.log(i)
-				this.cart.splice(i,1)
+			pjg(e){
+				
+				this.count=1
+				console.log(this.count)
+				console.log(e)
+				console.log(e.srcElement.attributes.ajg.value)
+				this.jg=Number(e.srcElement.attributes.ajg.value)
 			},
 			da(){
 				if(this.sty.display=="none"){
