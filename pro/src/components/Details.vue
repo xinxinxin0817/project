@@ -142,7 +142,7 @@
 						<h2 class="cp-t">产品概述</h2>
 						<div class="cp-f">
 							<div>
-				<router-link  v-if="list[1]" :to="'/details/'+list[1].pid" style="width:40%"><img  v-if="list[1]" :src="list[1].pimg" alt="" style="width:100%;height:100%"></router-link>
+				<router-link  v-if="list[0]" :to="'/details/'+list[0].pid" style="width:40%"><img  v-if="list[0]" :src="list[0].pimg" alt="" style="width:100%;height:100%"></router-link>
 
 							</div>
 							<div>
@@ -173,7 +173,7 @@
 		
 		<footer class="foot-d">
 			<div><router-link to="/payment" style="color: #fff;">立即购买</router-link></div>
-			<div @click="cart"><router-link to="" style="color:#fff;">加入购物车</router-link></div>
+			<div @click="cart"><router-link to="/cart" style="color:#fff;">加入购物车</router-link></div>
 		</footer>
 		
 		
@@ -222,7 +222,7 @@
 			axios({
 					method:'get',
 					url:'http://jx.xuzhixiang.top/ap/api/productlist.php',
-					params:{uid:'11475'}
+					params:{uid:'14632'}
 				}).then((data)=>{
 					//console.log(data.data.data)
 					_this.list=data.data.data
@@ -237,7 +237,7 @@
 			axios({
 				method:'get',
 				url:'http://jx.xuzhixiang.top/ap/api/detail.php',
-				params:{uid:'11475',id:_this.$route.params.id}
+				params:{uid:'14632',id:_this.$route.params.id}
 			}).then((data)=>{
 				console.log(data.data.data)
 				_this.list1=data.data.data;
@@ -245,14 +245,7 @@
 				_this.jg=data.data.data.pprice
 				_this.img=data.data.data.pimg
 
-				// for(var i=0;i<data.data.users.length;i++){
-				// 	_this.title=data.data.users.title
-				// 	console.log(data.data.users[i].pid)
-				// 	if(data.data.users[i].pid==id){
-				// 		console.log(data.data.users[i])
-				// 		_this.title=data.data.users[i].title
-				// 	}
-				// }
+				
 			})
 			//console.log(this.$route.params)
 		}

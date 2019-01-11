@@ -54,7 +54,7 @@
 		
 			<dl>
 				<router-link to="/allc">	
-					<dt><img  v-if="list[1]" :src="list[1].pimg" alt=""></dt>
+					<dt><img  v-if="list[0]" :src="list[0].pimg" alt=""></dt>
 					<dd>新品上架</dd>
 				</router-link>
 			</dl>
@@ -91,7 +91,7 @@
 				</div>
 				<div class="cp-foot">
 					<router-link  v-if="list[9]" :to="'/details/'+list[9].pid" style="width:40%"><p><img  v-if="list[9]" :src="list[9].pimg" alt=""></p></router-link>
-					<router-link  v-if="list[1]" :to="'/details/'+list[1].pid" style="width:40%"><p><img  v-if="list[1]" :src="list[1].pimg" alt=""></p></router-link>
+					<router-link  v-if="list[0]" :to="'/details/'+list[1].pid" style="width:40%"><p><img  v-if="list[0]" :src="list[0].pimg" alt=""></p></router-link>
 				</div>
 			</div>
 		
@@ -100,7 +100,7 @@
 
 		<div class="banner">
 				<!-- <img v-if="list1[3]" :src="list1[3].banner_img_ur" style="width:100%;height:100%;" alt=""> -->
-				<router-link  v-if="list[0]" :to="'/details/'+list[0].pid" style="width:40%"><img  v-if="list[0]" :src="list[0].pimg" alt="" style="width:100%;height:100%"></router-link>
+				<router-link  v-if="list[1]" :to="'/details/'+list[1].pid" style="width:40%"><img  v-if="list[1]" :src="list[1].pimg" alt="" style="width:100%;height:100%"></router-link>
 
 		</div>
 		<!--bander-->
@@ -164,24 +164,26 @@
 		<!--健康建议-->
 			<div class="jkjy">
 				<h2 class="jk-top">健康建议</h2>
-					<router-link to="/title" style="display:flex;flex-direction:row;">
+					
 				<div class="jk-foot">
-				<dl>
-						<dt></dt>
-						<dd>
-							<h3>肠胃保健汤</h3>
-							<p>健康建议肠胃保健汤肠胃保健汤</p>
-						</dd>
-					</dl>
-				<dl>
-						<dt></dt>
-						<dd>
-							<h3>肠胃保健汤</h3>
-							<p>健康建议肠胃保健汤肠胃保健汤</p>
-						</dd>
-					</dl>
+					<router-link v-if="list[3]" :to="'/title/'+list[3].pid" style="display:flex;width:55%;height:120px;">
+						<dl>
+							<dt><img  v-if="list[3]" :src="list[3].pimg" alt="" style="width:100%;height:120px"></dt>
+								<dd>
+									{{list[3].pname}}
+								</dd>
+							</dl>	
+					</router-link>
+						<router-link v-if="list[4]" :to="'/title/'+list[4].pid" style="display:flex;width:55%;height:120px;">
+						<dl>
+							<dt><img  v-if="list[4]" :src="list[4].pimg" alt="" style="width:100%;height:120px"></dt>
+								<dd>
+									{{list[4].pname}}
+								</dd>
+							</dl>	
+					</router-link>
 				</div>
-				</router-link>
+				
 			</div>
 
 		<!--健康建议end-->
@@ -551,29 +553,37 @@ a{
 		padding-left:5%;
 		font-size:16px;
 		line-height:50px;
+		
 	}
 	.jk-foot{
 		width:100%;
 		height:170px;
 	
 		display: flex;
-		flex-direction:row
+		flex-direction:row;
+		
 	}
 	.jk-foot dl{
-		width:45%;
+		width:100%;
 		margin-left:4%;
+		font-size: 14px;
+		height:140px;
+		
+		margin-top:10px;
 	}
 	.jk-foot dt{
-		background:blue;
 		width:100%;
-		height:100px;
+		height:120px;
 	}
-	.jk-foot dd h3{
-		font-size:14px;
+	.jk-foot dd {
+		width:100%;
+		height:30px;
+		color:#000;
+		line-height: 30px;
+		text-align: center;
+		overflow: hidden;
 	}
-	.jk-foot dd p{
-		font-size:12px;
-	}
+	
 
 	/*健康建议end*/
 </style>

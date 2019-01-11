@@ -112,7 +112,7 @@
 			axios({
 					method:'get',
 					url:'http://jx.xuzhixiang.top/ap/api/productlist.php',
-					params:{uid:'11475'}
+					params:{uid:'14632'}
 				}).then((data)=>{
 					console.log(data.data.data)
 					_this.list=data.data.data

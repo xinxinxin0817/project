@@ -107,7 +107,7 @@ export default new Router({
 		component:Banner,
 	},
 	{
-		path:'/title',
+		path:'/title/:id',
 		component:Title,
 	},
 	{	
