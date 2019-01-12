@@ -277,6 +277,7 @@ tab("left","p","right","div","onmouseover");
 			db(){
 				this.str="草本和顺势疗法"
 			
+			left_li[0].style.borderLeft="0"
 
 				
 				right_li[0].style.display="none"
@@ -300,6 +301,7 @@ tab("left","p","right","div","onmouseover");
 				right_li[6].style.display="none"
 				right_li[7].style.display="none"
 				right_li[8].style.display="none"
+			left_li[0].style.borderLeft="0"
 
 				right_li[2].style.display="block"
 			},
@@ -313,6 +315,7 @@ tab("left","p","right","div","onmouseover");
 				right_li[6].style.display="none"
 				right_li[7].style.display="none"
 				right_li[8].style.display="none"
+			left_li[0].style.borderLeft="0"
 				
 				right_li[3].style.display="block"
 			},
@@ -326,6 +329,7 @@ tab("left","p","right","div","onmouseover");
 				right_li[6].style.display="none"
 				right_li[7].style.display="none"
 				right_li[8].style.display="none"
+			left_li[0].style.borderLeft="0"
 				
 				right_li[4].style.display="block"
 
@@ -340,6 +344,7 @@ tab("left","p","right","div","onmouseover");
 				right_li[6].style.display="none"
 				right_li[7].style.display="none"
 				right_li[8].style.display="none"
+			left_li[0].style.borderLeft="0"
 				
 				right_li[5].style.display="block"
 			},
@@ -353,7 +358,8 @@ tab("left","p","right","div","onmouseover");
 				right_li[1].style.display="none"
 				right_li[7].style.display="none"
 				right_li[8].style.display="none"
-				
+			left_li[0].style.borderLeft="0"
+
 				right_li[6].style.display="block"
 			},
 			dh(){
@@ -366,6 +372,7 @@ tab("left","p","right","div","onmouseover");
 				right_li[6].style.display="none"
 				right_li[1].style.display="none"
 				right_li[8].style.display="none"
+			left_li[0].style.borderLeft="0"
 				
 				right_li[7].style.display="block"
 			},
@@ -381,10 +388,13 @@ tab("left","p","right","div","onmouseover");
 				right_li[1].style.display="none"
 				
 				right_li[8].style.display="block"
+			left_li[0].style.borderLeft="0"
+
 			},
 
 		},
 		mounted(){
+			left_li[0].style.borderLeft="4px solid #cecece"
 			right_li[0].style.display="block"
 			this.$emit('toparent',this.tit)
 			var _this=this;
@@ -463,6 +473,7 @@ tab("left","p","right","div","onmouseover");
 		
 	}
 	section p:hover{
+	
 		border-left:4px solid #cecece;
 	}
 	section .right{
@@ -475,7 +486,7 @@ tab("left","p","right","div","onmouseover");
 	section .look{
 		width:100%;
 		height:40px;
-		margin-left:5%;
+		
 		margin-top:3%;
 		
 	}
@@ -567,5 +578,6 @@ tab("left","p","right","div","onmouseover");
 	}
 	.hide{
 		display: none;
+		margin-left:2%;
 	}
 </style>

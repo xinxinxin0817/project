@@ -3,7 +3,7 @@
 	<div>
 		<Header class="header-d" msg="我的">
 			<div class="h-top">
-				<div class="sy" ><router-link to="/home" ><span style="font-size:20px;" class="iconfont icon-fanhui" @click="fanhui()"></span></router-link></div>
+				<div class="sy" ><router-link to="/home" ><span style="font-size:20px;color:#000;" class="iconfont icon-fanhui" @click="fanhui()"></span></router-link></div>
 				<div class="sy1" ><router-link to="/home" ><span class="sp">商品</span><em class="xq">详情</em></router-link></div>
 				<div class="sy2" style="text-align:center;"><router-link to="/home" style="width:100%;"><span class="osy">首页</span></router-link></div>
 			</div>
@@ -332,6 +332,7 @@
 	background:#fff;
 	display: flex;
 	justify-content: space-around;
+	color:#000;
 }
 .dj-cen img{
 	width:100%;
@@ -341,6 +342,7 @@
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	color:#000;
 
 }
 .dj-cen dl:nth-child(1){
@@ -446,6 +448,7 @@
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	color:#000;
 
 }
 .dj-foot dl:nth-child(1){

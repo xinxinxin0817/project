@@ -4,7 +4,7 @@
 			<router-link to="" style="width:95%"><input type="text" placeholder="搜索产品" /></router-link>
 			<div class="box" style="width:95%">
 			<router-link to="/health" style="width:33%"><p class="teshu">健康主题</p></router-link>
-			<router-link to="/category" style="width:33%"><p>类别</p></router-link>
+			<router-link to="/category" style="width:33%"><p @click="aa()">类别</p></router-link>
 			<router-link to="/brand" style="width:33%"><p>品牌</p></router-link>
 			</div>
 
@@ -29,6 +29,11 @@
 		},
 		mounted(){
 			this.$emit('toparent',this.tit)
+		},
+		methods:{
+			aa(){
+
+			}
 		}
 	}
 </script>
