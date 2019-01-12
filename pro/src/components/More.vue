@@ -8,12 +8,14 @@
 			<div class="guess-m">
 				
 				<ul class="like-m">
+					<!-- <router-link to="/details"><li><p></p><span>2222</span></li></router-link> -->
+				<li v-for="(item,more) in list" :key="more" :pid="item.pid"><router-link style="width:100%;"  :to="'/details/'+item.pid"><p><img :src="item.pimg" alt="" style="width:170px;height:240px"></p><span style="width:170px;height:45px;display:inline-block;line-height:45px;font-size:14px;overflow:hidden">{{item.pname}}</span></router-link></li>
+
+					<!-- <router-link to="/details"><li><p></p><span>2222</span></li></router-link>
 					<router-link to="/details"><li><p></p><span>2222</span></li></router-link>
 					<router-link to="/details"><li><p></p><span>2222</span></li></router-link>
 					<router-link to="/details"><li><p></p><span>2222</span></li></router-link>
-					<router-link to="/details"><li><p></p><span>2222</span></li></router-link>
-					<router-link to="/details"><li><p></p><span>2222</span></li></router-link>
-					<router-link to="/details"><li><p></p><span>2222</span></li></router-link>
+					<router-link to="/details"><li><p></p><span>2222</span></li></router-link> -->
 
 				</ul>
 			</div>
@@ -22,15 +24,29 @@
 </template>
 
 <script>
+		import axios from 'axios';
+
 	export default {
 		name:'More',
 		data(){
 			return{
-				tit:'更多'
+				tit:'更多',
+				list:[]
+
 			}
 		},
 		mounted(){
 			this.$emit('toparent',this.tit)
+			var _this=this;
+
+			axios({
+					method:'get',
+					url:'http://jx.xuzhixiang.top/ap/api/productlist.php',
+					params:{uid:'14632'}
+				}).then((data)=>{
+					console.log(data.data.data)
+					this.list=data.data.data
+				})
         },
         methods:{
           fanhui(){
@@ -100,7 +116,7 @@
 	.like-m p{
 		width:170px;
 		height:240px;
-		background:#ff0;
+	
 
 	}
 	.like-m span{
@@ -108,7 +124,7 @@
 		color:#504e4e;
 		width:170px;
 		height:45px;
-		background:pink;
+		
 	}
 
 </style>
