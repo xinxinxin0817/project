@@ -22,6 +22,10 @@ import Logina from '@/components/Logina'
 import Setting from '@/components/Setting'
 import Payment from '@/components/Payment'
 
+import Flora from '@/components/Flora'
+import Bathed from '@/components/Bathed'
+import Cosmetology from '@/components/Cosmetology'
+
 
 
 
@@ -50,6 +54,19 @@ export default new Router({
 								path:'/category',
 								component:Category,
 							},
+							{
+								path:'/flora',
+								component:Flora,
+							},
+							{
+								path:'/bathed',
+								component:Bathed,
+							},
+							{
+								path:'/cosmetology',
+								component:Cosmetology,
+							},
+
 							{
 								path:'/health',
 								component:Health,

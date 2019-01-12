@@ -8,9 +8,9 @@
 			</div>
 			<div class="h-ls">
 			<router-link to="/home"><p class="teshu">推荐</p></router-link>
-			<router-link to="/category"><p>草木顺势疗法</p></router-link>
-			<router-link to="/category"><p>沐浴和个人护理</p></router-link>
-			<router-link to="/category"><p>美容美妆</p></router-link>
+			<router-link to="/flora"><p>草木顺势疗法</p></router-link>
+			<router-link to="/bathed"><p>沐浴和个人护理</p></router-link>
+			<router-link to="/cosmetology"><p>美容美妆</p></router-link>
 			</div>
 
 		</Header>

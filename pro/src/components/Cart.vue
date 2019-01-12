@@ -15,7 +15,7 @@
 			<div class="inclod">
 				
 			<div class="cart-list" v-for="(item,i,cart) in cart" :key="cart">
-				<input type="checkbox" checked="false" :ajg="item.pprice" v-on:click="pjg($event)" name="ral" class="duoxuan" style="width:20px;height:100px;color:#fff"/>
+				<input type="checkbox"  :ajg="item.pprice" v-on:click="pjg($event)" name="ral" class="duoxuan" style="width:20px;height:100px;color:#fff"/>
 				<p class="img"><img :src="item.pimg" alt=""></p>
 				<div class="jisuan">
 					<router-link :to="'/details/'+item.pid"><p class="xiang">{{item.pname}}</p></router-link>
@@ -56,7 +56,7 @@
 				<div class="fixed2">
 				<div class="meme"><input type="checkbox" name="ram" class="quanxuan" style="width:20px;"/>全选</div>
 					<div class="xiadan">
-						合计:<input type="text" value="￥:" class="jine">
+						合计:<input type="text" @click="quxuan()" value="￥:" class="jine">
 						<router-link to="/payment" style="width:52%;height:40px;"><input type="button" value="下单" class="mai"></router-link>
 					</div>
 				</div>
@@ -80,6 +80,8 @@
 	// 			}
 	// 		]
 	// 	})
+	var aduoxuan=document.getElementsByClassName("duoxuan")
+	console.log(aduoxuan)
 
 	export default{
 		name:'Shop',
@@ -180,6 +182,9 @@
 					}
 				}
 			},
+			quanxuan(){
+
+			}
 		
 			
 		},
