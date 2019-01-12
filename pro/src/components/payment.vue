@@ -2,7 +2,7 @@
 
 	<div>
 		<Header class="header-p" msg="支付">
-			<span @click="fanhui()">《</span>
+			<span @click="fanhui()" class="iconfont icon-fanhui" style="font-size:20px;margin-left:3%;"></span>
 			<span>填写订单</span>
 		</Header>
 		<section class="section">
@@ -82,7 +82,7 @@
 			</div>
 			<div class="foot-f">
 				<p>合计：￥149.00</p>
-				<p><router-link to="">提交订单</router-link></p>
+				<p><router-link to="" style="color:#000;">提交订单</router-link></p>
 			</div>
 		</footer>
 		
@@ -276,7 +276,7 @@ a{
 	width:22%;
 	margin: 0 3%;
 	height:100%;
-	background:red;
+	background:rgb(235, 231, 231);
 }
 .nr div:last-child{
 	width:75%;
