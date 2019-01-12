@@ -3,7 +3,7 @@
 	<div>
 		<Header class="header" msg="我的">
 			<div class="h-top">
-				<div class="sy" ><router-link to="/home" ><span class="iconfont icon-fanhui" style="font-size:20px;color:#000;"></span></router-link></div>
+				<div class="sy" ><router-link to="" ><span @click="fanhui()" class="iconfont icon-fanhui" style="font-size:20px;color:#000;"></span></router-link></div>
 				<div class="sy1" ><router-link to="/cart" ><span class="iconfont icon-gouwucheman" style="font-size:20px;color:#000;"></span></router-link></div>
 				
 			</div>
@@ -82,7 +82,9 @@
 			}
 		},
 		methods:{
-			
+			fanhui(){
+				this.$router.go(-1)
+			}
 		},
 		mounted(){
 			this.$emit('toparent',this.tit)
