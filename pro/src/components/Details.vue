@@ -236,6 +236,7 @@
 						params:{uid:Number(_this.token),pid:_this.list1.pid,pnum:1}
 					}).then((data)=>{
 						console.log(data)
+						alert("添加成功")
 						
 					})
 
@@ -626,6 +627,7 @@
 	display: inline-block;
 	width:50%;
 	text-align: center;
+
 }
 
 .banner{
