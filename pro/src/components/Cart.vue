@@ -5,7 +5,7 @@
 			<router-link to="/cart"><p>购物车</p></router-link>
 			<router-link to=""><span @click="da()">三</span></router-link>
 			<div class="hide1-a" v-bind:style="[sty]">
-				<button class="all-a">选择全部</button>
+				<!-- <button class="all-a">选择全部</button> -->
 				<button class="remove-a" @click="remove(all)">移除所有商品</button>
 			</div>
 
@@ -70,6 +70,9 @@
 </template>
 
 <script>
+
+
+
 	import axios from 'axios';
 	import Mock from 'mockjs'
 	// Mock.mock('http://www.ccc.com',{
@@ -104,6 +107,31 @@
 		var token=getCookie("token")
 		console.log(token);
 
+		$(function(){
+			$('.quanxuan').click(function(){
+			if($('.quanxuan').is(':checked')){
+			$('.duoxuan').prop('checked',true);
+			}else{
+			$('.duoxuan').prop('checked',false);
+			} 
+			});
+			$('.duoxuan').click(function(){
+			var i = 0;
+			var arr = $('.duoxuan').length;
+			$('.duoxuan').each(function(){	
+			if($(this).is(':checked')){
+			i++;
+			};	
+			});
+			if(i == arr){
+			$('.quanxuan').prop('checked',true);
+			}else{
+			$('.quanxuan').prop('checked',false);
+			}
+
+			});
+	});
+
 	export default{
 		name:'Shop',
 		data(){
@@ -126,7 +154,9 @@
 			}
 		},
 		mounted(){
-
+					
+					
+					
 			this.$emit('toparent',this.tit)
 			var _this=this;
 			axios({
@@ -468,7 +498,7 @@ li{
 	}
 	.hide1-a{
 		width:40%;
-		height:80px;
+		height:40px;
 		position:absolute;
 		left:60%;
 		top:36px;
