@@ -93,6 +93,12 @@
 			// },
 
 			login(){
+				var value=$('.tex').val();
+				if(value==""){
+					alert("请输入用户名")
+					return
+			
+				}
 				var _this=this;
 				axios({
 					method:'get',

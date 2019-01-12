@@ -943,21 +943,22 @@ a{
 	width:100%;
 	height:50px;
 	display: flex;
-	
-	justify-content: space-around;
+	font-size: 14px;
+	justify-content:flex-end ;
+	align-items: center;
 }
 .foot-d div:first-child{
-	width:40%;
-	height:50px;
-	line-height: 50px;
+	width:26%;
+	height:40px;
+	line-height: 40px;
 	text-align: center;
 	background:rgb(151, 150, 150);
 	
 }
 .foot-d div:last-child{
-	width:40%;
-	height:50px;
-	line-height: 50px;
+	width:26%;
+	height:40px;
+	line-height: 40px;
 	text-align: center;
 	background:rgb(95, 94, 95);
 }

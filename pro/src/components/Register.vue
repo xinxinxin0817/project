@@ -37,10 +37,10 @@
 			<section>
 			<div class="box2">
 				<input type="text" placeholder="请输入邮箱" v-model="username" class="tex">
-				<div class="box3">
-					<!-- <input type="text" placeholder="邮箱验证码" v-model="code" class="txt"> -->
-					<!-- <button size="normal" type="primary" @click="send()" class="yzm">发送验证码</button> -->
-				</div>
+				<!-- <div class="box3">
+					<input type="text" placeholder="邮箱验证码" v-model="code" class="txt">
+					<button size="normal" type="primary" @click="send()" class="yzm">发送验证码</button>
+				</div> -->
 				<input type="password" placeholder="请设置密码" v-model="password" class="pas">
 				<router-link to="" style="width:90%;"   ><button @click="register()" class="btn2">注册</button></router-link>
 				
@@ -99,7 +99,13 @@
 
 				// 	}
 				// })
-
+				var value=$('.tex').val();
+				if(value==""){
+					alert("请输入用户名")
+					return
+			
+				}
+			
 				var _this=this;
 				axios({
 					method:'get',
