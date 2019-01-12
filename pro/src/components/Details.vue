@@ -258,7 +258,10 @@
 .xqjs{
 	height:400px;
 	text-indent: 2rem;
-	
+	font-size: 14px;
+	line-height: 25px;
+	color:rgb(46, 45, 45);
+	padding:10px;
 }
 
 .cpgs{
@@ -607,8 +610,7 @@
 	background:rgb(230, 230, 227);
 	width:100%;
 	height:53px;
-	border-top:5px solid #ccc;
-	border-bottom:5px solid #ccc;
+	
 }
 .al-d{
 	width:100%;
@@ -883,11 +885,13 @@ a{
 .b-l-t1{
 	border-left: 1px solid #ccc;
 	text-align: center;
+	font-size: 12px;
 }
 .b-l-foot{
 	font-size:12px;
 	color:rgb(119, 117, 117);
 	margin-left:10px;
+	margin-top:10px;
 }
 .b-r{
 	width:55%;

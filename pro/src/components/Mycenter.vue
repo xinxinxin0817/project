@@ -5,9 +5,9 @@
 			<div class="sy" ><router-link to="/home" ><span  class="iconfont icon-fanhui" style="color:#000;font-size:20px;"></span></router-link></div>
 		</Header>
 		<section class="section">
-			<div class="logo"></div>
-			<router-link to="/banner">
-				<mt-swipe :auto="4000" style="height:200px; margin:0; padding:0;">
+			<!-- <div class="logo"></div> -->
+			<router-link to="">
+				<mt-swipe :auto="4000" style="height:200px; margin:0; padding:0;margin-top:10%">
 					<mt-swipe-item style="background: red;height:200px;" v-for="(item,home) in list1" :key="home"><img :src="item.banner_img_url" style="width:100%;height:200px;"></mt-swipe-item>
 					<!-- <mt-swipe-item style="background: yellow;height:200px;"></mt-swipe-item>
 					<mt-swipe-item style="background: pink;height:200px;"></mt-swipe-item>
@@ -84,7 +84,7 @@ a{
 	width:96%;
 	display: flex;
 	align-items: center;
-
+	background:rgb(248, 248, 246);
 }
 .sy{
 	width:15%;
@@ -95,7 +95,7 @@ a{
 	font-size:16px;
 }
 .sy span{
-	margin-left:-2px;
+	margin-left:0px;
 }
 
 
