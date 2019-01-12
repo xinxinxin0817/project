@@ -182,6 +182,11 @@
 
 <script>
 
+
+
+
+
+
 	import axios from 'axios';
 		function getCookie(name){
 			var str = document.cookie;
@@ -216,7 +221,7 @@
 				jg:'',
 				list:[],
 				list1:[],
-				token:'token'
+				token:token
 			}
 		},
 		methods:{
@@ -228,7 +233,7 @@
 				axios({
 						method:'get',
 						url:'http://jx.xuzhixiang.top/ap/api/add-product.php',
-						params:{uid:'11475',pid:_this.list1.pid,pnum:1}
+						params:{uid:Number(_this.token),pid:_this.list1.pid,pnum:1}
 					}).then((data)=>{
 						console.log(data)
 						
