@@ -173,7 +173,7 @@
 		
 		<footer class="foot-d">
 			<div><router-link to="/payment" style="color: #fff;">立即购买</router-link></div>
-			<div @click="cart"><router-link to="/cart" style="color:#fff;">加入购物车</router-link></div>
+			<div @click="cart"><router-link to="" style="color:#fff;">加入购物车</router-link></div>
 		</footer>
 		
 		

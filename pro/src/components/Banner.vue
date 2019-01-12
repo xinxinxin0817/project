@@ -6,7 +6,9 @@
 		</Header>
 		<section class="section-b">
 			<div class="banner-b">
-				<img  :src="img" alt="" style="width;100%;height:100%">
+				<!-- <p>IHerb活动</p>
+				<p>立即选购</p> -->
+				<img  v-if="list[9]" :src="list[9].pimg" alt="" style="width:100%;height:100%">
 			</div>
              <h1>相关商品推荐</h1>
             <div class="banner-c">
@@ -125,10 +127,32 @@
 	.banner-b{
         width:90%;
         height:60%;
-        background:#ccc;
+        background:rgb(230, 229, 229);
         margin-top:20px;
-
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
     }
+	.banner-b p:first-child{
+		font-size: 20px;
+		color:#504e4e;
+
+	}
+	.banner-b p:last-child{
+		font-size: 12px;
+		color:#504e4e;
+		width:30%;
+		height:20px;
+		line-height: 20px;
+		border-radius: 10px;
+		display: inline-block;
+		background:#fff;
+		text-align: center;
+		margin-top:20px;
+
+		
+	}
     .banner-c{
         width:95%;
        height:29vh;
