@@ -4,9 +4,9 @@
 		<Header msg="购物车" class="header" style="background: #ccc;width:100%;height:40px;">
 			<router-link to="/cart"><p>购物车</p></router-link>
 			<router-link to=""><span @click="da()">三</span></router-link>
-			<div class="hide1" v-bind:style="[sty]">
-				<button class="all">选择全部</button>
-				<button class="remove" @click="remove(all)">移除所有商品</button>
+			<div class="hide1-a" v-bind:style="[sty]">
+				<button class="all-a">选择全部</button>
+				<button class="remove-a" @click="remove(all)">移除所有商品</button>
 			</div>
 
 		</Header>
@@ -80,9 +80,9 @@
 	// 			}
 	// 		]
 	// 	})
-	var aduoxuan=document.getElementsByClassName("duoxuan")
-	console.log(aduoxuan)
-
+	
+	// var len=aduoxuan.length;
+	// console.log(len);
 	export default{
 		name:'Shop',
 		data(){
@@ -99,10 +99,12 @@
 				ajg:'',
 				cart:[],
 				all:[],
-				all1:{}
+				all1:{},
+				checked:'false'
 			}
 		},
 		mounted(){
+
 			this.$emit('toparent',this.tit)
 			var _this=this;
 			axios({
@@ -183,7 +185,11 @@
 				}
 			},
 			quanxuan(){
-
+					for(var i=0;i<aduoxuan.length;i++){
+						aduoxuan[i].checked=true
+						console.log(aduoxuan[i])
+						console.log(aduoxuan[i].style)
+					}
 			}
 		
 			
@@ -436,7 +442,7 @@ li{
 		border:0;
 		background:#ccc;
 	}
-	.hide1{
+	.hide1-a{
 		width:40%;
 		height:80px;
 		position:absolute;
@@ -452,7 +458,7 @@ li{
 		border:1px solid #ccc;
 		border-radius: 5px;
 	}
-	.hide1 button{
+	.hide1-a button{
 		border:0;
 		background:#fff;
 		font-size: 14px;
