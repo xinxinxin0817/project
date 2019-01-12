@@ -18,7 +18,7 @@
 				<input type="checkbox" checked="false" :ajg="item.pprice" v-on:click="pjg($event)" name="ral" class="duoxuan" style="width:20px;height:100px;color:#fff"/>
 				<p class="img"><img :src="item.pimg" alt=""></p>
 				<div class="jisuan">
-					<router-link to="details"><p class="xiang">{{item.pname}}</p></router-link>
+					<router-link :to="'/details/'+item.pid"><p class="xiang">{{item.pname}}</p></router-link>
 					<p class="money">
 						<span>{{item.pprice}}</span>
 
