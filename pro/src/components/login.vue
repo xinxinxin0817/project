@@ -121,7 +121,7 @@
 			},
 		
 			fanhui(){
-				this.$router.go(-1)
+				location.href="/home"
 			}
 	
 		}

@@ -59,7 +59,7 @@
 		atc(){
 			alert("退出成功，欢迎下次登录")
 			removeCookie("token")
-			location.href="#/home"	
+			location.href="#/login"	
 
 			}
         }

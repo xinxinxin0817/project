@@ -57,6 +57,8 @@ export default {
 		location.reload()
 	},
 	denglu(){
+		// location.reload()
+
 		if(this.token){
 			location.href="#/logina"
 		}
