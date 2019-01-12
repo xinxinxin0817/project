@@ -46,8 +46,7 @@
 </template>
 
 <script>
-		
-		
+	
 
 		function getCookie(name){
 			var str = document.cookie;
