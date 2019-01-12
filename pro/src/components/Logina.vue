@@ -6,7 +6,7 @@
 				<div class="my-top">
 					<p></p>
 					<p>
-						<span>18738192715</span>
+						<span>{{name}}</span>
 						<span>信用积分</span>
 					</p>
 				</div>
@@ -46,14 +46,42 @@
 </template>
 
 <script>
+		
+		
+
+		function getCookie(name){
+			var str = document.cookie;
+			var arr = str.split("; ");
+			for(var i = 0; i < arr.length; i++){
+				var arr1 = arr[i].split("=");
+				if(arr1[0]==name){
+					return arr1[1];
+				}
+			}
+		}
+		function setCookie(name,val,n){
+			var oDate = new Date();
+			oDate.setDate(oDate.getDate()+n);
+			document.cookie = name + "=" + val + ";expires="+ oDate ;
+		}
+		function removeCookie(name){
+			setCookie(name,1,-1);
+		}
+		var aname=getCookie("mingzi")
+		console.log(aname)
+
+
+
 	export default {
 		name:'Logina',
 		data(){
 			return{
-				tit:'更多'
+				tit:'更多',
+				name:''
 			}
 		},
 		mounted(){
+			this.name=aname
 			this.$emit('toparent',this.tit)
         },
         methods:{

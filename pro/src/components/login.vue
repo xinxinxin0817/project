@@ -108,14 +108,15 @@
 					console.log(data)
 					if(data.data.code==1){
 						setCookie("token",data.data.data.id,{expires:30});
-						alert("登录成功，跳转个人主页");
-						location.href="#/logina"
+						setCookie("mingzi",data.data.data.username,{expires:30});
+						alert("登录成功，跳转主页");
+						location.href="#/home"
 
 					}else{
 						alert("登录失败，请重新登录");
 						location.href="#/login"
 
-					}
+					 }
 				})
 			},
 		

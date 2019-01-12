@@ -11,18 +11,42 @@
                 <p>缓存设置</p>
          
             </div>
-            <router-link to="/login" style="display:flex;width:100%;"><div class="tuichu">退出登录</div></router-link>
+           <div id="tc" class="tuichu" @click='atc()'><router-link to="/login" style="display:flex;width:100%;justify-content:center;">退出登录</router-link></div>
 		</section>
        
 	</div>
 </template>
 
 <script>
+
+		function getCookie(name){
+			var str = document.cookie;
+			var arr = str.split("; ");
+			for(var i = 0; i < arr.length; i++){
+				var arr1 = arr[i].split("=");
+				if(arr1[0]==name){
+					return arr1[1];
+				}
+			}
+		}
+		function setCookie(name,val,n){
+			var oDate = new Date();
+			oDate.setDate(oDate.getDate()+n);
+			document.cookie = name + "=" + val + ";expires="+ oDate ;
+		}
+		function removeCookie(name){
+			setCookie(name,1,-1);
+		}
+		var token=getCookie("token")
+		console.log(Number(token));
+	
+		
+
 	export default {
 		name:'More',
 		data(){
 			return{
-				tit:'更多'
+				tit:'更多',
 			}
 		},
 		mounted(){
@@ -31,6 +55,12 @@
         methods:{
           fanhui(){
 				this.$router.go(-1)
+			},
+		atc(){
+			alert("退出成功，欢迎下次登录")
+			removeCookie("token")
+			location.href="#/home"	
+
 			}
         }
 	}
