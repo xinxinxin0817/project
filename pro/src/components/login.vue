@@ -22,7 +22,8 @@
 		</div> -->
 		<section>
 			<div class="box1">
-				<input type="text" placeholder="请输入邮箱" v-model="email" class="tex">
+				<!-- <input type="text" placeholder="请输入邮箱" v-model="email" class="tex"> -->
+				<input type="text" placeholder="请输入邮箱" v-model="username" class="tex">
 				<input type="password" placeholder="密码" v-model="password" class="pas">
 				<router-link to="" style="width:90%;"><button  @click="login()">登录</button></router-link>
 			</div>
@@ -33,6 +34,28 @@
 </template>
 
 <script>
+		function getCookie(name){
+			var str = document.cookie;
+			var arr = str.split("; ");
+			for(var i = 0; i < arr.length; i++){
+				var arr1 = arr[i].split("=");
+				if(arr1[0]==name){
+					return arr1[1];
+				}
+			}
+		}
+		function setCookie(name,val,n){
+			var oDate = new Date();
+			oDate.setDate(oDate.getDate()+n);
+			document.cookie = name + "=" + val + ";expires="+ oDate ;
+		}
+		function removeCookie(name){
+			setCookie(name,1,-1);
+		}
+
+
+
+
 	import axios from 'axios';
 	
 	
@@ -40,6 +63,7 @@
 		name:"Login",
 		data(){
 			return{
+				username:'',
 				email:'',
 				password:'',
 				yzm:''
@@ -47,17 +71,40 @@
 		},
 		methods:{
 			
+			// login(){
+			// 	var _this=this;
+			// 	axios({
+			// 		method:'get',
+			// 		url:'http://10.8.155.66:8081/user/login.do',
+			// 		params:{email:_this.email,password:_this.password}
+			// 	}).then(function(data){
+			// 		console.log(data)
+			// 		if(data.data.code==1000){
+			// 			//setCookie("token",data.data.token,{expires:30});
+			// 			alert("登录成功，跳转个人主页");
+			// 			location.href="#/logina"
+
+			// 		}else{
+			// 			alert("登录失败，请重新登录");
+			// 			location.href="#/login"
+
+			// 		}
+			// 	})
+			// },
+
 			login(){
 				var _this=this;
 				axios({
 					method:'get',
-					url:'http://10.8.155.66:8081/user/login.do',
-					params:{email:_this.email,password:_this.password}
+					url:'http://jx.xuzhixiang.top/ap/api/login.php',
+					params:{username:_this.username,password:_this.password}
 				}).then(function(data){
 					console.log(data)
-					if(data.data.code==1000){
+					if(data.data.code==1){
+						setCookie("token",data.data.data.id,{expires:30});
 						alert("登录成功，跳转个人主页");
 						location.href="#/logina"
+
 					}else{
 						alert("登录失败，请重新登录");
 						location.href="#/login"

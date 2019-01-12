@@ -83,6 +83,27 @@
 	
 	// var len=aduoxuan.length;
 	// console.log(len);
+	function getCookie(name){
+			var str = document.cookie;
+			var arr = str.split("; ");
+			for(var i = 0; i < arr.length; i++){
+				var arr1 = arr[i].split("=");
+				if(arr1[0]==name){
+					return arr1[1];
+				}
+			}
+		}
+		function setCookie(name,val,n){
+			var oDate = new Date();
+			oDate.setDate(oDate.getDate()+n);
+			document.cookie = name + "=" + val + ";expires="+ oDate ;
+		}
+		function removeCookie(name){
+			setCookie(name,1,-1);
+		}
+		var token=getCookie("token")
+		console.log(token);
+
 	export default{
 		name:'Shop',
 		data(){
@@ -100,7 +121,8 @@
 				cart:[],
 				all:[],
 				all1:{},
-				checked:'false'
+				checked:'false',
+				token:token
 			}
 		},
 		mounted(){
@@ -110,7 +132,7 @@
 			axios({
 					method:'get',
 					url:'http://jx.xuzhixiang.top/ap/api/cart-list.php',
-					params:{id:'11475'}
+					params:{id:"11475"}//购物车 上面用户的
 				}).then((data)=>{
 					console.log(data)
 					_this.cart=data.data.data
@@ -125,7 +147,7 @@
 			axios({
 					method:'get',
 					url:'http://jx.xuzhixiang.top/ap/api/productlist.php',
-					params:{uid:'11475'}
+					params:{uid:'11475'}//下面的商品 喜欢
 				}).then((data)=>{
 					console.log(data.data.data)
 					_this.list=data.data.data
@@ -138,6 +160,8 @@
 		
 		methods:{
 			remove(all){
+				console.log(this.token)
+				
 				console.log(this.all.length)
 				var _this=this;
 				if(_this.all.length<=0){
@@ -149,7 +173,7 @@
 							axios({
 								method:'get',
 								url:'http://jx.xuzhixiang.top/ap/api/cart-delete.php',
-								params:{uid:'11475',pid:_this.all[i]}
+								params:{uid:"11475",pid:_this.all[i]}
 							}).then((data)=>{
 								console.log(data)
 								

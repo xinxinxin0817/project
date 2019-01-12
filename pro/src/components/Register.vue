@@ -21,12 +21,25 @@
 			
 			
 		</div> -->
-		<section>
+		<!-- <section>
 			<div class="box2">
 				<input type="email" placeholder="请输入邮箱" v-model="email" class="tex">
 				<div class="box3">
 					<input type="text" placeholder="邮箱验证码" v-model="code" class="txt">
 					<button size="normal" type="primary" @click="send()" class="yzm">发送验证码</button>
+				</div>
+				<input type="password" placeholder="请设置密码" v-model="password" class="pas">
+				<router-link to="" style="width:90%;"   ><button @click="register()" class="btn2">注册</button></router-link>
+				
+			</div>
+		</section> -->
+
+			<section>
+			<div class="box2">
+				<input type="text" placeholder="请输入邮箱" v-model="username" class="tex">
+				<div class="box3">
+					<!-- <input type="text" placeholder="邮箱验证码" v-model="code" class="txt"> -->
+					<!-- <button size="normal" type="primary" @click="send()" class="yzm">发送验证码</button> -->
 				</div>
 				<input type="password" placeholder="请设置密码" v-model="password" class="pas">
 				<router-link to="" style="width:90%;"   ><button @click="register()" class="btn2">注册</button></router-link>
@@ -47,33 +60,55 @@
 			return{
 				code:'',
 				email:'',
-				
+				username:'',
 				password:'',
 				yzm:''
 			}
 		},
 		methods:{
-			send(){
-				var _this=this;
-				axios({
-					method:'get',
-					url:'http://10.8.155.66:8081/user/emailcode.do',
-					// params:{code:_this.code,id:'1'}
-					params:{email:_this.email}
-				}).then(function(data){
-					console.log(data)
+			// send(){
+			// 	var _this=this;
+			// 	axios({
+			// 		method:'get',
+			// 		url:'http://10.8.155.66:8081/user/emailcode.do',
+			// 		// params:{code:_this.code,id:'1'}
+			// 		params:{email:_this.email}
+			// 	}).then(function(data){
+			// 		console.log(data)
 
-				})
+			// 	})
+			// },
+			send(){
+				
 			},
+
 			register(){
 				var _this=this;
+				// axios({
+				// 	method:'get',
+				// 	url:'http://10.8.155.66:8081/user/register.do',
+				// 	params:{email:_this.email,password:_this.password,code:_this.code}
+				// }).then(function(data){
+				// 	console.log(data)
+				// 	if(data.data.code==1000){
+				// 		alert("注册成功，跳转登录");
+				// 		location.href="#/login"
+				// 	}else{
+				// 		alert("注册失败，请重新注册");
+				// 		location.href="#/register"
+
+				// 	}
+				// })
+
+				var _this=this;
 				axios({
 					method:'get',
-					url:'http://10.8.155.66:8081/user/register.do',
-					params:{email:_this.email,password:_this.password,code:_this.code}
+					url:'http://jx.xuzhixiang.top/ap/api/reg.php',
+					// params:{code:_this.code,id:'1'}
+					params:{username:_this.username,password:_this.password}
 				}).then(function(data){
 					console.log(data)
-					if(data.data.code==1000){
+						if(data.data.code==1){
 						alert("注册成功，跳转登录");
 						location.href="#/login"
 					}else{
