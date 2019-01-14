@@ -23,13 +23,13 @@
 					</div>
 				</router-link>
 
-				<router-link :to="'/details/'+list[1].pid">
+				<router-link :to="'/details/'+list[9].pid">
 					<div class="box">
 					
-						<div class="b-l"><img  v-if="list[1]" :src="list[1].pimg" alt=""></div>
+						<div class="b-l"><img  v-if="list[9]" :src="list[9].pimg" alt=""></div>
 						<div class="b-r">
-							<p class="b-r-t">{{list[1].pname}}</p>
-							<p class="b-r-f"><span>{{list[1].pprice}}</span><span>立即购买</span></p>
+							<p class="b-r-t">{{list[9].pname}}</p>
+							<p class="b-r-f"><span>{{list[9].pprice}}</span><span>立即购买</span></p>
 						</div>
 					
 					</div>
@@ -57,7 +57,62 @@
 						</div>
 					
 					</div>
-				</router-link>	
+				</router-link>
+				<router-link :to="'/details/'+list[4].pid">
+					<div class="box">
+					
+						<div class="b-l"><img  v-if="list[4]" :src="list[4].pimg" alt=""></div>
+						<div class="b-r">
+							<p class="b-r-t">{{list[4].pname}}</p>
+							<p class="b-r-f"><span>{{list[4].pprice}}</span><span>立即购买</span></p>
+						</div>
+					
+					</div>
+				</router-link>
+				<router-link :to="'/details/'+list[5].pid">
+					<div class="box">
+					
+						<div class="b-l"><img  v-if="list[5]" :src="list[5].pimg" alt=""></div>
+						<div class="b-r">
+							<p class="b-r-t">{{list[5].pname}}</p>
+							<p class="b-r-f"><span>{{list[5].pprice}}</span><span>立即购买</span></p>
+						</div>
+					
+					</div>
+				</router-link>
+				<router-link :to="'/details/'+list[6].pid">
+					<div class="box">
+					
+						<div class="b-l"><img  v-if="list[6]" :src="list[6].pimg" alt=""></div>
+						<div class="b-r">
+							<p class="b-r-t">{{list[6].pname}}</p>
+							<p class="b-r-f"><span>{{list[6].pprice}}</span><span>立即购买</span></p>
+						</div>
+					
+					</div>
+				</router-link>
+				<router-link :to="'/details/'+list[7].pid">
+					<div class="box">
+					
+						<div class="b-l"><img  v-if="list[7]" :src="list[7].pimg" alt=""></div>
+						<div class="b-r">
+							<p class="b-r-t">{{list[7].pname}}</p>
+							<p class="b-r-f"><span>{{list[7].pprice}}</span><span>立即购买</span></p>
+						</div>
+					
+					</div>
+				</router-link>
+				<router-link :to="'/details/'+list[8].pid">
+					<div class="box">
+					
+						<div class="b-l"><img  v-if="list[8]" :src="list[8].pimg" alt=""></div>
+						<div class="b-r">
+							<p class="b-r-t">{{list[8].pname}}</p>
+							<p class="b-r-f"><span>{{list[8].pprice}}</span><span>立即购买</span></p>
+						</div>
+					
+					</div>
+				</router-link>
 			</div>
 	
 		</section>
@@ -92,7 +147,7 @@
 			axios({
 					method:'get',
 					url:'http://jx.xuzhixiang.top/ap/api/productlist.php',
-					params:{uid:'11475'}
+					params:{uid:'14632'}
 				}).then((data)=>{
 					console.log(data.data.data)
 					_this.list=data.data.data

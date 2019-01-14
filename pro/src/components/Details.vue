@@ -237,6 +237,7 @@
 					}).then((data)=>{
 						alert("添加成功")
 						console.log(data)
+						alert("添加成功")
 						
 					})
 
@@ -627,6 +628,7 @@
 	display: inline-block;
 	width:50%;
 	text-align: center;
+
 }
 
 .banner{

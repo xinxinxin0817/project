@@ -29,7 +29,9 @@
 				url:'http://jx.xuzhixiang.top/ap/api/detail.php',
 				params:{uid:'11475',id:_this.$route.params.id}
 			}).then((data)=>{
+				
 				_this.detail=data.data.data.pdesc;
+				
 			})
 		}
 	}
