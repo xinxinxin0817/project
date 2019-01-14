@@ -98,7 +98,7 @@
         
 	}
     .header-b span:first-child {
-        margin-left:20px;
+        margin-left:-130px;
     }
    .header-b span:last-child {
         margin-left:30%;

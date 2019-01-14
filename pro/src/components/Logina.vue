@@ -105,7 +105,7 @@
 		display: flex;
 		flex-direction: column;
 		overflow:auto;
-		background:pink;		
+		background:#fff;		
 	}
 	.top-l{
 		width:100%;

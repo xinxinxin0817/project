@@ -235,6 +235,7 @@
 						url:'http://jx.xuzhixiang.top/ap/api/add-product.php',
 						params:{uid:Number(_this.token),pid:_this.list1.pid,pnum:1}
 					}).then((data)=>{
+						alert("添加成功")
 						console.log(data)
 						
 					})
